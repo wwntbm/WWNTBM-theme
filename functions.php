@@ -4,6 +4,14 @@
 function create_post_type() {
 	register_post_type( 'wwntbm_missionaries',
 		array(
+			'supports' => array(
+				'title',
+				'editor',
+				'custom-fields',
+				'revisions',
+				'thumbnail',
+				'author'
+			),
 			'labels' => array(
 				'name' => __( 'Missionaries' ),
 				'singular_name' => __( 'Missionary' )
