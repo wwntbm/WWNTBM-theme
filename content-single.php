@@ -20,6 +20,19 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+	<?php
+		//   field
+		$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
+		if ($wwntbm_field != NULL) {echo '<h2 class="field-of-service">'.$wwntbm_field.'</h2>'."\n";}
+		
+		//   ministry type
+		$wwntbm_ministry_type = get_post_meta(get_the_ID(), 'Ministry Type', true);
+		if ($wwntbm_ministry_type != NULL) {echo '<h2 class="ministry-type">'.$wwntbm_ministry_type.'</h2>'."\n";}
+		
+		//   title
+		$wwntbm_job_title = get_post_meta(get_the_ID(), 'Title', true);
+		if ($wwntbm_job_title != NULL) {echo '<h2 class="job-title">'.$wwntbm_job_title.'</h2>'."\n";}
+	?>
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
