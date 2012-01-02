@@ -14,11 +14,17 @@ function create_post_type() {
 			),
 			'labels' => array(
 				'name' => __( 'Missionaries' ),
-				'singular_name' => __( 'Missionary' )
+				'singular_name' => __( 'Missionary' ),
+				'add_new_item' => __( 'Add New Missionary' ),
+				'edit_item' => __( 'Edit Missionary' ),
+				'new_item' => __( 'New Missionary' ),
+				'view_item' => __( 'View Missionary' ),
+				'search_items' => __( 'Search Missionaries' )
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'missionaries')
+			'rewrite' => array('slug' => 'missionaries'),
+			'capability_type' => 'missionary_info'
 		)
 	);
 }
