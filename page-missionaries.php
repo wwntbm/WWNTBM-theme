@@ -32,8 +32,20 @@ get_header(); ?>
 						</header><!-- .entry-header -->
 					
 						<div class="entry-content">
-							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+						<?php
+							$args = array( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Last Name', 'order' => 'ASC' );
+							$loop = new WP_Query( $args );
+							while ( $loop->have_posts() ) : $loop->the_post();
+								echo '<h2><a href="';
+								the_permalink();
+								echo '">';
+								the_title();
+								echo '</a>';
+								$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
+								if ($wwntbm_field != NULL) {echo '<span class="field-of-service"> &mdash; '.$wwntbm_field.'</span>';}
+								echo '</h2>';
+							endwhile;
+						?>
 						</div><!-- .entry-content -->
 					
 						<footer class="entry-meta">
