@@ -20,6 +20,12 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+	<?php 
+	//   photo
+	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+	  the_post_thumbnail('medium', array('class' => 'alignright'));
+	} 
+	?>
 	<?php
 		//   field
 		$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
