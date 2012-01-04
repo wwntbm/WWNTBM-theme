@@ -89,7 +89,29 @@ $administrator_role = get_role('administrator');
 	add_role('office_staff', 'Office Staff', $office_staff_caps);
 
 
-
+// missionary prayer letter names
+function missionary_prayer_letters($file,$missionary_name_key) {
+	$file_extension = pathinfo($file, PATHINFO_EXTENSION);
+	$month_numbers = array('01','02','03','04','05','06','07','08','09','10','11','12');
+	$month_names = array('January','February','March','April','May','June','July','August','September','October','November','December');
+	
+	// rename prayer letter
+	$prayer_letter_title = str_ireplace($missionary_name_key.'---','',(basename($file,'.'.$file_extension)));
+		// filter out month
+		$prayer_letter_month_array = explode('-',$prayer_letter_title);
+		$prayer_letter_month = $prayer_letter_month_array[1];
+		$prayer_letter_year = $prayer_letter_month_array[0];
+				
+	// build title
+	$prayer_letter_title = str_replace($month_numbers, $month_names, $prayer_letter_month).' '.$prayer_letter_year;
+	
+	// check for special titles
+	if ($prayer_letter_month_array[2] != NULL) {$prayer_letter_title .= ' ('.$prayer_letter_month_array[2].')';}
+	
+	// echo the <li> item
+	echo '<li><a target="_blank" href="'.site_url('/').$file.'" title="'.$prayer_letter_title.'">'.$prayer_letter_title.'</a></li>'."\n";
+}
+// end missionary prayer letter names
 
 // create custom post type
 add_action( 'init', 'create_post_type' );

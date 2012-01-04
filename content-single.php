@@ -40,7 +40,56 @@
 		if ($wwntbm_job_title != NULL) {echo '<h2 class="job-title">'.$wwntbm_job_title.'</h2>'."\n";}
 	?>
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+		
+		<div class="prayer-letters">
+		<h2>Prayer Letters:</h2>
+		<?php
+			//   get slug of current page
+			$slug = basename(get_permalink());
+			
+			//   get lastname-firstname construct
+			$name_array = explode('-',$slug);
+			$missionary_name_key = array_pop($name_array).'-'.ucwords($name_array[0]);
+			$missionary_name_key = ucwords($missionary_name_key);
+			
+			//   get list of prayer letters
+			$location = 'wp-content/uploads/Prayer-letters/'.$missionary_name_key.'/';
+			
+			//   get and sort folders
+			$folder_list = glob($location.'*',GLOB_ONLYDIR);
+			natcasesort($folder_list);
+			$folder_list = array_reverse($folder_list);
+			
+			echo '<ul class="dropdown">';
+
+			//   process folders
+			foreach ($folder_list as $group_folder) {
+				echo '<li><a class="dropdown_trigger';
+				//   open group if it is this year's
+				if (basename($group_folder) == date('Y')) {echo ' active';}
+				echo '"><span class="trigger_pointer_arrow"></span>'.ucwords(strtolower(basename($group_folder))).'</a>
+				<ul class="sub_links" style="display:';
+				if (basename($group_folder) == date('Y')) {echo 'block';}
+				else {echo 'none';}
+				echo ';">'."\n";
+				
+				//   get and sort files
+				$file_list = glob($location.basename($group_folder).'/*.pdf',GLOB_BRACE);
+				natcasesort($file_list);
+				$file_list = array_reverse($file_list);
+				
+				//   display files
+				foreach ($file_list as $file) {
+					missionary_prayer_letters($file,$missionary_name_key);
+				}
+				echo '</ul><!-- .sub_links -->
+				</li>'."\n";
+			}
+			
+			echo '</ul><!-- .dropdown -->';
+			
+		?>
+		</div>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
