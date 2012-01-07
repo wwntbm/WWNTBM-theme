@@ -28,22 +28,36 @@ function create_post_type() {
 		)
 	);
 }
+	
+	// Styling for the custom post type icon
+	function wwntbm_custom_post_icons() {
+		?>
+		<style type="text/css" media="screen">
+			#menu-posts-wwntbm_missionaries .wp-menu-image {
+				background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/user.png) no-repeat 6px -16px !important;
+			}
+			#menu-posts-wwntbm_missionaries:hover .wp-menu-image, #menu-posts-wwntbm_missionaries.wp-has-current-submenu .wp-menu-image {
+				background-position:6px 8px !important;
+			}
+		</style>
+	<?php }
+// end Add misionaries custom post type
 
-// Styling for the custom post type icon
-function wwntbm_custom_post_icons() {
-	?>
-	<style type="text/css" media="screen">
-		#menu-posts-wwntbm_missionaries .wp-menu-image {
-			background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/user.png) no-repeat 6px -16px !important;
-		}
-		#menu-posts-wwntbm_missionaries:hover .wp-menu-image, #menu-posts-wwntbm_missionaries.wp-has-current-submenu .wp-menu-image {
-			background-position:6px 8px !important;
-		}
-	</style>
-<?php }
+
+// Add custom post capabilities
+	$administrator_role = get_role('administrator');
+	$administrator_role->add_cap( 'edit_others_missionary_infos' );
+	$administrator_role->add_cap( 'edit_missionary_info' );
+	$administrator_role->add_cap( 'edit_missionary_infos' );
+	$administrator_role->add_cap( 'edit_others_missionary_infos' );
+	$administrator_role->add_cap( 'publish_missionary_infos' );
+	$administrator_role->add_cap( 'read_missionary_infos' );
+	$administrator_role->add_cap( 'delete_missionary_infos' );
+// end Add custom post capabilities
+
 
 // Add missionaries custom role
-$author_role = get_role('author');
+	$author_role = get_role('author');
  
 	// get_role returns an object; we want the capabilities piece, which is an array.
 	$missionary_caps = $author_role->capabilities;
@@ -58,16 +72,8 @@ $author_role = get_role('author');
 	 
 	// Add the new role.
 	add_role('missionary', 'Missionary', $missionary_caps);
+// end Add missionaries custom role
 
-// Add custom post capabilities
-$administrator_role = get_role('administrator');
-	$administrator_role->add_cap( 'edit_others_missionary_infos' );
-	$administrator_role->add_cap( 'edit_missionary_info' );
-	$administrator_role->add_cap( 'edit_missionary_infos' );
-	$administrator_role->add_cap( 'edit_others_missionary_infos' );
-	$administrator_role->add_cap( 'publish_missionary_infos' );
-	$administrator_role->add_cap( 'read_missionary_infos' );
-	$administrator_role->add_cap( 'delete_missionary_infos' );
 
 
 // Add office staff custom role 
@@ -87,6 +93,7 @@ $administrator_role = get_role('administrator');
 	 
 	// Add the new role.
 	add_role('office_staff', 'Office Staff', $office_staff_caps);
+// end Add office staff custom role
 
 
 // missionary prayer letter names
