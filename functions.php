@@ -50,7 +50,7 @@ function create_post_type() {
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'updates'),
+			'rewrite' => array('slug' => 'connect/missionary-updates', 'with_front' => 'false' ),
 			'capability_type' => 'missionary_update'
 		)
 	);
