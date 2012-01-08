@@ -23,7 +23,7 @@ function create_post_type() {
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array('slug' => 'missionaries'),
+			'rewrite' => array( 'slug' => 'connect/missionaries', 'with_front' => 'false' ),
 			'capability_type' => 'missionary_info'
 		)
 	);
