@@ -99,7 +99,7 @@
 			echo '<h2>Updates:</h2>
 			<ul class="updates">';
 			// The Query
-			$the_query = new WP_Query( 'author_name='.$wwntbm_missionary_username );
+			$the_query = new WP_Query( 'author_name='.$wwntbm_missionary_username.'&post_type=wwntbm_updates' );
 			
 			// The Loop
 			while ( $the_query->have_posts() ) : $the_query->the_post();
