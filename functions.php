@@ -36,6 +36,7 @@ function create_post_type() {
 				'editor',
 				'revisions',
 				'thumbnail',
+				'comments',
 				'author'
 			),
 			'labels' => array(
