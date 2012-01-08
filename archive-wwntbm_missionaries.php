@@ -11,8 +11,10 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
-				<article class="page type-page status-publish hentry">
-				<h1 class="entry-title">Missionaries</h1>
+				<article id="post-<?php the_ID(); ?>" class="post-<?php the_ID(); ?> page type-page status-publish hentry">
+				<header class="entry-header">
+					<h1 class="entry-title">Missionaries</h1>
+				</header><!-- .entry-header -->
 					<div class="entry-content">
 					<?php while ( have_posts() ) : the_post();
 	
