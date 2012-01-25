@@ -18,8 +18,6 @@ get_header(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
-				<div class="fb-comments" data-href="<?php echo home_url().$_SERVER['REQUEST_URI']; ?>" data-num-posts="3" data-width="470"></div>
-
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
