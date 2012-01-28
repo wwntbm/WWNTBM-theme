@@ -35,6 +35,11 @@
 		$wwntbm_ministry_type = get_post_meta(get_the_ID(), 'Ministry Type', true);
 		if ($wwntbm_ministry_type != NULL) {echo '<h2 class="ministry-type">Ministry Type: '.$wwntbm_ministry_type.'</h2>'."\n";}
 		
+		// status
+		$wwntbm_status = get_post_meta(get_the_ID(), 'Status', true);
+		if ($wwntbm_status == 'Deputation') {echo '<h2 class="deputation">Currently on Deputation</h2>'."\n";}
+		if ($wwntbm_status == 'Retired') {echo '<h2 class="retired">Retired</h2>'."\n";}
+
 		// title
 		$wwntbm_job_title = get_post_meta(get_the_ID(), 'Title', true);
 		if ($wwntbm_job_title != NULL) {echo '<h2 class="job-title">'.$wwntbm_job_title.'</h2>'."\n";}
