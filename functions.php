@@ -1,5 +1,6 @@
 <?php
 
+// Add custom post types
 function create_post_type() {
 	// Add missionaries custom post type
 	register_post_type( 'wwntbm_missionaries',
@@ -75,7 +76,7 @@ function create_post_type() {
 			}
 		</style>
 	<?php }
-// end Add misionaries custom post type
+// end Add custom post types
 
 
 // Add custom post capabilities
@@ -180,5 +181,14 @@ function missionary_prayer_letters($file,$missionary_name_key) {
 // create custom post type
 add_action( 'init', 'create_post_type' );
 add_action( 'admin_head', 'wwntbm_custom_post_icons' );
+
+// add sidebar to all pages
+add_action( 'after_setup_theme', 'my_child_theme_setup' );
+
+	function my_child_theme_setup() {
+	// Removes the filter that adds the "singular" class to the body element which centers the content and does not allow for a sidebar
+	remove_filter( 'body_class', 'twentyeleven_body_classes' );
+	}
+// end add sidebar to all pages
 
 ?>

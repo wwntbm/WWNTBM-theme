@@ -126,12 +126,12 @@ body {
 /* Singular */
 
 .singular #primary {
-	margin: 0;
+	margin: 0 -26.4% 0 0;
 }
 
 .singular #content,
 .left-sidebar.singular #content {
-	margin: 0 7.6%;
+	margin: 0 34% 0 7.6%;
 	position: relative;
 	width: auto;
 }
@@ -141,7 +141,7 @@ body {
 .singular footer.entry-meta,
 .singular #comments-title {
 	margin: 0 auto;
-	width: 68.9%;
+	width: 100%;
 }
 
 /* @end */
@@ -1424,7 +1424,7 @@ article.format-status .entry-content {
 
 .singular .hentry {
 	border-bottom: none;
-	padding: 4.875em 0 0;
+	padding: 0;
 	position: relative;
 }
 
@@ -1445,9 +1445,9 @@ article.format-status .entry-content {
 }
 
 .singular .entry-header .entry-meta {
-	position: absolute;
 	top: 0;
 	left: 0;
+	position: relative;
 }
 
 blockquote.pull {
@@ -2927,6 +2927,25 @@ p.comment-form-comment {
 
 /* @end */
 
+/* @group edits for sidebar */
+
+/* Without explicitly setting the padding-top we're inheriting 
+a value of "15px" which adds redundant whitespace to the top of the article */
+.singular article .entry-title {
+	padding-top: 0;
+}
+
+/* This is just a nicety. Moves the "Edit" link for admins to a more suitable position */
+.singular .entry-meta .edit-link a {
+	right: 0;
+	top: 0;
+	left: auto;
+}
+
+
+
+/* @end */
+
 /* =Responsive Structure
 ----------------------------------------------- */
 
@@ -3165,7 +3184,7 @@ blockquote.pull {
 }
 
 .singular .hentry {
-	padding: 1.625em 0 0;
+	padding: 0;
 }
 
 .singular.page .hentry {
