@@ -16,8 +16,15 @@ get_header(); ?>
 					<h1 class="entry-title">Missionaries</h1>
 				</header><!-- .entry-header -->
 					<div class="entry-content">
-					<?php while ( have_posts() ) : the_post();
-	
+					<?php
+/*
+					// get missionaries sorted by last name
+					$missionaries_query = $wpdb->get_col($wpdb->prepare("SELECT *, SUBSTRING_INDEX(post_title, ' ', -1) as last_name FROM $wpdb->posts WHERE post_type = 'wwntbm_missionaries' ORDER BY last_name,post_title ASC", $metakey) );
+*/
+					$missionaries_query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Last Name','posts_per_page' => -1, 'order' => 'ASC' ) );
+
+					while ( $missionaries_query->have_posts() ) : $missionaries_query->the_post();
+
 						echo '<h2><a href="';
 						the_permalink();
 						echo '">';
@@ -26,7 +33,7 @@ get_header(); ?>
 						$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
 						if ($wwntbm_field != NULL) {echo '<span class="field-of-service"> &mdash; '.$wwntbm_field.'</span>';}
 						echo '</h2>';
-	
+
 					endwhile; // end of the loop. ?>
 					</div>
 				</article><!-- .page -->
