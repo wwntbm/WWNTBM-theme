@@ -22,8 +22,7 @@
 			?>
 
 			<div id="site-generator">
-				<?php do_action( 'twentyeleven_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a>
+				designed and developed by <a href="_blank" href="http://minionsformissions.com">Andrew Minion</a> and April Howell | <a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">powered by Wordpress</a>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
