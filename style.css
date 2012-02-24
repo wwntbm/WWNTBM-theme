@@ -1,3 +1,5 @@
+/* @override http://new.wwntbm.com/wp-content/themes/WWNTBM/style.css */
+
 /*
 Theme Name: WWNTBM
 Theme URI: http://wordpress.org/extend/themes/twentyeleven
@@ -92,7 +94,7 @@ body {
 }
 
 #page {
-	margin: 2em auto;
+	margin: 0 auto;
 	max-width: 1000px;
 }
 
@@ -446,6 +448,10 @@ body {
 /* =Global
 ----------------------------------------------- */
 
+body {
+	background: #fff url(images/backgrounds/background-html.png) repeat;
+}
+
 body, input, textarea {
 	color: #373737;
 	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -453,12 +459,15 @@ body, input, textarea {
 	line-height: 1.625;
 }
 
-body {
-	background: #e2e2e2;
-}
 
 #page {
-	background: #fff;
+	background: #fff url(images/backgrounds/background-page.png) repeat;
+}
+
+.boxshadow #page {
+	-webkit-box-shadow: 0 5px 27px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 5px 27px rgba(0,0,0,0.23);
+	box-shadow: 0 5px 27px rgba(0,0,0,0.23);
 }
 
 /* @group headings */
@@ -630,13 +639,17 @@ input[type=text] {
 }
 
 input#s {
-	background: url(images/search.png) no-repeat 5px 6px;
+	background: rgba(255,254,255,0.5) url(images/search.png) no-repeat 5px 6px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	font-size: 14px;
 	height: 22px;
 	line-height: 1.2em;
 	padding: 4px 10px 4px 28px;
+}
+
+.borderradius input#s {
+	border-radius: 18px;
 }
 
 input#searchsubmit {
@@ -698,7 +711,6 @@ a:hover {
 ----------------------------------------------- */
 
 #branding {
-	border-top: 2px solid #bbb;
 	padding-bottom: 10px;
 	position: relative;
 	z-index: 2;
@@ -706,15 +718,19 @@ a:hover {
 
 #site-title {
 	margin-right: 270px;
-	padding: 3.65625em 0 0;
+	width: 259px;
+	height: 135px;
+	padding: 25px 0;
+}
+
+#site-title span,
+#site-description {
+	display: none;
 }
 
 #site-title a {
-	color: #111;
-	font-size: 30px;
-	font-weight: bold;
-	line-height: 36px;
-	text-decoration: none;
+	width: 259px;
+	height: 135px;
 }
 
 #site-title a:hover,
