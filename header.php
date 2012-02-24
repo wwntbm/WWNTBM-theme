@@ -85,7 +85,11 @@
 				<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri( 'template_directory' ) . '/images/header/logo.png'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" width="259" height="135" /><span><?php bloginfo( 'name' ); ?></span></a></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
+			 
+			<div id="search-login">
 				<?php get_search_form(); ?>
+				<?php wp_loginout(); ?>
+			</div><!-- #search-login -->
 
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
