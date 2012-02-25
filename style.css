@@ -2900,6 +2900,8 @@ p.comment-form-comment {
 
 #colophon {
 	clear: both;
+	background-color: rgba(24,71,95,0.2);
+	border-top: 1px solid rgba(25,130,209,0.38);
 }
 
 #supplementary {
@@ -2945,8 +2947,6 @@ p.comment-form-comment {
 /* Site Generator Line */
 
 #site-generator {
-	background: #f9f9f9;
-	border-top: 1px solid #ddd;
 	color: #666;
 	font-size: 12px;
 	line-height: 2.2em;
