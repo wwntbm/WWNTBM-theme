@@ -86,10 +86,7 @@
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
 			 
-			<div id="search-login">
-				<?php get_search_form(); ?>
-				<?php wp_loginout(); ?>
-			</div><!-- #search-login -->
+			<?php get_search_form(); ?>
 
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>

@@ -94,7 +94,7 @@ body {
 }
 
 #page {
-	margin: 0 auto;
+	margin: 25px auto;
 	max-width: 1000px;
 }
 
@@ -640,16 +640,12 @@ input[type=text] {
 
 input#s {
 	background: rgba(255,254,255,0.5) url(images/search.png) no-repeat 5px 6px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	font-size: 14px;
 	height: 22px;
 	line-height: 1.2em;
 	padding: 4px 10px 4px 28px;
-}
-
-.borderradius input#s {
-	border-radius: 18px;
 }
 
 input#searchsubmit {
@@ -765,7 +761,7 @@ a:hover {
 
 /* Search Form */
 
-#branding #search-login {
+#branding #searchform {
 	position: absolute;
 	top: 3.8em;
 	right: 7.6%;
@@ -842,11 +838,11 @@ a:hover {
 	display: block;
 	float: right;
 	margin: 0 auto 6px;
-	width: 610px;
+	width: 600px;
 }
 
 #access ul {
-	font-size: 22px;
+	font-size: 20px;
 	list-style: none;
 	margin: 0 0 0 -0.8125em;
 	padding-left: 0;
@@ -864,7 +860,7 @@ a:hover {
 	line-height: 1.8em;
 	text-decoration: none;
 	text-transform: uppercase;
-	border-radius: .7em;
+	border-radius: 5px;
 	padding: 0 1.1em;
 	-webkit-transition: all .2s linear;
 	-moz-transition: all .2s linear;
@@ -889,13 +885,16 @@ a:hover {
 	background: #fff;
 	visibility: hidden;
 	border: 1px solid #efefef;
-	border-top-left-radius: .7em;
-	border-bottom-left-radius: .7em;
-	border-bottom-right-radius: .7em;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	-webkit-transition: all .2s linear;
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
+	-webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 5px 8px rgba(0,0,0,0.23);
+	box-shadow: 0 5px 8px rgba(0,0,0,0.23);
 }
 
 #access ul ul ul {
@@ -917,12 +916,12 @@ a:hover {
 
 #access ul ul li:last-child a {
 	border-bottom: none;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #access ul ul li:first-child a {
-	border-top-left-radius: 10px;
+	border-top-left-radius: 5px;
 }
 
 #access li:hover > a,
@@ -939,6 +938,15 @@ a:hover {
 #access a:focus {
 	background: #efefef;
 	color: #373737;
+	-webkit-box-shadow: 0 5px 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 5px 8px rgba(0,0,0,0.23);
+	box-shadow: 0 5px 8px rgba(0,0,0,0.23);
+}
+
+#access li li:hover a {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 #access ul li:hover > ul {
@@ -1137,8 +1145,8 @@ dl.gallery-item {
 .entry-meta .edit-link a,
 .commentlist .edit-link a {
 	background: #eee;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	color: #666;
 	float: right;
 	font-size: 12px;
@@ -1360,8 +1368,8 @@ a:active img[class*="wp-image-"],
 
 #author-avatar img {
 	background: #fff;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	-webkit-box-shadow: 0 1px 2px #bbb;
 	-moz-box-shadow: 0 1px 2px #bbb;
 	box-shadow: 0 1px 2px #bbb;
@@ -1621,8 +1629,8 @@ blockquote.pull {
 }
 
 .format-status img.avatar {
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	-webkit-box-shadow: 0 1px 2px #ccc;
 	-moz-box-shadow: 0 1px 2px #ccc;
 	box-shadow: 0 1px 2px #ccc;
@@ -1807,8 +1815,8 @@ article.intro .entry-content {
 
 article.intro .edit-link a {
 	background: #aaa;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	color: #fff;
 	font-size: 12px;
 	padding: 0 8px;
@@ -1940,8 +1948,8 @@ section.feature-image.large .hentry {
 article.feature-image.large .entry-title a {
 	background: #222;
 	background: rgba(0,0,0,0.8);
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	color: #fff;
 	display: inline-block;
 	font-weight: 300;
@@ -2530,8 +2538,8 @@ section.ephemera .entry-title a span {
 .commentlist > li.comment {
 	background: #f6f6f6;
 	border: 1px solid #ddd;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	margin: 0 0 1.625em;
 	padding: 1.625em;
 	position: relative;
@@ -2550,8 +2558,8 @@ section.ephemera .entry-title a span {
 .commentlist .children li.comment {
 	background: #fff;
 	border-left: 1px solid #ddd;
-	-moz-border-radius: 0 3px 3px 0;
-	border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
 	margin: 1.625em 0 0;
 	padding: 1.625em;
 	position: relative;
@@ -2591,8 +2599,8 @@ section.ephemera .entry-title a span {
 }
 
 .commentlist .avatar {
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	-webkit-box-shadow: 0 1px 2px #ccc;
 	-moz-box-shadow: 0 1px 2px #ccc;
 	box-shadow: 0 1px 2px #ccc;
@@ -2624,8 +2632,8 @@ section.ephemera .entry-title a span {
 
 a.comment-reply-link {
 	background: #eee;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	color: #666;
 	display: inline-block;
 	font-size: 12px;
@@ -2709,8 +2717,8 @@ a.comment-reply-link > span {
 #respond {
 	background: #ddd;
 	border: 1px solid #d3d3d3;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	margin: 0 auto 1.625em;
 	padding: 1.625em;
 	position: relative;
@@ -2796,8 +2804,8 @@ a.comment-reply-link > span {
 #respond input#submit {
 	background: #222;
 	border: none;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
 	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
@@ -2962,6 +2970,14 @@ p.comment-form-comment {
 }
 
 /* @end */
+
+#login-out {
+	display: block;
+	margin: 0 auto 25px;
+	text-align: center;
+	font-size: small;
+	padding-bottom: 10px;
+}
 
 /* @end */
 
@@ -3446,8 +3462,8 @@ footer.entry-meta a[rel=bookmark]:link:after,
 .commentlist > li.comment {
 	background: none;
 	border: 1px solid #ddd;
-	-moz-border-radius: 3px 3px 3px 3px;
-	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	margin: 0 auto 1.625em;
 	padding: 1.625em;
 	position: relative;

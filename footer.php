@@ -24,6 +24,9 @@
 			<div id="site-generator">
 				designed and developed by <a href="_blank" href="http://minionsformissions.com">Andrew Minion</a> and April Howell | <a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">powered by Wordpress</a>
 			</div>
+			<div id="login-out">
+				<?php wp_loginout(); ?>
+			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
