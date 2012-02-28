@@ -972,6 +972,15 @@ a:hover {
 	padding: 1.625em 0 0;
 }
 
+.custom-slider {
+	display: block;
+	width: 650px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+}
+
 .page-title {
 	color: #666;
 	font-size: 10px;

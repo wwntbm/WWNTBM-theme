@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+		<?php echo do_shortcode('[orbit-slider]') ?>
 		<div id="primary">
 			<div id="content" role="main">
 

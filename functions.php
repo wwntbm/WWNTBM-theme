@@ -182,6 +182,9 @@ function missionary_prayer_letters($file,$missionary_name_key) {
 add_action( 'init', 'create_post_type' );
 add_action( 'admin_head', 'wwntbm_custom_post_icons' );
 
+//   change custom size of orbit-slider
+if ( function_exists( 'add_image_size' ) ) { add_image_size( 'orbit-custom', 650, 300 ); }
+
 // add sidebar to all pages
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
 
