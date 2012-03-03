@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-		<?php echo do_shortcode('[orbit-slider]') ?>
+		<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow(); } ?>
 		<div id="primary">
 			<div id="content" role="main">
 
