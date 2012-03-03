@@ -967,28 +967,6 @@ a:hover {
 /* =Content
 ----------------------------------------------- */
 
-/* @group slideshow */
-
-#meteor-slideshow {
-	display: block;
-	width: 650px;
-	margin: 0 auto;
-}
-
-#meteor-slideshow .mslide {
-	overflow: visible;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
-	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
-	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
-}
-
-.meteor-slides .mslide img {
-	border-radius: 5px;
-}
-
-/* @end */
-
 #main {
 	clear: both;
 	padding: 1.625em 0 0;
