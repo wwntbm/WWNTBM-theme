@@ -2517,7 +2517,7 @@ section.ephemera .entry-title a span {
 
 /* @group twitter widget */
 
-span.time-meta a {
+.time-meta a {
 	display: block;
 	font-weight: 200;
 }
