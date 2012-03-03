@@ -674,9 +674,9 @@ a.telephone-link:focus,
 a.telephone-link:active,
 a.telephone-link:hover {
 	color: inherit !important;
-	text-decoration: none !important;
-	font-weight: normal !important;
-	font-style: normal !important;
+	text-decoration: inherit !important;
+	font-weight: inherit !important;
+	font-style: inherit !important;
 	cursor: default;
 }
 
@@ -2523,7 +2523,7 @@ section.ephemera .entry-title a span {
 }
 
 .intent-meta a {
-	padding-right: 1em;
+	margin-right: 1em;
 	font-style: italic;
 	font-weight: 200;
 	font-size: smaller;
@@ -2941,10 +2941,18 @@ p.comment-form-comment {
 	border-top: 1px solid rgba(25,130,209,0.38);
 }
 
+#colophon .widget {
+	margin-bottom: 0;
+}
+
 #supplementary {
 	border-top: 1px solid #ddd;
 	padding: 1.625em 7.6%;
 	overflow: hidden;
+}
+
+#supplementary p {
+	margin-bottom: 0;
 }
 
 /* @group two footer widget areas */
@@ -2987,8 +2995,8 @@ p.comment-form-comment {
 	color: #666;
 	font-size: 12px;
 	line-height: 2.2em;
-	padding: 2.2em 0.5em;
 	text-align: center;
+	padding: 0 0.5em 1.5em;
 }
 
 #site-generator a {
@@ -2996,25 +3004,11 @@ p.comment-form-comment {
 	font-weight: bold;
 }
 
-#site-generator .sep {
-	background: url(images/wordpress.png) center left no-repeat;
-	color: transparent;
-	display: inline-block;
-	height: 16px;
-	line-height: 16px;
-	margin: 0 7px;
-	width: 16px;
+#colophon .light-weight a {
+	font-weight: 200;
 }
 
 /* @end */
-
-#login-out {
-	display: block;
-	margin: 0 auto 25px;
-	text-align: center;
-	font-size: small;
-	padding-bottom: 10px;
-}
 
 /* @end */
 
