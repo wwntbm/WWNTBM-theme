@@ -669,6 +669,17 @@ a:hover {
 	text-decoration: underline;
 }
 
+a.telephone-link,
+a.telephone-link:focus,
+a.telephone-link:active,
+a.telephone-link:hover {
+	color: inherit !important;
+	text-decoration: none !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	cursor: default;
+}
+
 /* @end */
 
 /* @group assistive text */
@@ -803,7 +814,7 @@ a:hover {
 #branding .only-search #s {
 	background-color: #666;
 	border-color: #000;
-	color: #222;
+	color: #424242;
 }
 
 #branding .only-search #s,
@@ -991,7 +1002,6 @@ a:hover {
 
 .hentry,
 .no-results {
-	border-bottom: 1px solid #ddd;
 	margin: 0 0 1.625em;
 	padding: 0 0 1.625em;
 	position: relative;
@@ -1014,21 +1024,24 @@ a:hover {
 .entry-title,
 .entry-header .entry-meta {
 	padding-right: 76px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 .entry-title {
 	clear: both;
-	color: #222;
+	color: #424242;
 	font-size: 26px;
 	font-weight: bold;
 	line-height: 1.5em;
 	padding-bottom: .3em;
 	padding-top: 15px;
+	text-transform: uppercase;
 }
 
 .entry-title,
 .entry-title a {
-	color: #222;
+	color: #424242;
 	text-decoration: none;
 }
 
@@ -1056,15 +1069,21 @@ a:hover {
 .entry-content,
 .entry-summary {
 	padding: 1.625em 0 0;
+	color: #424242;
 }
 
 .entry-content h1,
 .entry-content h2,
 .comment-content h1,
 .comment-content h2 {
-	color: #000;
 	font-weight: 600;
 	margin: 0 0 .8125em;
+	text-transform: uppercase;
+}
+
+.entry-content h1,
+.comment-content h1 {
+	font-size: larger;
 }
 
 .entry-content h3,
@@ -1902,7 +1921,7 @@ article.feature-image.small .entry-summary {
 }
 
 article.feature-image.small .entry-summary p a {
-	background: #222;
+	background: #424242;
 	color: #eee;
 	display: block;
 	left: -23.8%;
@@ -1946,7 +1965,7 @@ section.feature-image.large .hentry {
 }
 
 article.feature-image.large .entry-title a {
-	background: #222;
+	background: #424242;
 	background: rgba(0,0,0,0.8);
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -1960,7 +1979,7 @@ section.feature-image.large:hover .entry-title a,
 section.feature-image.large .entry-title:hover a {
 	background: #eee;
 	background: rgba(255,255,255,0.8);
-	color: #222;
+	color: #424242;
 }
 
 article.feature-image.large .entry-summary {
@@ -2802,7 +2821,7 @@ a.comment-reply-link > span {
 }
 
 #respond input#submit {
-	background: #222;
+	background: #424242;
 	border: none;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
