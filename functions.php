@@ -178,20 +178,32 @@ function missionary_prayer_letters($file,$missionary_name_key) {
 }
 // end missionary prayer letter names
 
-// create custom post type
-add_action( 'init', 'create_post_type' );
-add_action( 'admin_head', 'wwntbm_custom_post_icons' );
 
-//   change custom size of orbit-slider
-if ( function_exists( 'add_image_size' ) ) { add_image_size( 'orbit-custom', 650, 300 ); }
+// add sidebar for home page
+function WWNTBM_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Homepage Sidebar', 'twentyeleven' ),
+		'id' => 'sidebar-6',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+}
+
 
 // add sidebar to all pages
-add_action( 'after_setup_theme', 'my_child_theme_setup' );
-
-	function my_child_theme_setup() {
+function my_child_theme_setup() {
 	// Removes the filter that adds the "singular" class to the body element which centers the content and does not allow for a sidebar
 	remove_filter( 'body_class', 'twentyeleven_body_classes' );
-	}
+}
 // end add sidebar to all pages
+
+
+// add actions
+add_action( 'init', 'create_post_type' );
+add_action( 'admin_head', 'wwntbm_custom_post_icons' );
+add_action( 'widgets_init', 'WWNTBM_widgets_init' );
+add_action( 'after_setup_theme', 'my_child_theme_setup' );
 
 ?>
