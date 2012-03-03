@@ -2515,6 +2515,24 @@ section.ephemera .entry-title a span {
 
 /* @end */
 
+/* @group twitter widget */
+
+span.time-meta a {
+	display: block;
+	font-weight: 200;
+}
+
+.intent-meta a {
+	padding-right: 1em;
+	font-style: italic;
+	font-weight: 200;
+	font-size: smaller;
+}
+
+
+
+/* @end */
+
 /* @end */
 
 /* @group comments */
