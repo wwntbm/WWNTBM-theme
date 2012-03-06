@@ -21,23 +21,19 @@ get_header(); ?>
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 				
 				<a class="home-button" id="who" href="<?php bloginfo('url'); ?>/connect/missionaries/" title="Who We Are">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/home-buttons/who-we-are.jpg" alt="Who We Are" />
-					<h2>Who We Are</h2>
+					<h2><span class="hide">Who We Are</span></h2>
 				</a>
 				
 				<a class="home-button" id="where" href="<?php bloginfo('url'); ?>/connect/countries/" title="Where We Serve">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/home-buttons/where-we-serve.png" alt="Where We Serve" />
-					<h2>Where We Serve</h2>
+					<h2><span class="hide">Where We Serve</span></h2>
 				</a>
 				
 				<a class="home-button" id="beliefs" href="<?php bloginfo('url'); ?>/learn/our-doctrinal-statement/" title="What We Believe">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/home-buttons/what-we-believe.jpg" alt="What We Believe" />
-					<h2>What We Believe</h2>
+					<h2><span class="hide">What We Believe</span></h2>
 				</a>
 				
 				<a class="home-button" id="contact" href="<?php bloginfo('url'); ?>/connect/contact-wwntbm/" title="Who We Are">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/images/home-buttons/how-to-contact.jpg" alt="How to Contact Us" />
-					<h2>How to Contact Us</h2>
+					<h2><span class="hide">How to Contact Us</span></h2>
 				</a>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
