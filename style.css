@@ -3092,127 +3092,153 @@ a value of "15px" which adds redundant whitespace to the top of the article */
 ----------------------------------------------- */
 
 @media (max-width: 800px) {
+/* @media max-width: 800px */
 
-/* Simplify the basic layout */
-
-#main #content {
-	margin: 0 7.6%;
-	width: auto;
-}
-
-#nav-below {
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 1.625em;
-}
-
-#main #secondary {
-	float: none;
-	margin: 0 7.6%;
-	width: auto;
-}
-
-/* Simplify the showcase template */
-
-.page-template-showcase-php .featured-posts {
-	min-height: 280px;
-}
-
-.featured-posts section.featured-post {
-	height: auto;
-}
-
-.page-template-showcase-php section.recent-posts {
-	float: none;
-	margin: 0;
-	width: 100%;
-}
-
-.page-template-showcase-php #main .widget-area {
-	float: none;
-	margin: 0;
-	width: auto;
-}
-
-.page-template-showcase-php .other-recent-posts {
-	border-bottom: 1px solid #ddd;
-}
-
-/* Simplify the showcase template when small feature */
-
-section.featured-post .attachment-small-feature,
-	.one-column section.featured-post .attachment-small-feature {
-	border: none;
-	display: block;
-	float: left;
-	height: auto;
-	margin: 0.625em auto 1.025em;
-	max-width: 30%;
-	position: static;
-}
-
-article.feature-image.small {
-	float: right;
-	margin: 0 0 1.625em;
-	width: 64%;
-}
-
-.one-column article.feature-image.small .entry-summary {
-	height: auto;
-}
-
-article.feature-image.small .entry-summary p a {
-	left: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-	width: auto;
-}
-
-/* Remove the margin on singular articles */
-
-.singular .entry-header,
-	.singular .entry-content,
-	.singular footer.entry-meta,
-	.singular #comments-title {
-	width: 100%;
-}
-
-/* Simplify the pullquotes and pull styles */
-
-.singular blockquote.pull {
-	margin: 0 0 1.625em;
-}
-
-.singular .pull.alignleft {
-	margin: 0 1.625em 0 0;
-}
-
-.singular .pull.alignright {
-	margin: 0 0 0 1.625em;
-}
-
-.singular .entry-meta .edit-link a {
-	left: 0;
-	position: absolute;
-	top: 40px;
-}
-
-.singular #author-info {
-	margin: 2.2em -8.8% 0;
-	padding: 20px 8.8%;
-}
-
-/* Make sure we have room for our comment avatars */
-
-.commentlist {
-	width: 100%;
-}
-
-.commentlist > li.comment,
-	.commentlist .pingback {
-	margin-left: 102px;
-	width: auto;
-}
-
+	/* @group basic layout */
+	
+	/* Simplify the basic layout */
+	
+	#main #content {
+		margin: 0 7.6%;
+		width: auto;
+	}
+	
+	#nav-below {
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 1.625em;
+	}
+	
+	#main #secondary {
+		float: none;
+		margin: 0 7.6%;
+		width: auto;
+	}
+	
+	/* @end */
+	
+	/* @group showcase template */
+	
+	/* Simplify the showcase template */
+	
+	.page-template-showcase-php .featured-posts {
+		min-height: 280px;
+	}
+	
+	.featured-posts section.featured-post {
+		height: auto;
+	}
+	
+	.page-template-showcase-php section.recent-posts {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+	
+	.page-template-showcase-php #main .widget-area {
+		float: none;
+		margin: 0;
+		width: auto;
+	}
+	
+	.page-template-showcase-php .other-recent-posts {
+		border-bottom: 1px solid #ddd;
+	}
+	
+	/* @end */
+	
+	/* @group showcase template when small
+	 */
+	
+	/* Simplify the showcase template when small feature */
+	
+	section.featured-post .attachment-small-feature,
+		.one-column section.featured-post .attachment-small-feature {
+		border: none;
+		display: block;
+		float: left;
+		height: auto;
+		margin: 0.625em auto 1.025em;
+		max-width: 30%;
+		position: static;
+	}
+	
+	article.feature-image.small {
+		float: right;
+		margin: 0 0 1.625em;
+		width: 64%;
+	}
+	
+	.one-column article.feature-image.small .entry-summary {
+		height: auto;
+	}
+	
+	article.feature-image.small .entry-summary p a {
+		left: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: auto;
+	}
+	
+	/* @end */
+	
+	/* @group remove margin on singular erticles */
+	
+	/* Remove the margin on singular articles */
+	
+	.singular .entry-header,
+		.singular .entry-content,
+		.singular footer.entry-meta,
+		.singular #comments-title {
+		width: 100%;
+	}
+	
+	/* @end */
+	
+	/* @group simplify pullquotes and pull styles */
+	
+	/* Simplify the pullquotes and pull styles */
+	
+	.singular blockquote.pull {
+		margin: 0 0 1.625em;
+	}
+	
+	.singular .pull.alignleft {
+		margin: 0 1.625em 0 0;
+	}
+	
+	.singular .pull.alignright {
+		margin: 0 0 0 1.625em;
+	}
+	
+	.singular .entry-meta .edit-link a {
+		left: 0;
+		position: absolute;
+		top: 40px;
+	}
+	
+	.singular #author-info {
+		margin: 2.2em -8.8% 0;
+		padding: 20px 8.8%;
+	}
+	
+	/* @end */
+	
+	/* @group room for comment avatars */
+	
+	/* Make sure we have room for our comment avatars */
+	
+	.commentlist {
+		width: 100%;
+	}
+	
+	.commentlist > li.comment,
+		.commentlist .pingback {
+		margin-left: 102px;
+		width: auto;
+	}
+	
+	/* @end */
+	
 /* And a full-width comment form */
 
 #respond {
@@ -3242,6 +3268,22 @@ embed,
 	max-width: 100%;
 }
 
+#meteor-slideshow,
+#meteor-slideshow .mslide,
+#meteor-slideshow .mslide img {
+	width: 500px !important;
+	height: 231px !important;
+}
+
+#meteor-slideshow .mslide {
+	margin: 0 auto;
+}
+
+#meteor-slideshow.navpaged,
+#meteor-slideshow.navboth {
+	padding: 0;
+}
+
 }
 
 @media (max-width: 650px) {
@@ -3258,6 +3300,10 @@ body, input, textarea {
 
 #site-description {
 	font-size: 12px;
+}
+
+#access {
+	width: 100%;
 }
 
 #access ul {
@@ -3376,9 +3422,27 @@ blockquote.pull {
 	height: auto;
 }
 
+#meteor-slideshow,
+#meteor-slideshow .mslide,
+#meteor-slideshow .mslide img {
+	width: 390px !important;
+	height: 180px !important;
+}
+
+#meteor-slideshow .mslide {
+	margin: 0 auto;
+}
+
+#meteor-slideshow.navpaged,
+#meteor-slideshow.navboth {
+	padding: 0;
+}
+
 }
 
 @media (max-width: 450px) {
+
+/* @media max-width: 450px */
 
 #content .gallery-columns-2 .gallery-item {
 	width: 45%;
@@ -3390,20 +3454,54 @@ blockquote.pull {
 	height: auto;
 }
 
+#meteor-slideshow,
+#meteor-slideshow .mslide,
+#meteor-slideshow .mslide img {
+	width: 350px !important;
+	height: 162px !important;
+}
+
+#meteor-slideshow .mslide {
+	margin: 0 auto;
+}
+
+#meteor-slideshow.navpaged,
+#meteor-slideshow.navboth {
+	padding: 0;
+}
+
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+/* @media min-width: 320px and max-width: 480px */
 
 body {
 	padding: 0;
 }
 
 #page {
-	margin-top: 0;
+	margin: 0;
 }
 
 #branding {
 	border-top: none;
+}
+
+#meteor-slideshow,
+#meteor-slideshow .mslide,
+#meteor-slideshow .mslide img {
+	width: 300px !important;
+	height: 138px !important;
+}
+
+#meteor-slideshow .mslide {
+	margin: 0 auto;
+}
+
+#meteor-slideshow.navpaged,
+#meteor-slideshow.navboth {
+	padding: 0;
 }
 
 }
