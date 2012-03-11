@@ -464,14 +464,23 @@ body, input, textarea {
 	background: #fff url(images/backgrounds/background-page.png) repeat;
 }
 
-.boxshadow #page {
-	-webkit-box-shadow: 0 5px 27px rgba(0,0,0,0.23);
-	-moz-box-shadow: 0 5px 27px rgba(0,0,0,0.23);
-	box-shadow: 0 5px 27px rgba(0,0,0,0.23);
-}
-
 .hide {
 	text-indent: -99999px;
+}
+
+.rounded {
+	border-radius: 5px;
+}
+
+.rounded-bottom {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.shadowed {
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
 }
 
 /* @group headings */
@@ -1574,10 +1583,6 @@ blockquote.pull {
 	margin: 1em 5% 1em 0;
 	width: 250px;
 	height: 150px;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
-	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
-	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
 }
 
 .home-button span {

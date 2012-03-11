@@ -20,19 +20,19 @@ get_header(); ?>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 				
-				<a class="home-button" id="who" href="<?php bloginfo('url'); ?>/connect/missionaries/" title="Who We Are">
+				<a class="home-button rounded shadowed" id="who" href="<?php bloginfo('url'); ?>/connect/missionaries/" title="Who We Are">
 					<h2><span class="hide">Who We Are</span></h2>
 				</a>
 				
-				<a class="home-button" id="where" href="<?php bloginfo('url'); ?>/connect/countries/" title="Where We Serve">
+				<a class="home-button rounded shadowed" id="where" href="<?php bloginfo('url'); ?>/connect/countries/" title="Where We Serve">
 					<h2><span class="hide">Where We Serve</span></h2>
 				</a>
 				
-				<a class="home-button" id="beliefs" href="<?php bloginfo('url'); ?>/learn/our-doctrinal-statement/" title="What We Believe">
+				<a class="home-button rounded shadowed" id="beliefs" href="<?php bloginfo('url'); ?>/learn/our-doctrinal-statement/" title="What We Believe">
 					<h2><span class="hide">What We Believe</span></h2>
 				</a>
 				
-				<a class="home-button" id="contact" href="<?php bloginfo('url'); ?>/connect/contact-wwntbm/" title="Who We Are">
+				<a class="home-button rounded shadowed" id="contact" href="<?php bloginfo('url'); ?>/connect/contact-wwntbm/" title="Who We Are">
 					<h2><span class="hide">How to Contact Us</span></h2>
 				</a>
 
