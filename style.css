@@ -1574,7 +1574,6 @@ blockquote.pull {
 }
 
 /* @end */
-
 /* @group home page */
 
 .home-button {
@@ -1620,6 +1619,34 @@ blockquote.pull {
 .home-button#contact,
 .home-button#contact span {
 	background-image: url(images/home-buttons/how-to-contact.jpg);
+}
+
+/* @end */
+
+/* @group missionary list page */
+
+.missionary-listed {
+	display: block;
+	float: left;
+	margin: 1em 5% 1em 0;
+	width: 250px;
+	height: auto;
+	min-height: 250px;
+	clear: none;
+	padding-right: 3%;
+	padding-left: 3%;
+}
+
+.missionary-listed .missionary-name,
+.missionary-listed .field-of-service {
+	display: block;
+	text-align: center;
+	text-transform: none;
+}
+
+.missionary-listed .field-of-service {
+	font-weight: 300;
+	font-size: smaller;
 }
 
 /* @end */
@@ -3427,6 +3454,11 @@ blockquote.pull {
 	height: auto;
 }
 
+.home-button {
+	margin: 1em auto;
+	float: none;
+}
+
 #meteor-slideshow,
 #meteor-slideshow .mslide,
 #meteor-slideshow .mslide img {
@@ -3457,6 +3489,11 @@ blockquote.pull {
 #content .gallery-columns-2 .gallery-item img {
 	width: 100%;
 	height: auto;
+}
+
+.home-button {
+	margin: 1em auto;
+	float: none;
 }
 
 #meteor-slideshow,
@@ -3491,6 +3528,11 @@ body {
 
 #branding {
 	border-top: none;
+}
+
+.home-button {
+	margin: 1em auto;
+	float: none;
 }
 
 #meteor-slideshow,

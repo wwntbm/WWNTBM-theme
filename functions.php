@@ -192,6 +192,13 @@ function WWNTBM_widgets_init() {
 }
 
 
+// add custom thumbnail size for missionary archive page
+if ( function_exists( 'add_theme_support' ) ) { 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'category-thumb', 250, 150, true );
+}
+
+
 // add sidebar to all pages
 function my_child_theme_setup() {
 	// Removes the filter that adds the "singular" class to the body element which centers the content and does not allow for a sidebar

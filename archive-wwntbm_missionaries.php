@@ -25,13 +25,16 @@ get_header(); ?>
 
 					while ( $missionaries_query->have_posts() ) : $missionaries_query->the_post();
 
-						echo '<h2><a href="';
+						echo '<h2 class="missionary-listed">
+						<a href="';
 						the_permalink();
 						echo '">';
+						the_post_thumbnail('category-thumb', array('class' => 'rounded shadowed'));
+						echo '<span class="missionary-name">';
 						the_title();
-						echo '</a>';
+						echo '</span></a>';
 						$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
-						if ($wwntbm_field != NULL) {echo '<span class="field-of-service"> &mdash; '.$wwntbm_field.'</span>';}
+						if ($wwntbm_field != NULL) {echo '<span class="field-of-service">'.$wwntbm_field.'</span>';}
 						echo '</h2>';
 
 					endwhile; // end of the loop. ?>
