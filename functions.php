@@ -195,7 +195,7 @@ function WWNTBM_widgets_init() {
 // add custom thumbnail size for missionary archive page
 if ( function_exists( 'add_theme_support' ) ) { 
 add_theme_support( 'post-thumbnails' );
-add_image_size( 'category-thumb', 250, 150, true );
+add_image_size( 'category-thumb', 150, 100, true );
 }
 
 

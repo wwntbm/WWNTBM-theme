@@ -1629,9 +1629,9 @@ blockquote.pull {
 	display: block;
 	float: left;
 	margin: 1em 5% 1em 0;
-	width: 250px;
+	max-width: 25%;
+	min-height: 25ex;
 	height: auto;
-	min-height: 250px;
 	clear: none;
 	padding-right: 3%;
 	padding-left: 3%;
@@ -1650,6 +1650,11 @@ blockquote.pull {
 }
 
 /* @end */
+
+.missionary-listed img {
+	max-width: 100%;
+	height: auto;
+}
 
 /* @end */
 
