@@ -3090,7 +3090,7 @@ p.comment-form-comment {
 	font-size: 12px;
 	line-height: 2.2em;
 	text-align: center;
-	padding: 0 0.5em 1.5em;
+	padding: 0 1.5em 1.5em;
 }
 
 #site-generator a {
@@ -3556,6 +3556,10 @@ body {
 	padding: 0;
 }
 
+}
+
+.missionary-listed {
+	min-height: 29ex;
 }
 
 /* =Print
