@@ -3323,6 +3323,15 @@ embed,
 
 }
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* iPad  */
+
+#access ul ul {
+	display: none;
+}
+
+}
+
 @media (max-width: 650px) {
 
 /* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
@@ -3538,6 +3547,10 @@ body {
 .home-button {
 	margin: 1em auto;
 	float: none;
+}
+
+#access ul ul {
+	display: none;
 }
 
 #meteor-slideshow,
