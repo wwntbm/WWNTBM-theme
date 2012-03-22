@@ -3542,8 +3542,17 @@ body {
 	float: none;
 }
 
+#access li.page_item {
+#	width: 100%;
+}
+
 #access ul ul {
 	display: none;
+	left: 0;
+}
+
+#secondary .widget {
+	border-top: 1px solid #ddd;
 }
 
 #meteor-slideshow,
