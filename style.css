@@ -1,4 +1,7 @@
-/* @override http://new.wwntbm.com/wp-content/themes/WWNTBM/style.css */
+/* @override 
+	http://new.wwntbm.com/wp-content/themes/WWNTBM/style.css */
+
+
 
 /*
 Theme Name: WWNTBM
@@ -993,7 +996,7 @@ a.telephone-link:hover {
 
 #main {
 	clear: both;
-	padding: 1.625em 0 0;
+	padding: 1.625em 25px 0;
 }
 
 .page-title {
@@ -1197,6 +1200,31 @@ dl.gallery-item {
 .entry-content .edit-link {
 	clear: both;
 	display: block;
+}
+
+#meteor-slideshow {
+	display: block;
+	margin: 0 auto 25px;
+	border-radius: 5px;
+}
+
+#meteor-slideshow .meteor-clip {
+	border-radius: 5px;
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	position: relative;
+}
+
+#meteor-slideshow img {
+	border-radius: 5px;
+}
+
+#meteor-buttons {
+	display: block;
+	margin: 0 auto;
+	bottom: 10px;
+	left: 10px;
 }
 
 /* @group images */
@@ -3303,22 +3331,6 @@ embed,
 	max-width: 100%;
 }
 
-#meteor-slideshow,
-#meteor-slideshow .mslide,
-#meteor-slideshow .mslide img {
-	width: 500px !important;
-	height: 231px !important;
-}
-
-#meteor-slideshow .mslide {
-	margin: 0 auto;
-}
-
-#meteor-slideshow.navpaged,
-#meteor-slideshow.navboth {
-	padding: 0;
-}
-
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
@@ -3471,22 +3483,6 @@ blockquote.pull {
 	float: none;
 }
 
-#meteor-slideshow,
-#meteor-slideshow .mslide,
-#meteor-slideshow .mslide img {
-	width: 390px !important;
-	height: 180px !important;
-}
-
-#meteor-slideshow .mslide {
-	margin: 0 auto;
-}
-
-#meteor-slideshow.navpaged,
-#meteor-slideshow.navboth {
-	padding: 0;
-}
-
 }
 
 @media (max-width: 450px) {
@@ -3506,22 +3502,6 @@ blockquote.pull {
 .home-button {
 	margin: 1em auto;
 	float: none;
-}
-
-#meteor-slideshow,
-#meteor-slideshow .mslide,
-#meteor-slideshow .mslide img {
-	width: 350px !important;
-	height: 162px !important;
-}
-
-#meteor-slideshow .mslide {
-	margin: 0 auto;
-}
-
-#meteor-slideshow.navpaged,
-#meteor-slideshow.navboth {
-	padding: 0;
 }
 
 }
@@ -3558,22 +3538,6 @@ body {
 
 #secondary .widget {
 	border-top: 1px solid #ddd;
-}
-
-#meteor-slideshow,
-#meteor-slideshow .mslide,
-#meteor-slideshow .mslide img {
-	width: 300px !important;
-	height: 138px !important;
-}
-
-#meteor-slideshow .mslide {
-	margin: 0 auto;
-}
-
-#meteor-slideshow.navpaged,
-#meteor-slideshow.navboth {
-	padding: 0;
 }
 
 }
