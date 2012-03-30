@@ -1642,12 +1642,17 @@ blockquote.pull {
 	font-size: smaller;
 }
 
-/* @end */
-
+.missionary-listed {
+	min-height: 29ex;
+}
 .missionary-listed img {
 	max-width: 100%;
 	height: auto;
 }
+
+/* @end */
+
+
 
 /* @end */
 
@@ -3573,9 +3578,6 @@ body {
 
 }
 
-.missionary-listed {
-	min-height: 29ex;
-}
 
 /* =Print
 ----------------------------------------------- */
