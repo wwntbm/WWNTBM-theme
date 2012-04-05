@@ -1202,6 +1202,19 @@ dl.gallery-item {
 	display: block;
 }
 
+/* @group page-specific content */
+
+.post-12 h2,
+.post-12 .alignleft,
+.post-64 h2,
+.post-64 .alignleft {
+	clear: left;
+}
+
+/* @end */
+
+/* @group meteor-slideshow */
+
 #meteor-slideshow {
 	display: block;
 	margin: 0 auto 25px;
@@ -1226,6 +1239,8 @@ dl.gallery-item {
 	bottom: 10px;
 	left: 10px;
 }
+
+/* @end */
 
 /* @group images */
 
