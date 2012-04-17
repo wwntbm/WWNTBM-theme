@@ -47,16 +47,12 @@
 		<?php the_content(); ?>
 		
 		<?php
-		// get slug of current page
-		$slug = basename(get_permalink());
-		
-		// get lastname-firstname construct
-		$name_array = explode('-',$slug);
-		$missionary_name_key = array_pop($name_array).'-'.ucwords($name_array[0]);
-		$missionary_name_key = ucwords($missionary_name_key);
-		
+		// get missionary unique key
+		$wwntbm_missionary_key = get_post_meta(get_the_ID(), 'Last Name', true);
+		$wwntbm_missionary_key = strtolower($wwntbm_missionary_key);
+				
 		// get list of prayer letters
-		$location = 'wp-content/uploads/Prayer-letters/'.$missionary_name_key.'/';
+		$location = 'wp-content/uploads/Prayer-letters/'.$wwntbm_missionary_key.'/';
 		
 		// get and sort folders
 		$folder_list = glob($location.'*',GLOB_ONLYDIR);
@@ -73,7 +69,7 @@
 				echo '<li><a class="dropdown_trigger';
 				// open group if it is this year's
 				if (basename($group_folder) == date('Y')) {echo ' active';}
-				echo '"><span class="trigger_pointer_arrow"></span>'.ucwords(strtolower(basename($group_folder))).'</a>
+				echo '"><span class="trigger_pointer_arrow"></span>'.strtolower(basename($group_folder)).'</a>
 				<ul class="sub_links" style="display:';
 				if (basename($group_folder) == date('Y')) {echo 'block';}
 				else {echo 'none';}
@@ -86,7 +82,7 @@
 				
 				// display files
 				foreach ($file_list as $file) {
-					missionary_prayer_letters($file,$missionary_name_key);
+					missionary_prayer_letters($file,$wwntbm_missionary_key);
 				}
 				echo '</ul><!-- .sub_links -->
 				</li>'."\n";
