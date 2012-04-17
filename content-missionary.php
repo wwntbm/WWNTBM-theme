@@ -48,18 +48,18 @@
 		
 		<?php
 		// get missionary unique key
-		$wwntbm_missionary_key = get_post_meta(get_the_ID(), 'Last Name', true);
+		$wwntbm_missionary_key = get_post_meta(get_the_ID(), 'Missionary Key', true);
 		$wwntbm_missionary_key = strtolower($wwntbm_missionary_key);
 				
 		// get list of prayer letters
-		$location = 'wp-content/uploads/Prayer-letters/'.$wwntbm_missionary_key.'/';
+		if ($wwntbm_missionary_key != NULL) {$location = 'wp-content/uploads/prayer-letters/'.$wwntbm_missionary_key.'/';}
 		
 		// get and sort folders
 		$folder_list = glob($location.'*',GLOB_ONLYDIR);
 		natcasesort($folder_list);
 		$folder_list = array_reverse($folder_list);
 		
-		if ($folder_list != NULL) {
+		if (($folder_list != NULL) AND ($wwntbm_missionary_key != NULL)) {
 			echo '<div class="prayer_letters">
 			<h2>Prayer Letters:</h2>
 			<ul class="dropdown">';

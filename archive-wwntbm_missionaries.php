@@ -17,7 +17,7 @@ get_header(); ?>
 				</header><!-- .entry-header -->
 					<div class="entry-content">
 					<?php
-					$missionaries_query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Last Name','posts_per_page' => -1, 'order' => 'ASC' ) );
+					$missionaries_query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Missionary Key','posts_per_page' => -1, 'order' => 'ASC' ) );
 
 					while ( $missionaries_query->have_posts() ) : $missionaries_query->the_post();
 
