@@ -16,6 +16,13 @@ get_header(); ?>
 					<h1 class="entry-title">Missionaries</h1>
 				</header><!-- .entry-header -->
 					<div class="entry-content">
+					
+					<?php
+					$missionary_post_count = wp_count_posts('wwntbm_missionaries');
+					?>
+					
+					<p>We have <?php echo $missionary_post_count->publish; ?> missionaries serving the Lord around the world. These are the faces of the people who make up the World Wide New Testament Baptist Missions family. Please click on their picture to learn more about them and their ministries.</p>
+					
 					<?php
 					$missionaries_query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Missionary Key','posts_per_page' => -1, 'order' => 'ASC' ) );
 

@@ -15,13 +15,20 @@ get_header(); ?>
 				<header class="entry-header">
 					<h1 class="entry-title">Countries</h1>
 				</header><!-- .entry-header -->
-					<div class="entry-content">
-					<ul class="dropdown">
-					<?php
-					
+
+				<?php
 					// get unique countries
 					$fields = $wpdb->get_col($wpdb->prepare("SELECT DISTINCT meta_value FROM $wpdb->postmeta WHERE meta_key = 'Field' ORDER BY meta_value ASC", $metakey) );
 					
+					$country_count = (count($fields));
+				?>
+				
+				<p>Our missionaries serve in over <?php echo $country_count; ?> countries across the globe. These are where the World Wide New Testament Baptist Missions family serves. Choose a country to learn more about the servants in that location.</p>
+				
+					<div class="entry-content">
+					<ul class="dropdown">
+
+					<?php
 					foreach ($fields as $field) {
 						// get missionaries by field
 						$query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Field', 'meta_value' => $field, 'order' => 'ASC' ) );
