@@ -36,12 +36,20 @@ get_header(); ?>
 						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>'.$field.'</a>
 						<ul class="sub_links" style="display:none;">';
 						while ( $query->have_posts() ) : $query->the_post();
-		
+							
+							//   get field region
+							$this_post_ID = get_the_ID();
+							$field_region = get_post_meta($this_post_ID, 'Field Region', 'true');
+							
 							echo '<li><a href="';
 							the_permalink();
 							echo '">';
 							the_title();
-							echo '</a></li>';
+							echo '</a>';
+							
+							//   echo field region
+							if ($field_region != NULL) {echo '<span class="field-region"> &mdash; '.$field_region.'</span>';}
+							echo '</li>';
 		
 						endwhile; // end of the loop.
 						echo '</ul>

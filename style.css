@@ -1289,6 +1289,10 @@ dl.gallery-item {
 
 /* @end */
 
+.field-region {
+	color: #606060;
+}
+
 /* @group page-specific content */
 
 .post-12 h2,

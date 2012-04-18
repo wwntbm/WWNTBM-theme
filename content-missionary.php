@@ -29,7 +29,10 @@
 	<?php
 		// field
 		$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
-		if ($wwntbm_field != NULL) {echo '<h2 class="field-of-service">Field of Service: '.$wwntbm_field.'</h2>'."\n";}
+		$wwntbm_field_region = get_post_meta(get_the_ID(), 'Field Region', true);
+		if ($wwntbm_field != NULL) {echo '<h2 class="field-of-service">Field of Service: '.$wwntbm_field;
+		if ($wwntbm_field_region != NULL) {echo '<span class="field-region"> &mdash; '.$wwntbm_field_region.'</span>';}
+		echo '</h2>'."\n";}
 		
 		// ministry type
 		$wwntbm_ministry_type = get_post_meta(get_the_ID(), 'Ministry Type', true);
