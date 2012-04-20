@@ -1,6 +1,59 @@
 RewriteRule ^login/?$ http://new.wwntbm.com/wp-login.php [NC,L]
 RedirectMatch 301 \@admin http://new.wwntbm.com/wp-admin
 
+# BEGIN old site redirects
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ http://new.wwntbm.com/ [L,NC,R]
+
+RewriteRule ^aboutus\.php$ http://new.wwntbm.com/learn/about-wwntbm/ [L,NC,R]
+RewriteRule ^execboard\.php$ http://new.wwntbm.com/learn/our-executive-board/ [L,NC,R]
+RewriteRule ^staff\.php$ http://new.wwntbm.com/learn/our-staff/ [L,NC,R]
+RewriteRule ^history\.php$ http://new.wwntbm.com/learn/our-history/ [L,NC,R]
+RewriteRule ^bylaws\.php$ http://new.wwntbm.com/learn/our-by-laws/ [L,NC,R]
+RewriteRule ^doctrinal\.php$ http://new.wwntbm.com/learn/our-doctrinal-statement/ [L,NC,R]
+RewriteRule ^harvestbrochure\.php$ http://new.wwntbm.com/learn/about-wwntbm/ [L,NC,R]
+RewriteRule ^location\.php$ http://new.wwntbm.com/connect/contact-wwntbm/ [L,NC,R]
+
+RewriteRule ^missionaries\.php$ http://new.wwntbm.com/connect/missionaries/ [L,NC,R]
+RewriteRule ^country\.php$ http://new.wwntbm.com/connect/countries/ [L,NC,R]
+RewriteRule ^ministry\.php$ http://new.wwntbm.com/??? [L,NC,R]
+
+RewriteRule ^gettinginvolved\.php$ http://new.wwntbm.com/involve/ [L,NC,R]
+RewriteRule ^donations\.php$ http://new.wwntbm.com/involve/donations/ [L,NC,R]
+RewriteRule ^touchtheworld\.php$ http://new.wwntbm.com/involve/touch-the-world/ [L,NC,R]
+RewriteRule ^whatcanido\.php$ http://new.wwntbm.com/involve/ [L,NC,R]
+RewriteRule ^willyougo\.php$ http://new.wwntbm.com/involve/will-you-go/ [L,NC,R]
+RewriteRule ^applying\.php$ http://new.wwntbm.com/involve/apply-to-wwntbm/ [L,NC,R]
+RewriteRule ^USmissionfields\.php$ http://new.wwntbm.com/involve/us-mission-fields/ [L,NC,R]
+RewriteRule ^webmissiontrip\.php$ http://new.wwntbm.com/connect/countries/ [L,NC,R]
+
+RewriteRule ^resources\.php$ http://new.wwntbm.com/learn/resources/ [L,NC,R]
+RewriteRule ^goodnews\.php$ http://new.wwntbm.com/learn/good-news/ [L,NC,R]
+RewriteRule ^brochures\.php$ http://new.wwntbm.com/learn/resources/ [L,NC,R]
+RewriteRule ^missionsarticles\.php$ http://new.wwntbm.com/learn/resources/#missions-articles [L,NC,R]
+RewriteRule ^faithpromise\.php$ http://new.wwntbm.com/learn/resources/#faith-promise [L,NC,R]
+RewriteRule ^helpfulwebsites\.php$ http://new.wwntbm.com/learn/resources/#helpful-websites [L,NC,R]
+RewriteRule ^cs.php$ http://new.wwntbm.com/connect/missionary-resources/candidate-school/ [L,NC,R]
+RewriteRule ^ffw.php$ http://new.wwntbm.com/connect/missionary-resources/family-fellowship-week/ [L,NC,R]
+RewriteRule ^albums\.php$ http://new.wwntbm.com/learn/multimedia/ [L,NC,R]
+RewriteRule ^multimedia\.php$ http://new.wwntbm.com/learn/multimedia/ [L,NC,R]
+RewriteRule ^intromovie\.php$ http://new.wwntbm.com/learn/multimedia/ [L,NC,R]
+
+RewriteRule ^specialprojects\.php$ http://new.wwntbm.com/connect/missionary-updates/ [L,NC,R]
+
+RewriteRule ^sitemap\.php$ http://new.wwntbm.com/sitemap/ [L,NC,R]
+
+RewriteRule ^contactus\.php$ http://new.wwntbm.com/connect/contact-wwntbm/ [L,NC,R]
+
+RewriteRule ^login\.php$ http://new.wwntbm.com/login/ [L,NC,R]
+RewriteRule ^loginresources/$ http://new.wwntbm.com/connect/missionary-resources/ [L,NC,R]
+RewriteRule ^loginwebsite/$ http://new.wwntbm.com/login/ [L,NC,R]
+</ifModule>
+# END old site redirects
+
+
 # BEGIN W3TC Browser Cache
 <IfModule mod_deflate.c>
     <IfModule mod_setenvif.c>
