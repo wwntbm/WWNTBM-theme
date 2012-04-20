@@ -5,7 +5,6 @@ RedirectMatch 301 \@admin http://new.wwntbm.com/wp-admin
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-RewriteRule ^index\.php$ http://new.wwntbm.com/ [L,NC,R]
 
 RewriteRule ^aboutus\.php$ http://new.wwntbm.com/learn/about-wwntbm/ [L,NC,R]
 RewriteRule ^execboard\.php$ http://new.wwntbm.com/learn/our-executive-board/ [L,NC,R]
@@ -17,6 +16,198 @@ RewriteRule ^harvestbrochure\.php$ http://new.wwntbm.com/learn/about-wwntbm/ [L,
 RewriteRule ^location\.php$ http://new.wwntbm.com/connect/contact-wwntbm/ [L,NC,R]
 
 RewriteRule ^missionaries\.php$ http://new.wwntbm.com/connect/missionaries/ [L,NC,R]
+
+RewriteCond %{QUERY_STRING} ^fullname=Bonikowsky_Al$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/al-and-helga-bonikowsky/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Bell_Russell$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/russell-and-mamie-bell/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Bergman_Roger$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/roger-and-mary-bergman/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Bauserman_Ernest$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ernest-and-darlene-bauserman/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Atkins_Renee$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/renee-atkins/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Arthurs_David$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/david-and-ruth-ann-arthurs/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Ashbury_Bill$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/bill-and-melody-ashbury/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Walker_Ronald$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ronald-and-rebecca-walker/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Alford_Danny$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/danny-and-gail-alford/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Johnston_Norman$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/norman-and-joy-johnston/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Bonikowsky_Andy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/andy-and-mimi-bonikowsky/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Burrow_Carol$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/carol-burrow/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Cannon_Joe$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/joe-and-carolyn-cannon/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Carlson_Melissa$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/melissa-and-null-carlson/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Cline_Stanley$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/stanley-and-marvine-cline/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=DaCosta_Allinson$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/allinson-and-floretta-dacosta/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Daub_Theodore$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/theodore-and-marjorie-daub/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Dickens_Joel$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/joel-and-cynthia-dickens/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Eliam_Clayton$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/clayton-and-linda-eliam/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Bourdess_Leslie$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/leslie-and-amy-bourdess/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Preston_David$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/david-and-mildred-preston/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Feghaly_Edgar$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/edgar-and-rosann-feghaly/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Franks_Eric$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/eric-and-molly-franks/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Futrell_Arnold$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/arnold-and-shirley-futrell/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Gali_Mike$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/mike-and-kristen-gali/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Gbendah_Guanue$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/guanue-and-bendu-gbendah/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Gilliam_Kelly$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/kelly-and-becca-gilliam/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Grenade_Guy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/guy-and-marilyn-grenade/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Haddad_Ghassan$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ghassan-and-ghada-haddad/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Heath_Dalton$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/dalton-and-norma-heath/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Howell_Lewis$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/lewis-and-kim-howell/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Hunt_Jack$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jack-and-jonnie-hunt/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Hurst_Elwood$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/elwood-and-doris-hurst/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Joel_William$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/william-and-lihner-joel/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Jordan_Randall$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/randall-and-linda-jordan/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Keiser_Roy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/roy-and-lou-ann-keiser/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Kendrick_Lisa$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/lisa-kendrick/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Kersey_Ruby$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ruby-and-null-kersey/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Klaus_Keith$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/keith-and-julia-klaus/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Knickerbocker_Peter$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/peter-and-isabelle-knickerbocker/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Kumar_Ramesh$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ramesh-and-christina-kumar/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Mathena_Robert$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/robert-and-pat-mathena/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Newton_Francis$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/francis-and-leena-newton/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Smith_Mike$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/mike-and-sue-smith/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Mercer_Allen$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/allen-and-marion-mercer/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Messer_Andy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/andy-and-becky-messer/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Milgrim_George$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/george-and-patricia-milgrim/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Mitchell_Robert$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/robert-and-kathy-mitchell/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Hendricks_Adrian$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/adrian-and-emma-hendricks/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Marshall_Sarah$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/sarah-marshall/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Mosher_Gerald$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/gerald-and-laura-mosher/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=OMalley_John$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/john-and-kim-omalley/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Padock_Sonny$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/sonny-and-lihna-padock/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Parvis_James$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/james-and-jennifer-parvis/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Peeler_Jack$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jack-and-melinda-peeler/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Racke_David$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/david-and-heidi-racke/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Ramirez_Elsa$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/elsa-ramirez/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=RobertGarikimukkula_Joseph$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/joseph-robert-garikimukkula/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Rovirosa_Ignacio$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ignacio-and-sherry-rovirosa/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Sanchez_Alejandro$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/alejandro-and-josefina-sanchez/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Town_Josh$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/josh-and-joanna-town/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Shaw_Jerry$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jerry-jr-and-itzen-shaw/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Shaw_Jerrel$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jerrel-k-sr-and-delia-shaw/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Schrock_Omar$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/omar-and-tracy-schrock/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=VeraCruz_Ricardo$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ricardo-and-antelise-vera-cruz/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Watson_Jimmy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jimmy-and-sharon-watson/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Childers_Rebekah$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/rebekah-childers/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Welles_Isamo$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/isamo-and-esther-welles/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Whetstone_Danny$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/danny-and-darleen-whetstone/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Whitmore_Bob$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/bob-and-polly-whitmore/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Wyrick_Ernest$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/ernest-and-nancy-wyrick/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Boylston_John$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/john-and-christa-boylston/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Zimmer_Georg$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/georg-and-opal-zimmer/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Zimmer_Mark$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/mark-and-diane-zimmer/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Zimmer_Paul$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/paul-and-sherry-zimmer/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Price_David$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/david-and-melissa-price/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Fetter_Daniel$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/daniel-and-megan-fetter/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Lockhart_Jeremy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jeremy-and-esther-lockhart/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Quinlan_Sean$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/sean-and-tammy-quinlan/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Shirk_Jason$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jason-and-katy-shirk/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Mathena_Carrie$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/carrie-mathena/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=David_Charles$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/charles-and-abigail-david/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Grove_Michael$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/michael-and-nancy-grove/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Bibey_Richard$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/richard-and-andrea-bibey/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Riffel_Michael$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/michael-and-april-riffel/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Osborn_Rick$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/rick-and-brenda-osborn/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Smith_Paul$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/paul-and-sara-smith/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Blumer_Kris$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/kris-and-rose-marie-blumer/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=OBrien_Sarah$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/sarah-obrien/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Principe_Daniel$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/daniel-and-cherish-principe/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Daniel_Fred\+III$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/fred-iii-and-brittany-daniel/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Fittro_Daniel$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/daniel-and-lydia-frittro/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Eiben_Gabriel$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/gabriel-and-susan-eiben/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Kenney_Jeremy$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jeremy-and-tanya-kenney/ [R,L]
+RewriteCond %{QUERY_STRING} ^fullname=Brown_Matthew$
+RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/matthew-and-brittany-brown/ [R,L]
+
 RewriteRule ^country\.php$ http://new.wwntbm.com/connect/countries/ [L,NC,R]
 RewriteRule ^ministry\.php$ http://new.wwntbm.com/??? [L,NC,R]
 
