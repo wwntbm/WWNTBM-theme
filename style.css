@@ -1445,8 +1445,10 @@ img[class*="align"],
 img[class*="wp-image-"],
 #content .gallery .gallery-icon img {
 /* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
-#	border: 1px solid #ddd;
-#	padding: 6px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	-moz-box-shadow: 0 2px 8px rgba(0,0,0,0.23);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
 }
 
 .wp-caption img {
