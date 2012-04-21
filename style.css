@@ -989,6 +989,14 @@ a.telephone-link:hover {
 	color: #0c8ecf;
 }
 
+.page-item-1043:after {
+	content: "\00a0\bb";
+	position: absolute;
+	top: 2px;
+	right: 10px;
+	color: #909090;
+}
+
 /* @end */
 
 /* @group content */
