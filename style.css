@@ -988,7 +988,8 @@ a.telephone-link:hover {
 	color: #0c8ecf;
 }
 
-.page-item-1043:after {
+.page-item-1043:after,
+.page-item-82:after {
 	content: "\00a0\bb";
 	position: absolute;
 	top: 2px;
