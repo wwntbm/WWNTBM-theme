@@ -1050,6 +1050,9 @@ a.telephone-link:hover {
 .entry-title,
 .entry-header .entry-meta {
 	padding-right: 76px;
+}
+
+.entry-title {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
@@ -1103,7 +1106,7 @@ a.telephone-link:hover {
 .comment-content h1,
 .comment-content h2 {
 	font-weight: 600;
-	margin: 0 0 .8125em;
+	margin: 1.625em 0 .8125em;
 	text-transform: uppercase;
 }
 
