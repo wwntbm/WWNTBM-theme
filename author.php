@@ -26,6 +26,13 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'twentyeleven' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+					<?php
+					// get info for missionary post
+					$author_query = new WP_Query( array( 'post_type' => 'wwntbm_missionaries', 'meta_key' => 'Username', 'meta_value' => get_the_author_meta('user_login') ) );
+					if ($author_query->found_posts >= 1) {
+					?>
+					<p>These are all the posts written by <?php the_author(); ?>. Find out more about <a href="<?php echo home_url('/connect/missionaries/'); echo $author_query->posts[0]->post_name; ?>"><?php the_author_meta('first_name'); ?> here</a>. </p>
+					<?php } ?>
 				</header>
 
 				<?php
