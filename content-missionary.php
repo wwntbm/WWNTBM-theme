@@ -50,6 +50,33 @@
 		<?php the_content(); ?>
 		
 		<?php
+		// Updates by this missionary
+		$wwntbm_missionary_username = get_post_meta($post->ID, 'Username', true);
+		// The Query
+		$the_query = new WP_Query( 'author_name='.$wwntbm_missionary_username.'&post_type=wwntbm_updates' );
+		
+		if ($the_query->found_posts >= 1) {
+			echo '<h2>Updates:</h2>
+			<ul class="updates">';
+			// The Loop
+			while ( $the_query->have_posts() ) : $the_query->the_post();
+				echo '<li class="recent-update">
+				<h3>';
+				the_title();
+				echo '</h3>';
+				the_date('', '<span class="post-date">', '</span>');
+				the_content();
+				echo '</li><!-- .recent-update -->';
+			endwhile;
+			
+			// Reset Post Data
+			wp_reset_postdata();
+			echo '</ul><!-- .updates -->';
+		}
+		?>
+		
+		<?php
+		// prayer letters
 		// get missionary unique key
 		$wwntbm_missionary_key = get_post_meta(get_the_ID(), 'Missionary Key', true);
 		$wwntbm_missionary_key = strtolower($wwntbm_missionary_key);
@@ -96,31 +123,6 @@
 		}
 		?>
 		
-		<?php
-		// Updates by this missionary
-		$wwntbm_missionary_username = get_post_meta($post->ID, 'Username', true);
-		// The Query
-		$the_query = new WP_Query( 'author_name='.$wwntbm_missionary_username.'&post_type=wwntbm_updates' );
-		
-		if ($the_query->found_posts >= 1) {
-			echo '<h2>Updates:</h2>
-			<ul class="updates">';
-			// The Loop
-			while ( $the_query->have_posts() ) : $the_query->the_post();
-				echo '<li class="recent-update">
-				<h3>';
-				the_title();
-				echo '</h3>';
-				the_date('', '<span class="post-date">', '</span>');
-				the_content();
-				echo '</li><!-- .recent-update -->';
-			endwhile;
-			
-			// Reset Post Data
-			wp_reset_postdata();
-			echo '</ul><!-- .updates -->';
-		}
-		?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
