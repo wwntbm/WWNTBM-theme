@@ -9,7 +9,6 @@
  * @since Twenty Eleven 1.0
  */
 ?>
-
 	</div><!-- #main -->
 
 	<footer id="colophon" class="rounded-bottom" role="contentinfo">

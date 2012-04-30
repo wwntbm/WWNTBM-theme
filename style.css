@@ -473,6 +473,10 @@ body, input, textarea {
 	overflow: hidden;
 }
 
+.smaller {
+	font-size: smaller;
+}
+
 .rounded {
 	border-radius: 5px;
 }
