@@ -55,7 +55,7 @@
 		// The Query
 		$the_query = new WP_Query( 'author_name='.$wwntbm_missionary_username.'&post_type=wwntbm_updates' );
 		
-		if ($the_query->found_posts >= 1) {
+		if (($the_query->found_posts >= 1) AND ($wwntbm_missionary_username != NULL)) {
 			echo '<h2>Updates:</h2>
 			<ul class="updates">';
 			// The Loop
