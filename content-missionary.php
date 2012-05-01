@@ -96,6 +96,10 @@
 
 			// process folders
 			foreach ($folder_list as $group_folder) {
+				// skip hidden folders
+				if (strpos(basename($group_folder),'site') !== false) {continue;}
+				elseif (strpos(basename($group_folder),'post') !== false) {continue;}
+				
 				echo '<li><a class="dropdown_trigger';
 				// open group if it is this year's
 				if (basename($group_folder) == date('Y')) {echo ' active';}
