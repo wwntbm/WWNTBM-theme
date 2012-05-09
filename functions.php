@@ -126,6 +126,7 @@ function create_post_type() {
 	$office_staff_role->add_cap( 'read_missionary_updates' );
 	$office_staff_role->add_cap( 'publish_missionary_updates' );
 	$office_staff_role->add_cap( 'delete_missionary_update' );
+	$office_staff_role->add_cap( 'read_private_pages' );
 // end Add office staff custom role
 
 
@@ -151,6 +152,7 @@ function create_post_type() {
 	$missionary_role->add_cap( 'edit_missionary_update' );
 	$missionary_role->add_cap( 'edit_missionary_updates' );
 	$missionary_role->add_cap( 'publish_missionary_updates' );
+	$missionary_role->add_cap( 'read_private_pages' );
 // end Add missionaries custom role
 
 
