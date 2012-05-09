@@ -127,6 +127,7 @@ function create_post_type() {
 	$office_staff_role->add_cap( 'publish_missionary_updates' );
 	$office_staff_role->add_cap( 'delete_missionary_update' );
 	$office_staff_role->add_cap( 'read_private_pages' );
+	$office_staff_role->add_cap( 'manage_options' );
 // end Add office staff custom role
 
 
@@ -208,11 +209,26 @@ function my_child_theme_setup() {
 }
 // end add sidebar to all pages
 
+// hide widgets
+function remove_dashboard_widgets() {
+	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboardb_xavisys', 'dashboard', 'normal' );
+	remove_meta_box( 'w3tc_latest', 'dashboard', 'normal' );
+	remove_meta_box( 'w3tc_pagespeed', 'dashboard', 'normal' );
+	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+	remove_meta_box( 'dashboard_secondary', 'dashboard', 'side' );
+} 
+//
 
 // add actions
 add_action( 'init', 'create_post_type' );
 add_action( 'admin_head', 'wwntbm_custom_post_icons' );
 add_action( 'widgets_init', 'WWNTBM_widgets_init' );
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
+
+if (!current_user_can('manage_options')) {
+	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+}
 
 ?>
