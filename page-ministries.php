@@ -18,9 +18,8 @@ get_header(); ?>
 
 				<?php
 					// get unique ministries
-					$ministries = $wpdb->get_col($wpdb->prepare("SELECT DISTINCT meta_value FROM $wpdb->postmeta WHERE meta_key = 'Ministry Type' ORDER BY meta_value ASC", $metakey) );
-					
-					$ministry_count = (count($ministries));
+					$ministries_list = get_terms( 'wwntbm_ministries' );
+					$ministry_count = (count($ministries_list));
 				?>
 				
 				<p>Our missionaries serve in over <?php echo $ministry_count; ?> types of ministries.</p>
@@ -29,14 +28,27 @@ get_header(); ?>
 					<ul class="dropdown">
 
 					<?php
-					foreach ($ministries as $ministry) {
-						// get missionaries by field
-						$query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Ministry Type', 'meta_value' => $ministry, 'order' => 'ASC' ) );
-						
-						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>'.$ministry.'</a>
+					foreach ($ministries_list as $ministry) {
+						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>'.$ministry->name.'</a> ('.$ministry->count.')
 						<ul class="sub_links" style="display:none;">';
-						while ( $query->have_posts() ) : $query->the_post();
-							
+						// get all missionaries for this ministry type
+						$ministry_missionaries_query = new WP_Query( array(
+							'post_type' => 'wwntbm_missionaries',
+							'wwntbm_ministries' => $ministry->slug,
+							'posts_per_page' => -1,
+							'meta_key' => 'Missionary Key',
+							'meta_query' => array(
+								array(
+						         	'key' => 'Missionary Key',
+									'type' => 'CHAR',
+								),
+							),
+							'orderby' => 'meta_value',
+							'order' => 'ASC'
+							) );
+						
+						while ( $ministry_missionaries_query->have_posts() ) : $ministry_missionaries_query->the_post(); // begin The Loop
+						
 							//   get field
 							$this_post_ID = get_the_ID();
 							$field = get_post_meta($this_post_ID, 'Field', 'true');
@@ -55,11 +67,12 @@ get_header(); ?>
 								echo '</span>';
 							}
 							echo '</li>';
-		
-						endwhile; // end of the loop.
-						echo '</ul>
-						</li>';
-					} // end of foreach
+							
+						endwhile; // end The Loop
+
+						echo '</ul><!-- .sublinks -->
+					</li>';
+					}
 					?>
 					</ul><!-- .dropdown -->
 					</div><!-- .entry-content -->

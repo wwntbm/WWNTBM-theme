@@ -35,8 +35,7 @@
 		echo '</h2>'."\n";}
 		
 		// ministry type
-		$wwntbm_ministry_type = get_post_meta(get_the_ID(), 'Ministry Type', true);
-		if ($wwntbm_ministry_type != NULL) {echo '<h2 class="ministry-type">Ministry Type: '.$wwntbm_ministry_type.'</h2>'."\n";}
+		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type: ', ', ', '</h2>' );
 		
 		// status
 		$wwntbm_status = get_post_meta(get_the_ID(), 'Status', true);

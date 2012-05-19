@@ -52,7 +52,8 @@ function create_post_type() {
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'connect/missionary-updates', 'with_front' => 'false' ),
-			'capability_type' => 'missionary_update'
+			'capability_type' => 'missionary_update',
+			'taxonomies' => array('wwntbm_ministries')
 		)
 	);
 	// end Add missionary updates custom post type
@@ -77,6 +78,24 @@ function create_post_type() {
 		</style>
 	<?php }
 // end Add custom post types
+
+
+// Add custom taxonomy for ministries
+function ministries_init() {
+	// create a new taxonomy
+	register_taxonomy(
+		'wwntbm_ministries',
+		'wwntbm_missionaries',
+		array(
+			'label' => 'Ministry Type',
+			'hierarchical' => false,
+			'sort' => true,
+			'rewrite' => array( 'slug' => 'ministry' ),
+			'show_tag_cloud' => false
+		)
+	);
+}
+// end Add custom taxonomy for ministries
 
 
 // Add custom post capabilities
@@ -223,6 +242,7 @@ function remove_dashboard_widgets() {
 
 // add actions
 add_action( 'init', 'create_post_type' );
+add_action( 'init', 'ministries_init' );
 add_action( 'admin_head', 'wwntbm_custom_post_icons' );
 add_action( 'widgets_init', 'WWNTBM_widgets_init' );
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
