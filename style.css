@@ -1,5 +1,6 @@
 /* @override 
-	http://new.wwntbm.com/wp-content/themes/WWNTBM/style.css */
+	http://new.wwntbm.com/wp-content/themes/WWNTBM/style.css
+	http://wwntbm.com/wp-content/themes/WWNTBM/style.css */
 
 
 
@@ -1266,6 +1267,16 @@ dl.gallery-item {
 	background-image: url(images/home-buttons/how-to-contact.jpg);
 }
 
+.home-button#news,
+.home-button#news span {
+	background-image: url(images/home-buttons/news-and-views.jpg);
+}
+
+.home-button#updates,
+.home-button#updates span {
+	background-image: url(images/home-buttons/missionary-updates.jpg);
+}
+
 /* @end */
 
 /* @group missionary list page */
@@ -1353,6 +1364,7 @@ dl.gallery-item {
 /* Images */
 
 .entry-content img,
+.tax-wwntbm_ministries img,
 .comment-content img,
 .widget img {
 	max-width: 97.5%;

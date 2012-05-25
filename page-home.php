@@ -36,6 +36,14 @@ get_header(); ?>
 					<h2><span class="hide">How to Contact Us</span></h2>
 				</a>
 
+				<a class="home-button rounded shadowed" id="news" href="<?php bloginfo('url'); ?>/connect/news-and-views/" title="News and Views">
+					<h2><span class="hide">News and Views</span></h2>
+				</a>
+
+				<a class="home-button rounded shadowed" id="updates" href="<?php bloginfo('url'); ?>/connect/missionary-updates/" title="Missionary Updates">
+					<h2><span class="hide">Missionary Updates</span></h2>
+				</a>
+
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
 
 			</div><!-- #content -->
