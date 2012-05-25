@@ -1,11 +1,13 @@
-RewriteRule ^login/?$ http://new.wwntbm.com/wp-login.php [NC,L]
-RedirectMatch 301 \@admin http://new.wwntbm.com/wp-admin
+SetEnv PHPRC /home/wwtoma8/public_html/php.ini
+
+RewriteRule ^login/?$ http://wwntbm.com/wp-login.php [NC,L]
+RedirectMatch 301 \@admin http://wwntbm.com/wp-admin
 
 # BEGIN old site redirects
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-
+	
 RewriteRule ^aboutus\.php$ http://new.wwntbm.com/learn/about-wwntbm/ [L,NC,R]
 RewriteRule ^execboard\.php$ http://new.wwntbm.com/learn/our-executive-board/ [L,NC,R]
 RewriteRule ^staff\.php$ http://new.wwntbm.com/learn/our-staff/ [L,NC,R]
