@@ -24,7 +24,7 @@ get_header(); ?>
 					<p>We have <?php echo $missionary_post_count->publish; ?> missionaries serving the Lord around the world, as well as some who cannot be listed on our website for security reasons. These are the faces of the people who make up the World Wide New Testament Baptist Missions family. Please click on their picture to learn more about them and their ministries.</p>
 					
 					<?php
-					$missionaries_query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Missionary Key','posts_per_page' => -1, 'order' => 'ASC' ) );
+					$missionaries_query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Missionary Key', 'order' => 'ASC', 'posts_per_page' => -1 ) );
 
 					while ( $missionaries_query->have_posts() ) : $missionaries_query->the_post();
 
