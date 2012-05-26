@@ -1045,8 +1045,6 @@ a.telephone-link:hover {
 
 .blog .sticky .entry-header .entry-meta {
 	clip: rect(1px 1px 1px 1px);
-
-
 /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -1060,9 +1058,6 @@ a.telephone-link:hover {
 .entry-title {
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
-}
-
-.entry-title {
 	clear: both;
 	color: #424242;
 	font-size: 26px;
@@ -1083,6 +1078,11 @@ a.telephone-link:hover {
 .entry-title a:focus,
 .entry-title a:active {
 	color: #1982d1;
+}
+
+.type-wwntbm_updates .entry-title {
+	border-top: none;
+	border-bottom: none;
 }
 
 .entry-meta {
