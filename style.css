@@ -895,10 +895,6 @@ a.telephone-link:hover {
 	text-transform: uppercase;
 	border-radius: 5px;
 	padding: 0 1.1em;
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
 }
 
 #access li.page_item a {
@@ -921,10 +917,6 @@ a.telephone-link:hover {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
 	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.23);
 	-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.23);
 	box-shadow: 0 1px 5px rgba(0,0,0,0.23);
@@ -961,10 +953,6 @@ a.telephone-link:hover {
 #access ul ul :hover > a,
 #access a:focus {
 	background: #efefef;
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
 }
 
 #access li:hover > a,
