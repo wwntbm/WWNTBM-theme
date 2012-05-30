@@ -107,7 +107,8 @@ body {
 }
 
 #access div {
-	margin: 0 7.6%;
+#	margin: 0 0 0 7.6%;
+	box-sizing: border-box;
 }
 
 #primary {
@@ -746,10 +747,11 @@ a.telephone-link:hover {
 }
 
 #site-title {
-	margin-right: 270px;
-	width: 259px;
-	height: 135px;
+	width: 100%;
+	max-width: 350px;
+	height: 182px;
 	padding: 25px 0;
+	float: left;
 }
 
 #site-title span,
@@ -796,7 +798,7 @@ a.telephone-link:hover {
 
 #branding #searchform {
 	position: absolute;
-	top: 3.8em;
+	top: 2em;
 	right: 7.6%;
 	text-align: right;
 }
@@ -870,8 +872,8 @@ a.telephone-link:hover {
 #access {
 	display: block;
 	float: right;
-	margin: 0 auto 6px;
-	width: 600px;
+	margin: 6.5em auto 6px;
+	width: auto;
 }
 
 #access ul {
@@ -886,6 +888,10 @@ a.telephone-link:hover {
 	position: relative;
 }
 
+#access .menu > ul > li:last-child > a {
+	padding-right: 0;
+}
+
 #access a {
 	color: #595959;
 	display: block;
@@ -894,7 +900,7 @@ a.telephone-link:hover {
 	text-decoration: none;
 	text-transform: uppercase;
 	border-radius: 5px;
-	padding: 0 1.1em;
+	padding: 0 15%;
 }
 
 #access li.page_item a {
@@ -3190,6 +3196,19 @@ a value of "15px" which adds redundant whitespace to the top of the article */
 /* =Responsive Structure
 ----------------------------------------------- */
 
+@media (max-width: 960px) {
+	#access {
+		display: block;
+		margin: 2em auto 0;
+		float: right;
+		clear: both;
+	}
+	
+	#access .menu {
+		width: auto;
+	}
+}
+
 @media (max-width: 800px) {
 /* @media max-width: 800px */
 
@@ -3211,6 +3230,10 @@ a value of "15px" which adds redundant whitespace to the top of the article */
 		float: none;
 		margin: 0 7.6%;
 		width: auto;
+	}
+	
+	#access {
+		margin-top: 2em;
 	}
 	
 	/* @end */
@@ -3396,10 +3419,11 @@ body, input, textarea {
 
 #access {
 	width: 100%;
+	margin-top: 1em;
 }
 
 #access ul {
-	font-size: 12px;
+	font-size: 14px;
 }
 
 article.intro .entry-content {
