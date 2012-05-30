@@ -24,7 +24,7 @@ get_header(); ?>
 					<h2><span class="hide">Who We Are</span></h2>
 				</a>
 				
-				<a class="home-button rounded shadowed" id="where" href="<?php bloginfo('url'); ?>/connect/countries/" title="Where We Serve">
+				<a class="home-button rounded shadowed" id="where" href="<?php bloginfo('url'); ?>/connect/fields-of-service/" title="Where We Serve">
 					<h2><span class="hide">Where We Serve</span></h2>
 				</a>
 				

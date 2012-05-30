@@ -210,7 +210,7 @@ RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/jeremy-and-ta
 RewriteCond %{QUERY_STRING} ^fullname=Brown_Matthew$
 RewriteRule ^info\.php$ http://new.wwntbm.com/connect/missionaries/matthew-and-brittany-brown/ [R,L]
 
-RewriteRule ^country\.php$ http://new.wwntbm.com/connect/countries/ [L,NC,R]
+RewriteRule ^country\.php$ http://new.wwntbm.com/connect/fields-of-service/ [L,NC,R]
 RewriteRule ^ministry\.php$ http://new.wwntbm.com/??? [L,NC,R]
 
 RewriteRule ^gettinginvolved\.php$ http://new.wwntbm.com/involve/ [L,NC,R]
@@ -220,7 +220,7 @@ RewriteRule ^whatcanido\.php$ http://new.wwntbm.com/involve/ [L,NC,R]
 RewriteRule ^willyougo\.php$ http://new.wwntbm.com/involve/will-you-go/ [L,NC,R]
 RewriteRule ^applying\.php$ http://new.wwntbm.com/involve/apply-to-wwntbm/ [L,NC,R]
 RewriteRule ^USmissionfields\.php$ http://new.wwntbm.com/involve/us-mission-fields/ [L,NC,R]
-RewriteRule ^webmissiontrip\.php$ http://new.wwntbm.com/connect/countries/ [L,NC,R]
+RewriteRule ^webmissiontrip\.php$ http://new.wwntbm.com/connect/fields-of-service/ [L,NC,R]
 
 RewriteRule ^resources\.php$ http://new.wwntbm.com/learn/resources/ [L,NC,R]
 RewriteRule ^goodnews\.php$ http://new.wwntbm.com/learn/good-news/ [L,NC,R]

@@ -13,7 +13,7 @@ get_header(); ?>
 			<div id="content" role="main">
 				<article id="post-<?php the_ID(); ?>" class="post-<?php the_ID(); ?> page type-page status-publish hentry">
 				<header class="entry-header">
-					<h1 class="entry-title">Countries</h1>
+					<h1 class="entry-title">Fields of Service</h1>
 				</header><!-- .entry-header -->
 
 				<?php
@@ -23,7 +23,7 @@ get_header(); ?>
 					$country_count = (count($fields));
 				?>
 				
-				<p>Our missionaries serve in over <?php echo $country_count; ?> countries across the globe. These are where the World Wide New Testament Baptist Missions family serves. Choose a country to learn more about the servants in that location.</p>
+				<p>Our missionaries serve in over <?php echo $country_count; ?> countries across the globe. These are where the World Wide New Testament Baptist Missions family serves. Choose a region to learn more about the servants in that location.</p>
 				
 					<div class="entry-content">
 					<ul class="dropdown">
