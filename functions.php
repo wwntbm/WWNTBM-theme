@@ -238,7 +238,41 @@ function remove_dashboard_widgets() {
 	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
 	remove_meta_box( 'dashboard_secondary', 'dashboard', 'side' );
 } 
-//
+// end hide widgets
+
+// AndrewRMinion branding
+	// change login page link
+	function wpc_url_login(){
+		return "http://wwntbm.com/"; // your URL here
+	}
+	add_filter('login_headerurl', 'wpc_url_login');
+	
+	// customize login page logo
+	function login_css() {
+		wp_enqueue_style( 'login_css', get_stylesheet_directory_uri() . '/login.css' );
+	}
+	add_action('login_head', 'login_css');
+	
+	// custom admin footer
+	function remove_footer_admin () {
+		echo '&copy; '.date('Y').' by <a href="http://andrewrminion.com/" target="_blank">AndrewRMinion Design</a>.';
+	}
+	add_filter('admin_footer_text', 'remove_footer_admin');
+	
+	// technical info widget
+	function armd_dashboard_widget_function() {
+		// Entering the text between the quotes
+		echo "<ul>
+		<li>Release Date: May 2012</li>
+		<li>Author: <a href=\"http://andrewrminion.com/\" target=\"_blank\">AndrewRMinion Design</a></li>
+		<li>Hosting provider: ANHosting (WWNTBM account)</li>
+		</ul>";
+	}
+	function armd_add_dashboard_widgets() {
+		wp_add_dashboard_widget('wp_dashboard_widget', 'Technical information', 'armd_dashboard_widget_function');
+	}
+	add_action('wp_dashboard_setup', 'armd_add_dashboard_widgets' );
+// end AndrewRMinion branding
 
 // add actions
 add_action( 'init', 'create_post_type' );
