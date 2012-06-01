@@ -23,7 +23,7 @@ get_header(); ?>
 					$country_count = (count($fields));
 				?>
 				
-				<p>Our missionaries serve in over <?php echo $country_count; ?> countries across the globe. These are where the World Wide New Testament Baptist Missions family serves. Choose a region to learn more about the servants in that location.</p>
+				<p>Our missionaries serve in over 40 countries across the globe. These are where the World Wide New Testament Baptist Missions family serves. Choose a region to learn more about the servants in that location.</p>
 				
 					<div class="entry-content">
 					<ul class="dropdown">
