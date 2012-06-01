@@ -1,5 +1,14 @@
 SetEnv PHPRC /home/wwtoma8/public_html/php.ini
 
+# Block the include-only files.
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+
 RewriteRule ^login/?$ http://wwntbm.com/wp-login.php [NC,L]
 RedirectMatch 301 \@admin http://wwntbm.com/wp-admin
 
