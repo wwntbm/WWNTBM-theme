@@ -2675,6 +2675,10 @@ section.ephemera .entry-title a span {
 	border-bottom: 1px solid #ccc;
 }
 
+.zilla-social {
+	float: right;
+}
+
 /* @end */
 
 /* @group twitter widget */
