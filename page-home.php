@@ -21,27 +21,27 @@ get_header(); ?>
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 				
 				<a class="home-button rounded shadowed" id="who" href="<?php bloginfo('url'); ?>/connect/missionaries/" title="Who We Are">
-					<h2><span class="hide">Who We Are</span></h2>
+					<h2><span class="hide rounded">Who We Are</span></h2>
 				</a>
 				
 				<a class="home-button rounded shadowed" id="where" href="<?php bloginfo('url'); ?>/connect/fields-of-service/" title="Where We Serve">
-					<h2><span class="hide">Where We Serve</span></h2>
+					<h2><span class="hide rounded">Where We Serve</span></h2>
 				</a>
 				
 				<a class="home-button rounded shadowed" id="beliefs" href="<?php bloginfo('url'); ?>/learn/our-doctrinal-statement/" title="What We Believe">
-					<h2><span class="hide">What We Believe</span></h2>
+					<h2><span class="hide rounded">What We Believe</span></h2>
 				</a>
 				
 				<a class="home-button rounded shadowed" id="contact" href="<?php bloginfo('url'); ?>/connect/contact-wwntbm/" title="Who We Are">
-					<h2><span class="hide">How to Contact Us</span></h2>
+					<h2><span class="hide rounded">How to Contact Us</span></h2>
 				</a>
 
 				<a class="home-button rounded shadowed" id="news" href="<?php bloginfo('url'); ?>/connect/news-and-views/" title="News and Views">
-					<h2><span class="hide">News and Views</span></h2>
+					<h2><span class="hide rounded">News and Views</span></h2>
 				</a>
 
 				<a class="home-button rounded shadowed" id="updates" href="<?php bloginfo('url'); ?>/connect/missionary-updates/" title="Missionary Updates">
-					<h2><span class="hide">Missionary Updates</span></h2>
+					<h2><span class="hide rounded">Missionary Updates</span></h2>
 				</a>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
