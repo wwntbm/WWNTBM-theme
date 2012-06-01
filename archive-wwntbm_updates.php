@@ -21,6 +21,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="entry-title">Recent Missionary Updates</h1>
+					<p>You can subscribe to missionary updates <a href="http://feeds.feedburner.com/WWNTBM-Updates">here</a>.</p>
 				</header>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
