@@ -36,7 +36,7 @@ get_header(); ?>
 						echo '<span class="missionary-name">';
 						the_title();
 						echo '</span></a>';
-						$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
+						$wwntbm_field = get_post_meta(get_the_ID(), 'Field Region', true);
 						if ($wwntbm_field != NULL) {echo '<span class="field-of-service">'.$wwntbm_field.'</span>';}
 						echo '</h2>';
 
