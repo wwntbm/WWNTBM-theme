@@ -20,6 +20,13 @@ get_header(); ?>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 				
+				<div id="motd_wrapper">
+					<?php echo do_shortcode('[potd display="thumbnail"]'); ?>
+					<?php echo do_shortcode('[potd display="home-button-link"]'); ?>
+						<h2><span class="hide rounded">Missionary of the Day</span></h2>
+					</a>
+				</div>
+
 				<a class="home-button rounded shadowed" id="who" href="<?php bloginfo('url'); ?>/connect/missionaries/" title="Who We Are">
 					<h2><span class="hide rounded">Who We Are</span></h2>
 				</a>
@@ -34,14 +41,6 @@ get_header(); ?>
 				
 				<a class="home-button rounded shadowed" id="contact" href="<?php bloginfo('url'); ?>/connect/contact-wwntbm/" title="Who We Are">
 					<h2><span class="hide rounded">How to Contact Us</span></h2>
-				</a>
-
-				<a class="home-button rounded shadowed" id="news" href="<?php bloginfo('url'); ?>/connect/news-and-views/" title="News and Views">
-					<h2><span class="hide rounded">News and Views</span></h2>
-				</a>
-
-				<a class="home-button rounded shadowed" id="updates" href="<?php bloginfo('url'); ?>/connect/missionary-updates/" title="Missionary Updates">
-					<h2><span class="hide rounded">Missionary Updates</span></h2>
 				</a>
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>
