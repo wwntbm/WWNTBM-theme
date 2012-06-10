@@ -175,31 +175,6 @@ function ministries_init() {
 	$missionary_role->add_cap( 'publish_missionary_updates' );
 	$missionary_role->add_cap( 'read_private_pages' );
 	
-	// hide some admin menu options
-	function my_remove_menu_pages() {
-		remove_menu_page('upload.php'); // Media
-		remove_menu_page('edit-comments.php'); // Comments
-		remove_menu_page('edit.php?post_type=slide'); // Slides
-	}
-	add_action( 'admin_menu', 'my_remove_menu_pages' );
-	// hide Contact Form
-	define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
-	define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
-
-	// hide other author's posts
-	function posts_for_current_author($query) {
-		global $pagenow;
-	
-		if( 'edit.php' != $pagenow || !$query->is_admin )
-		    return $query;
-	
-		if( !current_user_can( 'manage_options' ) ) {
-			global $user_ID;
-			$query->set('author', $user_ID );
-		}
-		return $query;
-	}
-	add_filter('pre_get_posts', 'posts_for_current_author');
 
 // end Add missionaries custom role
 
@@ -246,6 +221,7 @@ function WWNTBM_widgets_init() {
 if ( function_exists( 'add_theme_support' ) ) { 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'category-thumb', 150, 100, true );
+add_image_size( 'missionary-of-the-day', 250, 150, true );
 }
 
 
@@ -292,7 +268,7 @@ function remove_dashboard_widgets() {
 		// Entering the text between the quotes
 		echo "<ul>
 		<li>Release Date: May 2012</li>
-		<li>Author: <a href=\"http://andrewrminion.com/\" target=\"_blank\">AndrewRMinion Design</a></li>
+		<li>Developer: <a href=\"http://andrewrminion.com/\" target=\"_blank\">AndrewRMinion Design</a></li>
 		<li>Hosting provider: ANHosting (WWNTBM account)</li>
 		</ul>";
 	}
@@ -311,6 +287,32 @@ add_action( 'after_setup_theme', 'my_child_theme_setup' );
 
 if (!current_user_can('manage_options')) {
 	add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+	
+	// hide some admin menu options
+	function my_remove_menu_pages() {
+		remove_menu_page('upload.php'); // Media
+		remove_menu_page('edit-comments.php'); // Comments
+		remove_menu_page('edit.php?post_type=slide'); // Slides
+	}
+	add_action( 'admin_menu', 'my_remove_menu_pages' );
+	// hide Contact Form
+	define( 'WPCF7_ADMIN_READ_CAPABILITY', 'manage_options' );
+	define( 'WPCF7_ADMIN_READ_WRITE_CAPABILITY', 'manage_options' );
+
+	// hide other author's posts
+	function posts_for_current_author($query) {
+		global $pagenow;
+	
+		if( 'edit.php' != $pagenow || !$query->is_admin )
+		    return $query;
+	
+		if( !current_user_can( 'manage_options' ) ) {
+			global $user_ID;
+			$query->set('author', $user_ID );
+		}
+		return $query;
+	}
+	add_filter('pre_get_posts', 'posts_for_current_author');
 }
 
 ?>
