@@ -494,6 +494,10 @@ body, input, textarea {
 	box-shadow: 0 2px 8px rgba(0,0,0,0.23);
 }
 
+.no-boxshadow #page.shadowed {
+	border: 1px solid #d6d6d6;
+}
+
 /* @group headings */
 
 /* Headings */
