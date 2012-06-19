@@ -1227,7 +1227,7 @@ dl.gallery-item {
 .home-button {
 	display: block;
 	float: left;
-	margin: 1em 5% 1em 0;
+	margin: 1em 4.9% 1em 0;
 	width: 250px;
 	height: 150px;
 }
@@ -1235,10 +1235,14 @@ dl.gallery-item {
 #motd_wrapper {
 	display: block;
 	float: left;
-	margin: 0 5% 0 0;
+	margin: 1em 4.9% 1em 0;
 	width: 250px;
 	height: 150px;
 	position: relative;
+}
+
+#motd_wrapper .home-button {
+	margin: 0 5% 0 0;
 }
 
 .home-button span {
@@ -1266,7 +1270,6 @@ dl.gallery-item {
 	height: 150px;
 	position: absolute;
 	left: 100px;
-	top: 15px;
 	z-index: 0;
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
@@ -3586,6 +3589,7 @@ blockquote.pull {
 	height: auto;
 }
 
+#motd_wrapper,
 .home-button {
 	margin: 1em auto;
 	float: none;
@@ -3607,6 +3611,7 @@ blockquote.pull {
 	height: auto;
 }
 
+#motd_wrapper,
 .home-button {
 	margin: 1em auto;
 	float: none;
