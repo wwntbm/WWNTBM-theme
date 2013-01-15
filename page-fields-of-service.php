@@ -31,7 +31,7 @@ get_header(); ?>
 					<?php
 					foreach ($fields as $field) {
 						// get missionaries by field
-						$query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Field', 'meta_value' => $field, 'order' => 'ASC' ) );
+						$query = new WP_Query( array ( 'posts_per_page' => -1, 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Field', 'meta_value' => $field, 'order' => 'ASC' ) );
 
 						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>'.$field.'</a> ('.$query->post_count.')
 						<ul class="sub_links" style="display:none;">';
