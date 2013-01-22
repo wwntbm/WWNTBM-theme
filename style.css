@@ -8,8 +8,8 @@
 /*
 Theme Name: WWNTBM
 Theme URI: http://wordpress.org/extend/themes/twentyeleven
-Author: Andrew Minion
-Author URI: http://minionsformissions.com
+Author: AndrewRMinion Design
+Author URI: http://andrewrminion.com
 Description: Based on TwentyEleven by the Wordpress Team
 Version: 1.0
 License: GNU General Public License
@@ -908,7 +908,7 @@ a.telephone-link:hover {
 	text-decoration: none;
 	text-transform: uppercase;
 	border-radius: 5px;
-	padding: 0 15%;
+	padding: 0 15px;
 }
 
 #access li.page_item a {
