@@ -1265,22 +1265,19 @@ dl.gallery-item {
 
 .potd_thumbnail#motd_thumbnail {
 	display: block;
-	width: 150px;
+	width: 250px;
 	height: 150px;
 	position: absolute;
-	left: 100px;
+	left: 0;
 	z-index: 0;
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-moz-border-radius-bottomright: 5px;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .home-button#motd,
 .home-button#motd span {
-	background-image: url(images/home-buttons/missionary-of-the-day.png);
+	background-image: url(images/home-buttons/missionary-of-the-day.png?v2);
 	position: relative;
 	z-index: 25;
 }
