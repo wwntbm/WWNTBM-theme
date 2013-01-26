@@ -896,10 +896,6 @@ a.telephone-link:hover {
 	position: relative;
 }
 
-#access .menu > ul > li:last-child > a {
-	padding-right: 0;
-}
-
 #access a {
 	color: #595959;
 	display: block;
