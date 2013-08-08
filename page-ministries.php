@@ -22,7 +22,7 @@ get_header(); ?>
 					$ministry_count = (count($ministries_list));
 				?>
 				
-				<p>Our missionaries serve in over <?php echo $ministry_count; ?> types of ministries.</p>
+				<p>Missionaries assisted by WWNTBM serve in over <?php echo $ministry_count; ?> types of ministries.</p>
 				
 					<div class="entry-content">
 					<ul class="dropdown">
