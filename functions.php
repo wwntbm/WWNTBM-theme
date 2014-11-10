@@ -105,7 +105,7 @@ function status_init() {
 		'wwntbm_missionaries',
 		array(
 			'label' => 'Missionary Status',
-			'hierarchical' => true,
+			'hierarchical' => false,
 			'sort' => true,
 			'rewrite' => array( 'slug' => 'status' ),
 			'show_tag_cloud' => false
