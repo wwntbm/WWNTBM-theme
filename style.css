@@ -1308,7 +1308,10 @@ dl.gallery-item {
 	background-image: url(images/home-buttons/missionary-updates.jpg);
 }
 
-
+.home-button#missions-today,
+.home-button#missions-today span {
+	background-image: url(images/home-buttons/missions-today.jpg);
+}
 
 /* @end */
 
