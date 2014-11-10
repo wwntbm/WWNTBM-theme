@@ -97,6 +97,23 @@ function ministries_init() {
 }
 // end Add custom taxonomy for ministries
 
+// Add custom taxonomy for status
+function status_init() {
+	// create a new taxonomy
+	register_taxonomy(
+		'wwntbm_status',
+		'wwntbm_missionaries',
+		array(
+			'label' => 'Missionary Status',
+			'hierarchical' => true,
+			'sort' => true,
+			'rewrite' => array( 'slug' => 'status' ),
+			'show_tag_cloud' => false
+		)
+	);
+}
+// end Add custom taxonomy for ministries
+
 
 // Add custom post capabilities
 	$administrator_role = get_role('administrator');
@@ -281,6 +298,7 @@ function remove_dashboard_widgets() {
 // add actions
 add_action( 'init', 'create_post_type' );
 add_action( 'init', 'ministries_init' );
+add_action( 'init', 'status_init' );
 add_action( 'admin_head', 'wwntbm_custom_post_icons' );
 add_action( 'widgets_init', 'WWNTBM_widgets_init' );
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
