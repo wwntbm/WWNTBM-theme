@@ -30,6 +30,10 @@ get_header(); ?>
 
 					<?php
 					foreach ($fields as $field) {
+                        // if $field is NULL, skip the rest of this loop iteration
+                        if ($field == NULL) {
+                            continue;
+                        }
 						// get missionaries by field
 						$query = new WP_Query( array ( 'post_type' => 'wwntbm_missionaries', 'orderby' => 'meta_value', 'meta_key' => 'Field', 'meta_value' => $field, 'order' => 'ASC' ) );
 
