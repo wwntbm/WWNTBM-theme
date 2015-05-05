@@ -20,11 +20,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-	<?php 
+	<?php
 	// photo
 	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	  the_post_thumbnail('medium', array('class' => 'alignright rounded shadowed'));
-	} 
+	}
 	?>
 	<?php
 		// field
@@ -38,9 +38,8 @@
 		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type: ', ', ', '</h2>' );
 		
 		// status
-		$wwntbm_status = get_post_meta(get_the_ID(), 'Status', true);
-		if ($wwntbm_status == 'Deputation') {echo '<h2 class="deputation">Currently on Deputation</h2>'."\n";}
-		if ($wwntbm_status == 'Retired') {echo '<h2 class="retired">Retired</h2>'."\n";}
+		$wwntbm_status = wp_get_post_terms(get_the_ID(), 'wwntbm_status', array('fields' => 'names'));
+		if ($wwntbm_status) {echo '<h2>' . implode(', ', $wwntbm_status) . '</h2>';}
 
 		// title
 		$wwntbm_job_title = get_post_meta(get_the_ID(), 'Title', true);
