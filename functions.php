@@ -24,7 +24,8 @@ function create_post_type() {
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'connect/missionaries', 'with_front' => 'false' )
+			'rewrite' => array( 'slug' => 'connect/missionaries', 'with_front' => 'false' ),
+            'menu_icon' => 'dashicons-admin-users'
 		)
 	);
 	// end Add missionaries custom post type
@@ -51,30 +52,12 @@ function create_post_type() {
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'connect/missionary-updates', 'with_front' => 'false' ),
-			'taxonomies' => array('wwntbm_ministries')
+			'taxonomies' => array('wwntbm_ministries'),
+            'menu_icon' => 'dashicons-admin-page'
 		)
 	);
 	// end Add missionary updates custom post type
 }
-	
-	// Styling for the custom post type icon
-	function wwntbm_custom_post_icons() {
-		?>
-		<style type="text/css" media="screen">
-			#menu-posts-wwntbm_missionaries .wp-menu-image {
-				background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/user.png) no-repeat 6px -16px !important;
-			}
-			#menu-posts-wwntbm_missionaries:hover .wp-menu-image, #menu-posts-wwntbm_missionaries.wp-has-current-submenu .wp-menu-image {
-				background-position:6px 8px !important;
-			}
-			#menu-posts-wwntbm_updates .wp-menu-image {
-				background: url(<?php echo get_stylesheet_directory_uri(); ?>/images/newspapers.png) no-repeat 6px -16px !important;
-			}
-			#menu-posts-wwntbm_updates:hover .wp-menu-image, #menu-posts-wwntbm_updates.wp-has-current-submenu .wp-menu-image {
-				background-position:6px 8px !important;
-			}
-		</style>
-	<?php }
 // end Add custom post types
 
 
