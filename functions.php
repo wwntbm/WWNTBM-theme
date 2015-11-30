@@ -24,8 +24,7 @@ function create_post_type() {
 			),
 			'public' => true,
 			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'connect/missionaries', 'with_front' => 'false' ),
-			'capability_type' => 'missionary_info'
+			'rewrite' => array( 'slug' => 'connect/missionaries', 'with_front' => 'false' )
 		)
 	);
 	// end Add missionaries custom post type
@@ -52,7 +51,6 @@ function create_post_type() {
 			'public' => true,
 			'has_archive' => true,
 			'rewrite' => array('slug' => 'connect/missionary-updates', 'with_front' => 'false' ),
-			'capability_type' => 'missionary_update',
 			'taxonomies' => array('wwntbm_ministries')
 		)
 	);
@@ -115,27 +113,7 @@ function status_init() {
 // end Add custom taxonomy for ministries
 
 
-// Add custom post capabilities
-	$administrator_role = get_role('administrator');
-	$administrator_role->add_cap( 'edit_missionary_info' );
-	$administrator_role->add_cap( 'edit_missionary_infos' );
-	$administrator_role->add_cap( 'edit_others_missionary_info' );
-	$administrator_role->add_cap( 'edit_others_missionary_infos' );
-	$administrator_role->add_cap( 'publish_missionary_infos' );
-	$administrator_role->add_cap( 'read_missionary_infos' );
-	$administrator_role->add_cap( 'delete_missionary_infos' );
-	
-	$administrator_role->add_cap( 'edit_missionary_update' );
-	$administrator_role->add_cap( 'edit_missionary_updates' );
-	$administrator_role->add_cap( 'edit_others_missionary_update' );
-	$administrator_role->add_cap( 'edit_others_missionary_updates' );
-	$administrator_role->add_cap( 'read_missionary_updates' );
-	$administrator_role->add_cap( 'publish_missionary_updates' );
-	$administrator_role->add_cap( 'delete_missionary_update' );
-// end Add custom post capabilities
-
-
-// Add office staff custom role 
+// Add office staff custom role
 	// get_role returns an object; we want the capabilities piece, which is an array.
 	$office_staff_caps = $administrator_role->capabilities;
 	 
