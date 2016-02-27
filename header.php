@@ -99,7 +99,7 @@
 <div id="page" class="hfeed rounded shadowed">
 	<header id="branding" role="banner">
 			<hgroup>
-				<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri( 'template_directory' ) . '/images/header/logo.png'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" width="350" height="181" /><span><?php bloginfo( 'name' ); ?></span></a></h1>
+				<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri( 'template_directory' ) . '/images/header/logo-2016.png'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" width="350" height="136" /><span><?php bloginfo( 'name' ); ?></span></a></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 			 
 				<nav id="access" role="navigation">
