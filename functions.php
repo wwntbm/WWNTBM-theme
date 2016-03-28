@@ -97,6 +97,7 @@ function status_init() {
 
 
 // Add office staff custom role
+$administrator_role = get_role( 'administrator' );
 	// get_role returns an object; we want the capabilities piece, which is an array.
 	$office_staff_caps = $administrator_role->capabilities;
 	 
@@ -260,7 +261,6 @@ function remove_dashboard_widgets() {
 add_action( 'init', 'create_post_type' );
 add_action( 'init', 'ministries_init' );
 add_action( 'init', 'status_init' );
-add_action( 'admin_head', 'wwntbm_custom_post_icons' );
 add_action( 'widgets_init', 'WWNTBM_widgets_init' );
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
 
