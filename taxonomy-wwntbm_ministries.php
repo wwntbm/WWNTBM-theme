@@ -18,23 +18,26 @@ get_header(); ?>
 			<div id="content" role="main">
 			
 			<?php
-				// show all posts instead of just 10
-/*
-				global $query_string;
-				query_posts( $query_string . '&posts_per_page=-1' );
-*/
-				
-				
 				global $wp_query;
 				$args = array_merge( $wp_query->query, array( 'orderby' => 'meta_value', 'meta_key' => 'Missionary Key', 'order' => 'ASC','posts_per_page' => -1 ) );
 				query_posts( $args );
 
+                // get taxonomy name
+                $term = $wp_query->get_queried_object();
+                $title = $term->name;
+
+                // handle the indefinite article
+                if ( in_array( substr( strtolower( $title ), 0, 1 ), array( 'a', 'e', 'i', 'o', 'u' ) ) ) {
+                    $article = 'an';
+                } else {
+                    $article = 'a';
+                }
 			?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="entry-title">Ministries</h1>
-					<p>Below you will find all the missionaries that serve in a <?php echo strtolower(wp_title('',false)); ?>-type ministry. For more information about any one of them, click on their picture.</p>
+					<h1 class="entry-title"><?php echo $title; ?> Ministry</h1>
+					<p>Below you will find all the missionaries that serve in <?php echo $article . ' ' . strtolower( $title ); ?> ministry. For more information about any one of them, click on their picture.</p>
 				</header>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
