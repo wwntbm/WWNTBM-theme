@@ -1,101 +1,5 @@
 <?php
 
-// Add custom post types
-function create_post_type() {
-	// Add missionaries custom post type
-	register_post_type( 'wwntbm_missionaries',
-		array(
-			'supports' => array(
-				'title',
-				'editor',
-				'custom-fields',
-				'revisions',
-				'thumbnail',
-				'author'
-			),
-			'labels' => array(
-				'name' => __( 'Missionaries' ),
-				'singular_name' => __( 'Missionary' ),
-				'add_new_item' => __( 'Add New Missionary' ),
-				'edit_item' => __( 'Edit Missionary' ),
-				'new_item' => __( 'New Missionary' ),
-				'view_item' => __( 'View Missionary' ),
-				'search_items' => __( 'Search Missionaries' )
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array( 'slug' => 'connect/missionaries', 'with_front' => 'false' ),
-            'menu_icon' => 'dashicons-admin-users'
-		)
-	);
-	// end Add missionaries custom post type
-	// Add missionary updates custom post type
-	register_post_type( 'wwntbm_updates',
-		array(
-			'supports' => array(
-				'title',
-				'editor',
-				'revisions',
-				'thumbnail',
-				'comments',
-				'author'
-			),
-			'labels' => array(
-				'name' => __( 'Missionary Updates' ),
-				'singular_name' => __( 'Missionary Update' ),
-				'add_new_item' => __( 'Add New Missionary Update' ),
-				'edit_item' => __( 'Edit Missionary Update' ),
-				'new_item' => __( 'New Missionary Update' ),
-				'view_item' => __( 'View Missionary Update' ),
-				'search_items' => __( 'Search Missionary Updates' )
-			),
-			'public' => true,
-			'has_archive' => true,
-			'rewrite' => array('slug' => 'connect/missionary-updates', 'with_front' => 'false' ),
-			'taxonomies' => array('wwntbm_ministries'),
-            'menu_icon' => 'dashicons-admin-page'
-		)
-	);
-	// end Add missionary updates custom post type
-}
-// end Add custom post types
-
-
-// Add custom taxonomy for ministries
-function ministries_init() {
-	// create a new taxonomy
-	register_taxonomy(
-		'wwntbm_ministries',
-		'wwntbm_missionaries',
-		array(
-			'label' => 'Ministry Type',
-			'hierarchical' => false,
-			'sort' => true,
-			'rewrite' => array( 'slug' => 'ministry' ),
-			'show_tag_cloud' => false
-		)
-	);
-}
-// end Add custom taxonomy for ministries
-
-// Add custom taxonomy for status
-function status_init() {
-	// create a new taxonomy
-	register_taxonomy(
-		'wwntbm_status',
-		'wwntbm_missionaries',
-		array(
-			'label' => 'Missionary Status',
-			'hierarchical' => false,
-			'sort' => true,
-			'rewrite' => array( 'slug' => 'status' ),
-			'show_tag_cloud' => false
-		)
-	);
-}
-// end Add custom taxonomy for ministries
-
-
 // Add office staff custom role
 $administrator_role = get_role( 'administrator' );
 	// get_role returns an object; we want the capabilities piece, which is an array.
@@ -258,9 +162,6 @@ function remove_dashboard_widgets() {
 // end AndrewRMinion branding
 
 // add actions
-add_action( 'init', 'create_post_type' );
-add_action( 'init', 'ministries_init' );
-add_action( 'init', 'status_init' );
 add_action( 'widgets_init', 'WWNTBM_widgets_init' );
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
 
