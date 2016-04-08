@@ -21,9 +21,7 @@ get_header(); ?>
 					$ministries_list = get_terms( 'wwntbm_ministries' );
 					$ministry_count = (count($ministries_list));
 				?>
-				
-				<p>Missionaries assisted by WWNTBM serve in over <?php echo $ministry_count; ?> types of ministries.</p>
-				
+
 					<div class="entry-content">
 					<ul class="dropdown">
 
