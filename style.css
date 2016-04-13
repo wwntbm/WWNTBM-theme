@@ -1313,13 +1313,14 @@ dl.gallery-item {
 .missionary-listed {
     display: block;
     float: left;
-    margin: 1em 5% 1em 0;
-    max-width: 25%;
+    margin: 1em 0;
+    max-width: 33%;
     min-height: 25ex;
     height: auto;
     clear: none;
     padding-right: 3%;
     padding-left: 3%;
+    box-sizing: border-box;
 }
 
 .missionary-listed .missionary-name,
@@ -3583,6 +3584,10 @@ blockquote.pull {
     float: none;
 }
 
+.missionary-listed {
+    max-width: 50%
+}
+
 }
 
 @media (max-width: 450px) {
@@ -3607,7 +3612,7 @@ blockquote.pull {
 
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
 
 /* @media min-width: 320px and max-width: 480px */
 
