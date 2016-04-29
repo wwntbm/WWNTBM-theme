@@ -984,6 +984,7 @@ a.telephone-link:hover {
     color: #216EA7;
 }
 
+.menu-item-has-children:after,
 .menu .children .has-children::after {
     content: "\00a0\bb";
     position: absolute;
