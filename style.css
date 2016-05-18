@@ -511,7 +511,7 @@ hr {
 
 /* Text elements */
 
-p {
+p, .wp-video {
     margin-bottom: 1.625em;
 }
 
