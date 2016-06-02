@@ -1760,6 +1760,19 @@ blockquote.pull {
     top: 80px;
 }
 
+.tithely-give-btn {
+    background-color: #26af5f;
+    width: 100%;
+    padding: 1.5em !important;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.tithely-give-btn:hover,
+.tithely-give-btn:active {
+    background-color: #1D8649 !important;
+}
+
 /* @end */
 /* @end */
 
