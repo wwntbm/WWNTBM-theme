@@ -1766,6 +1766,13 @@ blockquote.pull {
     padding: 1.5em !important;
     border-radius: 5px;
     transition: all .3s ease;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tithely-give-btn,
+.tithely-give-btn * {
+    color: white;
 }
 
 .tithely-give-btn:hover,
