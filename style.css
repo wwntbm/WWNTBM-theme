@@ -3489,12 +3489,6 @@ embed,
 
 @media (max-width: 650px) {
 
-/* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
-
-body, input, textarea {
-    font-size: 13px;
-}
-
 #site-title a {
     font-size: 24px;
 }
