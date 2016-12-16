@@ -21,8 +21,8 @@ get_header(); ?>
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
 				<div id="motd_wrapper">
-					<?php echo do_shortcode('[potd display="thumbnail"]'); ?>
 					<?php echo do_shortcode('[potd display="link"]'); ?>
+					<?php echo do_shortcode('[potd display="thumbnail"]'); ?>
 						<h2><span class="hide rounded">Missionary of the Day</span></h2>
 					</a>
 				</div>
