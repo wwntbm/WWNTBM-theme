@@ -1775,6 +1775,7 @@ blockquote.pull {
 
 .quick-link-buttons li,
 .tithely-give-btn {
+    border: none;
     border-radius: 5px;
     transition: all .3s ease;
     box-sizing: border-box;
@@ -1800,6 +1801,24 @@ blockquote.pull {
 p.tithely-give-btn,
 p a.tithely-give-btn {
     display: inline-block;
+}
+
+form.donations * {
+    font-size: 15px;
+}
+
+form.donations .chosen-single {
+    padding: 1.25em 1.5em;
+    height: auto;
+}
+
+form.donations .chosen-container .chosen-single div b {
+    background-position: 0 20px;
+}
+
+form.donations .chosen-container-active.chosen-with-drop .chosen-single div b {
+    width: 90%;
+    background-position: -18px 20px;
 }
 
 .page-id-3934 .fluid-width-video-wrapper {
