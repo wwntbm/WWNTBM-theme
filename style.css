@@ -1797,7 +1797,8 @@ blockquote.pull {
     background-color: #1D8649 !important;
 }
 
-p.tithely-give-btn {
+p.tithely-give-btn,
+p a.tithely-give-btn {
     display: inline-block;
 }
 
