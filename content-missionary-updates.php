@@ -10,9 +10,12 @@
 
 <?php
 // get link for the author's missionary page
-$author_query = new WP_Query( array( 'post_type' => 'wwntbm_missionaries', 'meta_key' => 'Username', 'meta_value' => get_the_author_meta('user_login') ) );
-$author_missionary_page_link = '<a href="'.home_url('/connect/missionaries/').$author_query->posts[0]->post_name.'" title="'.$author_query->posts[0]->post_title.'">'.$author_query->posts[0]->post_title.'</a>';
-$author_thumbnail = get_the_post_thumbnail($author_query->posts[0]->ID, 'category-thumb', array('class' => 'rounded shadowed alignright'));
+$author_ID = get_field( 'missionary_author' );
+$author_missionary_page_link = '';
+foreach ( $author_ID as $author ) {
+    $author_missionary_page_link .= '<a href="'.get_permalink( $author ).'" title="'.get_the_title( $author ).'">'.get_the_title( $author ).'</a>, ';
+}
+$author_missionary_page_link = rtrim( $author_missionary_page_link, ', ' );
 ?>
 
 
