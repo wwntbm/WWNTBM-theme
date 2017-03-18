@@ -3944,3 +3944,29 @@ footer.entry-meta a[rel=bookmark]:link:after,
 }
 
 /* @end */
+
+img.giving-icon {
+    box-shadow: none;
+}
+
+.post-3934 .entry-content h2 {
+    margin-top: 3.125em;
+}
+
+@media screen and (min-width: 801px) {
+    .post-3934 .entry-content > * {
+        margin-left: 150px;
+    }
+    .post-3934 .entry-content p:first-child,
+    .post-3934 .entry-content h2 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .giving-icon {
+        float: right;
+        margin: 0 0 1.625em 1.625em;
+    }
+}
+
