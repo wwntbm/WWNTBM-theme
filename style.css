@@ -3970,3 +3970,6 @@ img.giving-icon {
     }
 }
 
+.pure-input-rounded {
+    border-radius: 5px !important;
+}
