@@ -32,12 +32,17 @@ get_header(); ?>
                         // get all missionaries for this status type
                         $status_missionaries_query = new WP_Query( array(
                             'post_type' => 'wwntbm_missionaries',
-                            'wwntbm_status' => $status->slug,
                             'posts_per_page' => -1,
-                            'meta_key' => 'Missionary Key',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy'  => 'wwntbm_status',
+                                    'field'     => 'slug',
+                                    'terms'     => $status->slug,
+                                ),
+                            ),
                             'meta_query' => array(
                                 array(
-                                    'key' => 'Missionary Key',
+                                    'key' => 'missionary_key',
                                     'type' => 'CHAR',
                                 ),
                             ),
@@ -52,11 +57,7 @@ get_header(); ?>
                             $field = get_post_meta($this_post_ID, 'Field', 'true');
                             $field_region = get_post_meta($this_post_ID, 'Field Region', 'true');
 
-                            echo '<li><a href="';
-                            the_permalink();
-                            echo '">';
-                            the_title();
-                            echo '</a>';
+                            echo '<li><a href="' . get_permalink() . '">'. get_the_title() . '</a>';
 
                             //   echo field region
                             if ($field != NULL) {
