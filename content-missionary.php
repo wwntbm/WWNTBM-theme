@@ -76,7 +76,7 @@
 		<?php
 		// prayer letters
 		// get missionary unique key
-		$wwntbm_missionary_key = get_post_meta(get_the_ID(), 'Missionary Key', true);
+		$wwntbm_missionary_key = get_post_meta(get_the_ID(), 'missionary_key', true);
 		$wwntbm_missionary_key = strtolower($wwntbm_missionary_key);
 
         // get list of prayer letters

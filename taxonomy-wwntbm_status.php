@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php
 				global $wp_query;
-				$args = array_merge( $wp_query->query, array( 'orderby' => 'meta_value', 'meta_key' => 'Missionary Key', 'order' => 'ASC','posts_per_page' => -1 ) );
+				$args = array_merge( $wp_query->query, array( 'orderby' => 'meta_value', 'meta_key' => 'missionary_key', 'order' => 'ASC','posts_per_page' => -1 ) );
 				query_posts( $args );
 
                 // get taxonomy name
