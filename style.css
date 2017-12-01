@@ -1359,6 +1359,13 @@ dl.gallery-item {
     clear: left;
 }
 
+.post-12 ul,
+.post-12 ul li,
+.post-64 ul,
+.post-64 ul li {
+    list-style-type: none;
+}
+
 /* @end */
 
 /* @group meteor-slideshow */
