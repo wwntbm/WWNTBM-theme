@@ -30,14 +30,14 @@ get_header(); ?>
                         echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>'.$ministry->name.'</a> ('.$ministry->count.')
                         <ul class="sub_links" style="display:none;">';
                         // get all missionaries for this ministry type
-                        $ministry_missionaries_query = new WP_Query( array(
+                        $ministry_args = array(
                             'post_type' => 'wwntbm_missionaries',
                             'posts_per_page' => -1,
                             'tax_query' => array(
                                 array(
-                                    'taxonomy'  => 'wwntbm_status',
+                                    'taxonomy'  => 'wwntbm_ministries',
                                     'field'     => 'slug',
-                                    'terms'     => $status->slug,
+                                    'terms'     => $ministry->slug,
                                 ),
                             ),
                             'meta_query' => array(
@@ -47,8 +47,10 @@ get_header(); ?>
                                 ),
                             ),
                             'orderby' => 'meta_value',
-                            'order' => 'ASC'
-                            ) );
+                            'order' => 'ASC',
+                        );
+
+                        $ministry_missionaries_query = new WP_Query( $ministry_args );
 
                         while ( $ministry_missionaries_query->have_posts() ) : $ministry_missionaries_query->the_post(); // begin The Loop
 
