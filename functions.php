@@ -1,7 +1,11 @@
 <?php
 
+/**
+ * Enqueue Google fonts and add cache-busting query string to stylesheet
+ */
 function wwntbm_assets() {
     wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i' );
+    wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 }
 add_action( 'wp_enqueue_scripts', 'wwntbm_assets' );
 
