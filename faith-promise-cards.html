@@ -1,0 +1,26 @@
+<select name="card-style" class="fp-donation-input">
+    <option value="church">Church</option>
+    <option value="girl">Girl</option>
+    <option value="kids-1">Kids 1</option>
+    <option value="kids-2">Kids 2</option>
+    <option value="world-map">World Map</option>
+</select>
+
+<select name="card-quantity" class="fp-donation-input">
+    <option value="50" data-printing="2.76" data-priority-cost="6.65" data-express-cost="23.75">50</option>
+    <option value="100" data-printing="5.52" data-priority-cost="6.65" data-express-cost="23.75">100</option>
+    <option value="150" data-printing="8.28" data-priority-cost="6.65" data-express-cost="23.75">150</option>
+    <option value="200" data-printing="11.04" data-priority-cost="7.80" data-express-cost="23.85">200</option>
+    <option value="300" data-printing="16.56" data-priority-cost="9.85" data-express-cost="24.95">300</option>
+</select>
+
+<label class="fp-donation-input priority"><input type="radio" class="fp-donation-input" name="shipping-method" value="priority" checked="checked" /> Priority 2-Day <span class="small">(<span class="cost"></span>)</span></label>
+<label class="fp-donation-input express"><input type="radio" class="fp-donation-input" name="shipping-method" value="express" /> Express <span class="small">(<span class="cost"></span>)</span></label>
+
+
+<button class="tithely-give-btn" data-church-id="17262">Donate to cover printing/shipping costs</button>
+<script src="https://wwntbm.com/wp-content/themes/WWNTBM/js/tithely-faith-promise-cards.min.js"></script>
+<script src="https://tithe.ly/widget/v3/give.js?3"></script>
+<script>
+  var tw = create_tithely_widget();
+</script>
