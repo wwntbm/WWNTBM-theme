@@ -92,6 +92,7 @@ body {
 }
 
 #page {
+    display: block;
     margin: 25px auto;
     max-width: 1000px;
 }
@@ -1352,6 +1353,10 @@ dl.gallery-item {
 
 .dropdown .field-region {
     color: #606060;
+}
+
+.dropdown_trigger {
+    cursor: pointer;
 }
 
 /* @group page-specific content */
