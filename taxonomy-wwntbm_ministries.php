@@ -47,7 +47,7 @@ get_header(); ?>
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 	
-						<h2 class="missionary-listed">
+						<h3 class="missionary-listed">
 							<a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail('category-thumb', array('class' => 'rounded shadowed')); ?>
 							<span class="missionary-name">
@@ -57,7 +57,7 @@ get_header(); ?>
 								$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
 								if ($wwntbm_field != NULL) {echo '<span class="field-of-service">'.$wwntbm_field.'</span>';}
 							?>
-						</h2>
+						</h3>
 	
 					<?php endwhile; ?>
 				
