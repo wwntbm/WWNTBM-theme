@@ -1,5 +1,10 @@
 <?php
 
+function wwntbm_assets() {
+    wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i' );
+}
+add_action( 'wp_enqueue_scripts', 'wwntbm_assets' );
+
 // Add office staff custom role
 $administrator_role = get_role( 'administrator' );
     // get_role returns an object; we want the capabilities piece, which is an array.
