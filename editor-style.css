@@ -5,7 +5,7 @@ Description: Used to style the TinyMCE editor.
 
 body {
     color: #333;
-    font: 15px "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    font: 17px "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     line-height: 1.625;
     max-width: 584px;
@@ -18,18 +18,18 @@ h1,h2,h3,h4,h5,h6 {
 h1,
 h2 {
     color: #000;
-    font-size: 15px;
+    font-size: 1.5em;
     font-weight: bold;
     margin: 0 0 .8125em;
 }
 h3 {
-    font-size: 10px;
+    font-size: 1.3em;
     letter-spacing: 0.1em;
     line-height: 2.6em;
     text-transform: uppercase;
 }
 h4, h5, h6 {
-    font-size: 14px;
+    font-size: 1em;
     margin: 0;
 }
 hr {
@@ -153,7 +153,6 @@ sub {
 input[type=text],
 textarea {
     background: #fafafa;
-    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
     border: 1px solid #ddd;
