@@ -1305,7 +1305,8 @@ dl.gallery-item {
 
 /* @group missionary list page */
 
-.post-type-archive-wwntbm_missionaries #content {
+.post-type-archive-wwntbm_missionaries #content,
+.flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
