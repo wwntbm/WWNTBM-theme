@@ -1338,11 +1338,11 @@ dl.gallery-item {
     display: block;
     text-align: center;
     text-transform: none;
+    font-weight: 400;
 }
 
 .missionary-listed .field-of-service {
-    font-weight: 400;
-    font-size: smaller;
+    font-size: .75em;
 }
 
 .missionary-listed img {
