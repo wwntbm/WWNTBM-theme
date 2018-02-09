@@ -30,12 +30,12 @@
 		// field
 		$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
 		$wwntbm_field_region = get_post_meta(get_the_ID(), 'Field Region', true);
-		if ($wwntbm_field != NULL) {echo '<h2 class="field-of-service">Field of Service: '.$wwntbm_field;
+		if ($wwntbm_field != NULL) {echo '<h2 class="field-of-service">Field of Service</h2><p>'.$wwntbm_field;
 		if ($wwntbm_field_region != NULL) {echo '<span class="field-region"> &mdash; '.$wwntbm_field_region.'</span>';}
-		echo '</h2>'."\n";}
+		echo '</p>'."\n";}
 		
 		// ministry type
-		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type: ', ', ', '</h2>' );
+		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type</h2><p>', ', ', '</p>' );
 		
 		// status
 		$wwntbm_status = wp_get_post_terms(get_the_ID(), 'wwntbm_status', array('fields' => 'names'));
