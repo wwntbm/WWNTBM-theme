@@ -1333,7 +1333,7 @@ dl.gallery-item {
     display: block;
     float: left;
     margin: 1em 0;
-    max-width: 33%;
+    width: 33%;
     height: auto;
     clear: none;
     padding-right: 3%;
