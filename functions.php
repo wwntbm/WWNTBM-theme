@@ -113,6 +113,8 @@ function WWNTBM_widgets_init() {
 if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'category-thumb', 150, 100, true );
+add_image_size( 'category-thumb-m', 225, 150, true );
+add_image_size( 'category-thumb-l', 300, 200, true );
 add_image_size( 'missionary_of_the_day', 250, 150, true );
 }
 
