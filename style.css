@@ -4,7 +4,7 @@ Theme URI: http://wordpress.org/extend/themes/twentyeleven
 Author: AndrewRMinion Design
 Author URI: http://andrewrminion.com
 Description: Based on TwentyEleven by the Wordpress Team
-Version: 1.0.8
+Version: 1.0.9
 License: GNU General Public License
 License URI: license.txt
 Template:       twentyeleven
@@ -4006,34 +4006,34 @@ img.giving-icon {
     border-radius: 5px !important;
 }
 
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-1,
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-2 {
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-1,
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-2 {
     display: block;
     margin-bottom: 0.5em;
 }
 
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-city,
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-state,
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip {
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-city,
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-state,
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip {
     display: inline-block;
 }
 
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-city input,
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-state input,
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip input {
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-city input,
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-state input,
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip input {
     max-width: 100%;
 }
 
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-city {
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-city {
     width: 50%;
     margin-right: 1em;
 }
 
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-state {
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-state {
     width: 25%;
     margin-right: 1em;
 }
 
-form[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip {
+.wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip {
     width: 10%;
 }
