@@ -14,32 +14,35 @@
 
 get_header(); ?>
 
-		<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow(); } ?>
+		<?php
+		if ( function_exists( 'meteor_slideshow' ) ) {
+meteor_slideshow(); }
+?>
 		<div id="primary">
 			<div id="content" role="main">
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
 				<div id="motd_wrapper">
-					<?php echo do_shortcode('[potd display="link"]'); ?>
-					<?php echo do_shortcode('[potd display="thumbnail"]'); ?>
+					<?php echo do_shortcode( '[potd display="link"]' ); ?>
+					<?php echo do_shortcode( '[potd display="thumbnail"]' ); ?>
 						<h2><span class="hide rounded">Missionary of the Day</span></h2>
 					</a>
 				</div>
 
-				<a class="home-button rounded shadowed" id="who" href="<?php bloginfo('url'); ?>/connect/missionaries/" title="Who We Are">
+				<a class="home-button rounded shadowed" id="who" href="<?php bloginfo( 'url' ); ?>/connect/missionaries/" title="Who We Are">
 					<h2><span class="hide rounded">Who We Are</span></h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="where" href="<?php bloginfo('url'); ?>/connect/fields-of-service/" title="Where We Serve">
+				<a class="home-button rounded shadowed" id="where" href="<?php bloginfo( 'url' ); ?>/connect/fields-of-service/" title="Where We Serve">
 					<h2><span class="hide rounded">Where We Serve</span></h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="beliefs" href="<?php bloginfo('url'); ?>/learn/our-doctrinal-statement/" title="What We Believe">
+				<a class="home-button rounded shadowed" id="beliefs" href="<?php bloginfo( 'url' ); ?>/learn/our-doctrinal-statement/" title="What We Believe">
 					<h2><span class="hide rounded">What We Believe</span></h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="contact" href="<?php bloginfo('url'); ?>/connect/contact-wwntbm/" title="Who We Are">
+				<a class="home-button rounded shadowed" id="contact" href="<?php bloginfo( 'url' ); ?>/connect/contact-wwntbm/" title="Who We Are">
 					<h2><span class="hide rounded">How to Contact Us</span></h2>
 				</a>
 
@@ -52,5 +55,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_sidebar('home'); ?>
+<?php get_sidebar( 'home' ); ?>
 <?php get_footer(); ?>

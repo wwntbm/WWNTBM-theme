@@ -24,7 +24,7 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404-posts' ) ); ?>
 
-					<?php the_widget( 'WP_Widget_Pages','number=10' ); ?>
+					<?php the_widget( 'WP_Widget_Pages', 'number=10' ); ?>
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->

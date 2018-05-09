@@ -14,14 +14,15 @@
 	<footer id="colophon" class="rounded-bottom" role="contentinfo">
 
 			<?php
-				/* A sidebar in the footer? Yep. You can can customize
+				/*
+				 A sidebar in the footer? Yep. You can can customize
 				 * your footer with three columns of widgets.
 				 */
 				get_sidebar( 'footer' );
 			?>
 
 			<div id="site-generator">
-				&copy;2006&ndash;<?php echo date('Y'); ?> | designed and developed by <a target="_blank" href="http://andrewrminion.com">AndrewRMinion Design</a> and April Howell | powered by <a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Wordpress</a> | <span class="light-weight"><?php wp_loginout(); ?></span>
+				&copy;2006&ndash;<?php echo date( 'Y' ); ?> | designed and developed by <a target="_blank" href="http://andrewrminion.com">AndrewRMinion Design</a> and April Howell | powered by <a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Wordpress</a> | <span class="light-weight"><?php wp_loginout(); ?></span>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

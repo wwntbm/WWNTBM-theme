@@ -15,7 +15,8 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php
-					/* Queue the first post, that way we know
+					/*
+					 Queue the first post, that way we know
 					 * what author we're dealing with (if that is the case).
 					 *
 					 * We reset this later so we can run the loop
@@ -25,18 +26,30 @@ get_header(); ?>
 				?>
 
 				<header class="page-header">
-					<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'twentyeleven' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+					<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'twentyeleven' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
 					<?php
 					// get info for missionary post
-					$author_query = new WP_Query( array( 'post_type' => 'wwntbm_missionaries', 'meta_key' => 'Username', 'meta_value' => get_the_author_meta('user_login') ) );
-					if ($author_query->found_posts >= 1) {
+					$author_query = new WP_Query(
+						 array(
+							 'post_type' => 'wwntbm_missionaries',
+							 'meta_key' => 'Username',
+							 'meta_value' => get_the_author_meta( 'user_login' ),
+						 )
+						);
+					if ( $author_query->found_posts >= 1 ) {
 					?>
-					<p>These are all the posts written by <?php the_author(); ?>. Find out more about <a href="<?php echo home_url('/connect/missionaries/'); echo $author_query->posts[0]->post_name; ?>"><?php the_author_meta('first_name'); ?> here</a>. </p>
+					<p>These are all the posts written by <?php the_author(); ?>. Find out more about <a href="
+																			  <?php
+					echo home_url( '/connect/missionaries/' );
+echo $author_query->posts[0]->post_name;
+?>
+"><?php the_author_meta( 'first_name' ); ?> here</a>. </p>
 					<?php } ?>
 				</header>
 
 				<?php
-					/* Since we called the_post() above, we need to
+					/*
+					 Since we called the_post() above, we need to
 					 * rewind the loop back to the beginning that way
 					 * we can run the loop properly, in full.
 					 */
@@ -47,7 +60,8 @@ get_header(); ?>
 
 				<?php
 				// If a user has filled out their description, show a bio on their entries.
-				if ( get_the_author_meta( 'description' ) ) : ?>
+				if ( get_the_author_meta( 'description' ) ) :
+				?>
 				<div id="author-info">
 					<div id="author-avatar">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 60 ) ); ?>
@@ -60,10 +74,14 @@ get_header(); ?>
 				<?php endif; ?>
 
 				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+				while ( have_posts() ) :
+the_post();
+?>
 
 					<?php
-						/* Include the Post-Format-specific template for the content.
+						/*
+						 Include the Post-Format-specific template for the content.
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */

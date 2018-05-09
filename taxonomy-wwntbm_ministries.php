@@ -19,19 +19,26 @@ get_header(); ?>
 			
 			<?php
 				global $wp_query;
-				$args = array_merge( $wp_query->query, array( 'orderby' => 'meta_value', 'meta_key' => 'missionary_key', 'order' => 'ASC','posts_per_page' => -1 ) );
+				$args = array_merge(
+					 $wp_query->query, array(
+						 'orderby' => 'meta_value',
+						 'meta_key' => 'missionary_key',
+						 'order' => 'ASC',
+						 'posts_per_page' => -1,
+					 )
+					);
 				query_posts( $args );
 
-                // get taxonomy name
-                $term = $wp_query->get_queried_object();
-                $title = $term->name;
+				// get taxonomy name
+				$term = $wp_query->get_queried_object();
+				$title = $term->name;
 
-                // handle the indefinite article
-                if ( in_array( substr( strtolower( $title ), 0, 1 ), array( 'a', 'e', 'i', 'o', 'u' ) ) ) {
-                    $article = 'an';
-                } else {
-                    $article = 'a';
-                }
+				// handle the indefinite article
+				if ( in_array( substr( strtolower( $title ), 0, 1 ), array( 'a', 'e', 'i', 'o', 'u' ) ) ) {
+				$article = 'an';
+				} else {
+				$article = 'a';
+				}
 			?>
 			<?php if ( have_posts() ) : ?>
 
@@ -45,17 +52,21 @@ get_header(); ?>
 				<div class="entry-content">
 				
 					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php
+					while ( have_posts() ) :
+the_post();
+?>
 	
 						<h3 class="missionary-listed">
 							<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('category-thumb', array('class' => 'rounded shadowed')); ?>
+							<?php the_post_thumbnail( 'category-thumb', array( 'class' => 'rounded shadowed' ) ); ?>
 							<span class="missionary-name">
 							<?php the_title(); ?>
 							</span></a>
 							<?php
-								$wwntbm_field = get_post_meta(get_the_ID(), 'Field', true);
-								if ($wwntbm_field != NULL) {echo '<span class="field-of-service">'.$wwntbm_field.'</span>';}
+								$wwntbm_field = get_post_meta( get_the_ID(), 'Field', true );
+								if ( $wwntbm_field != null ) {
+echo '<span class="field-of-service">' . $wwntbm_field . '</span>';}
 							?>
 						</h3>
 	
