@@ -28,7 +28,7 @@ get_header(); ?>
 					<?php
 					foreach ( $status_list as $status ) {
 						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>' . $status->name . '</a> (' . $status->count . ')
-                        <ul class="sub_links" style="display:none;">';
+						<ul class="sub_links" style="display:none;">';
 						// get all missionaries for this status type
 						$status_missionaries_query = new WP_Query(
 							 array(
@@ -53,12 +53,12 @@ get_header(); ?>
 							);
 
 						while ( $status_missionaries_query->have_posts() ) :
-$status_missionaries_query->the_post(); // begin The Loop
+							$status_missionaries_query->the_post();
 
 							// get field
 							$this_post_ID = get_the_ID();
-							$field = get_post_meta( $this_post_ID, 'Field', 'true' );
-							$field_region = get_post_meta( $this_post_ID, 'Field Region', 'true' );
+							$field = get_post_meta( $this_post_ID, 'missionary_field', 'true' );
+							$field_region = get_post_meta( $this_post_ID, 'missionary_field_region', 'true' );
 
 							echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a>';
 
@@ -66,7 +66,8 @@ $status_missionaries_query->the_post(); // begin The Loop
 							if ( $field != null ) {
 								echo '<span class="field-region"> &mdash; ' . $field;
 								if ( $field_region != null ) {
-echo ' (' . $field_region . ')';}
+									echo ' (' . $field_region . ')';
+								}
 								echo '</span>';
 							}
 							echo '</li>';
@@ -74,7 +75,7 @@ echo ' (' . $field_region . ')';}
 						endwhile; // end The Loop
 
 						echo '</ul><!-- .sublinks -->
-                    </li>';
+					</li>';
 					}
 					?>
 					</ul><!-- .dropdown -->

@@ -16,7 +16,7 @@ get_header(); ?>
 
 		<section id="primary">
 			<div id="content" role="main">
-			
+
 			<?php
 				global $wp_query;
 				$args = array_merge(
@@ -50,13 +50,13 @@ get_header(); ?>
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
 				<div class="entry-content">
-				
+
 					<?php /* Start the Loop */ ?>
 					<?php
 					while ( have_posts() ) :
 the_post();
 ?>
-	
+
 						<h3 class="missionary-listed">
 							<a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail( 'category-thumb', array( 'class' => 'rounded shadowed' ) ); ?>
@@ -64,14 +64,15 @@ the_post();
 							<?php the_title(); ?>
 							</span></a>
 							<?php
-								$wwntbm_field = get_post_meta( get_the_ID(), 'Field', true );
-								if ( $wwntbm_field != null ) {
-echo '<span class="field-of-service">' . $wwntbm_field . '</span>';}
+								$wwntbm_field = get_post_meta( get_the_ID(), 'missionary_field', true );
+								if ( ! empty( $wwntbm_field ) ) {
+									echo '<span class="field-of-service">' . esc_attr( $wwntbm_field ) . '</span>';
+								}
 							?>
 						</h3>
-	
+
 					<?php endwhile; ?>
-				
+
 				</div><!-- .entry-content -->
 
 				<?php twentyeleven_content_nav( 'nav-below' ); ?>

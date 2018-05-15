@@ -57,8 +57,8 @@ $ministry_missionaries_query->the_post(); // begin The Loop
 
 							// get field
 							$this_post_ID = get_the_ID();
-							$field = get_post_meta( $this_post_ID, 'Field', 'true' );
-							$field_region = get_post_meta( $this_post_ID, 'Field Region', 'true' );
+							$field = get_post_meta( $this_post_ID, 'missionary_field', 'true' );
+							$field_region = get_post_meta( $this_post_ID, 'missionary_field_region', 'true' );
 
 							echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a>';
 
@@ -66,7 +66,8 @@ $ministry_missionaries_query->the_post(); // begin The Loop
 							if ( $field != null ) {
 								echo '<span class="field-region"> &mdash; ' . $field;
 								if ( $field_region != null ) {
-echo ' (' . $field_region . ')';}
+									echo ' (' . $field_region . ')';
+								}
 								echo '</span>';
 							}
 							echo '</li>';

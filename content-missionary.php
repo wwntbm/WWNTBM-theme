@@ -28,13 +28,16 @@
 	?>
 	<?php
 		// field
-		$wwntbm_field = get_post_meta( get_the_ID(), 'Field', true );
-		$wwntbm_field_region = get_post_meta( get_the_ID(), 'Field Region', true );
-		if ( $wwntbm_field != null ) {
-echo '<h2 class="field-of-service">Field of Service</h2><p>' . $wwntbm_field;
-		if ( $wwntbm_field_region != null ) {
-echo '<span class="field-region"> &mdash; ' . $wwntbm_field_region . '</span>';}
-		echo '</p>' . "\n";}
+		$wwntbm_field = get_post_meta( get_the_ID(), 'missionary_field', true );
+		$wwntbm_field_region = get_post_meta( get_the_ID(), 'missionary_field_region', true );
+
+		if ( ! empty( $wwntbm_field ) ) {
+			echo '<h2 class="field-of-service">Field of Service</h2><p>' . esc_attr( $wwntbm_field );
+			if ( ! empty( $wwntbm_field_region ) ) {
+				echo '<span class="field-region"> &mdash; ' . esc_attr( $wwntbm_field_region ) . '</span>';
+			}
+			echo '</p>';
+		}
 
 		// ministry type
 		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type</h2><p>', ', ', '</p>' );
@@ -42,7 +45,8 @@ echo '<span class="field-region"> &mdash; ' . $wwntbm_field_region . '</span>';}
 		// status
 		$wwntbm_status = wp_get_post_terms( get_the_ID(), 'wwntbm_status', array( 'fields' => 'names' ) );
 		if ( $wwntbm_status ) {
-echo '<h2>' . implode( ', ', $wwntbm_status ) . '</h2>';}
+			echo '<h2>' . implode( ', ', $wwntbm_status ) . '</h2>';
+		}
 
 		// title
 		$wwntbm_job_title = get_post_meta( get_the_ID(), 'Title', true );
@@ -50,7 +54,7 @@ echo '<h2>' . implode( ', ', $wwntbm_status ) . '</h2>';}
 echo '<h2 class="job-title">' . $wwntbm_job_title . '</h2>' . "\n";}
 	?>
 		<?php the_content(); ?>
-		
+
 		<?php
 		// Updates by this missionary
 		$wwntbm_missionary_username = get_post_meta( $post->ID, 'Username', true );
@@ -134,7 +138,7 @@ continue;} elseif ( strpos( basename( $group_folder ), 'post' ) !== false ) {
 			</div><!-- .prayer_letters -->';
 		}
 		?>
-		
+
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

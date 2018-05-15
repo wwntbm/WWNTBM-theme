@@ -57,7 +57,7 @@ the_post();
 							<?php the_title(); ?>
 							</span></a>
 							<?php
-								$wwntbm_field = get_post_meta( get_the_ID(), 'Field', true );
+								$wwntbm_field = get_post_meta( get_the_ID(), 'missionary_field', true );
 								if ( $wwntbm_field != null ) {
 echo '<span class="field-of-service">' . $wwntbm_field . '</span>';}
 							?>
