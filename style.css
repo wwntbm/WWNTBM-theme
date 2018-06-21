@@ -4055,3 +4055,8 @@ img.giving-icon {
 .wpcf7[id*="wpcf7-f14657"] .wpcf7-form-control-wrap.your-mailing-address-zip {
 	width: 10%;
 }
+
+embed, iframe, object, video {
+	max-width: 100%;
+	vertical-align: middle;
+}
