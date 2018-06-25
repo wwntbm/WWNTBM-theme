@@ -1,20 +1,26 @@
 <?php
 
+define( 'WWNTBM_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
+
 /**
  * Enqueue Google fonts and add cache-busting query string to stylesheet
  */
 function wwntbm_assets() {
 	wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,900,900i' );
-	wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'stylesheet', get_stylesheet_uri(), array(), WWNTBM_THEME_VERSION );
+
+	wp_enqueue_script( 'frontend', get_stylesheet_directory() . '/js/frontend.min.js', array( 'jquery' ), WWNTBM_THEME_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'wwntbm_assets' );
 
-// Add office staff custom role
+/**
+ * Add office staff role.
+ */
 $administrator_role = get_role( 'administrator' );
 	// get_role returns an object; we want the capabilities piece, which is an array.
 	$office_staff_caps = $administrator_role->capabilities;
 
-	// set custom capabilities
+	// Set custom capabilities.
 	unset( $office_staff_caps['install_plugins'] );
 	unset( $office_staff_caps['activate_plugins'] );
 	unset( $office_staff_caps['delete_plugins'] );
@@ -28,7 +34,7 @@ $administrator_role = get_role( 'administrator' );
 	// Add the new role.
 	add_role( 'office_staff', 'Office Staff', $office_staff_caps );
 
-	// add custom capabilities
+	// Add custom capabilities.
 	$office_staff_role = get_role( 'office_staff' );
 	$office_staff_role->add_cap( 'edit_missionary_update' );
 	$office_staff_role->add_cap( 'edit_missionary_updates' );
