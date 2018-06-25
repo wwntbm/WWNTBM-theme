@@ -27,7 +27,7 @@ get_header(); ?>
 
 					<?php
 					foreach ( $status_list as $status ) {
-						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>' . $status->name . '</a> (' . $status->count . ')
+						echo '<li class="dropdown_trigger">' . $status->name . ' (' . $status->count . ')
 						<ul class="sub_links" style="display:none;">';
 						// get all missionaries for this status type
 						$status_missionaries_query = new WP_Query(

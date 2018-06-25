@@ -9,7 +9,10 @@
 'use strict';
 
 (function($) {
-	$('.dropdown_trigger').on('click', function() {
-		$(this).next('.sub_links').slideToggle();
+	$('document').ready(function() {
+		$('.dropdown_trigger').on('click', function() {
+			$(this).find('.sub_links').slideToggle();
+			$(this).toggleClass('expanded');
+		});
 	});
 }(jQuery));

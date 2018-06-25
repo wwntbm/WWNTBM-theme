@@ -27,7 +27,7 @@ get_header(); ?>
 
 					<?php
 					foreach ( $ministries_list as $ministry ) {
-						echo '<li><a class="dropdown_trigger"><span class="trigger_pointer_arrow"></span>' . $ministry->name . '</a> (' . $ministry->count . ')
+						echo '<li class="dropdown_trigger">' . $ministry->name . ' (' . $ministry->count . ')
                         <ul class="sub_links" style="display:none;">';
 						// get all missionaries for this ministry type
 						$ministry_args = array(

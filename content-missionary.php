@@ -109,11 +109,11 @@ $location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';
 continue;} elseif ( strpos( basename( $group_folder ), 'post' ) !== false ) {
 					continue;}
 
-				echo '<li><a class="dropdown_trigger';
+				echo '<li class="dropdown_trigger';
 				// open group if it is this year's
 				if ( basename( $group_folder ) == date( 'Y' ) ) {
 						echo ' active';}
-				echo '"><span class="trigger_pointer_arrow"></span>' . strtolower( basename( $group_folder ) ) . '</a>
+				echo '">' . strtolower( basename( $group_folder ) ) . '
 				<ul class="sub_links" style="display:';
 				if ( basename( $group_folder ) == date( 'Y' ) ) {
 						echo 'block';

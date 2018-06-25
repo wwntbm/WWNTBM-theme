@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.14
+ * Version: 1.0.18
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -1380,6 +1380,22 @@ dl.gallery-item {
 
 .dropdown .field-region {
 	color: #606060;
+}
+
+.dropdown > li {
+    list-style-type: none;
+}
+
+.dropdown > li:before {
+    content: "\25b6";
+    font-size: 0.66em;
+    padding-right: 0.5em;
+    top: -0.2em;
+    position: relative;
+}
+
+.dropdown > .dropdown_trigger.expanded:before {
+	content: "\25bc";
 }
 
 .dropdown_trigger {
