@@ -787,17 +787,6 @@ a.telephone-link:hover {
 	display: none;
 }
 
-#site-title a {
-	width: 259px;
-	height: 135px;
-}
-
-#site-title a:hover,
-#site-title a:focus,
-#site-title a:active {
-	color: #216EA7;
-}
-
 #site-description {
 	color: #7a7a7a;
 	font-size: 14px;
@@ -824,6 +813,7 @@ a.telephone-link:hover {
 
 /* Search Form */
 
+.give-button,
 #branding #searchform {
 	position: absolute;
 	top: 2em;
@@ -886,6 +876,19 @@ a.telephone-link:hover {
 
 #branding .only-search + #access div {
 	padding-right: 205px;
+}
+
+.give-button {
+    background-color: #216ea7;
+    color: white;
+    padding: .666em 2em;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.give-button:hover {
+    text-decoration: none;
+    background-color: #134061;
 }
 
 /* @end */

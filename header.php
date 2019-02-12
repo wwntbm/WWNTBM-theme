@@ -118,6 +118,7 @@
 				</nav><!-- #access -->
 			</hgroup>
 			<?php get_search_form(); ?>
+			<p><a class="button give-button" href="<?php echo esc_url( home_url( 'give/' ) ); ?>">Give</a></p>
 	</header><!-- #branding -->
 
 
