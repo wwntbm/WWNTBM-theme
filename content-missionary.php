@@ -48,14 +48,8 @@
 			echo '<h2>' . implode( ', ', $wwntbm_status ) . '</h2>';
 		}
 
-		// title
-		$wwntbm_job_title = get_post_meta( get_the_ID(), 'Title', true );
-		if ( $wwntbm_job_title != null ) {
-echo '<h2 class="job-title">' . $wwntbm_job_title . '</h2>' . "\n";}
-	?>
-		<?php the_content(); ?>
+		the_content();
 
-		<?php
 		// Updates by this missionary
 		$wwntbm_missionary_username = get_post_meta( $post->ID, 'Username', true );
 		// The Query
@@ -66,7 +60,7 @@ echo '<h2 class="job-title">' . $wwntbm_job_title . '</h2>' . "\n";}
 			<ul class="updates">';
 			// The Loop
 			while ( $the_query->have_posts() ) :
-$the_query->the_post();
+				$the_query->the_post();
 				echo '<li class="recent-update">
 				<h3>';
 				the_title();
@@ -90,7 +84,8 @@ $the_query->the_post();
 
 		// get list of prayer letters
 		if ( $wwntbm_missionary_key != null ) {
-$location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';}
+			$location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';
+		}
 
 		// get and sort folders
 		$folder_list = glob( $location . '*', GLOB_ONLYDIR );
@@ -106,8 +101,10 @@ $location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';
 			foreach ( $folder_list as $group_folder ) {
 				// skip hidden folders
 				if ( strpos( basename( $group_folder ), 'site' ) !== false ) {
-continue;} elseif ( strpos( basename( $group_folder ), 'post' ) !== false ) {
-					continue;}
+					continue;
+				} elseif ( strpos( basename( $group_folder ), 'post' ) !== false ) {
+					continue;
+				}
 
 				echo '<li class="dropdown_trigger';
 				// open group if it is this year's
@@ -117,8 +114,9 @@ continue;} elseif ( strpos( basename( $group_folder ), 'post' ) !== false ) {
 				<ul class="sub_links" style="display:';
 				if ( basename( $group_folder ) == date( 'Y' ) ) {
 						echo 'block';
-} else {
-										echo 'none';}
+				} else {
+					echo 'none';
+				}
 				echo ';">' . "\n";
 
 				// get and sort files
