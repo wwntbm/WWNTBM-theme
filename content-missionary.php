@@ -39,14 +39,11 @@
 			echo '</p>';
 		}
 
-		// ministry type
+		// Ministry type.
 		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type</h2><p>', ', ', '</p>' );
 
-		// status
-		$wwntbm_status = wp_get_post_terms( get_the_ID(), 'wwntbm_status', array( 'fields' => 'names' ) );
-		if ( $wwntbm_status ) {
-			echo '<h2>' . implode( ', ', $wwntbm_status ) . '</h2>';
-		}
+		// Missionary status.
+		the_terms( $post->ID, 'wwntbm_status', '<h2 class="missionary-status">Missionary Status: ', ', ', '</h2>' );
 
 		the_content();
 
