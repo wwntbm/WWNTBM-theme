@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.23
+ * Version: 1.0.24
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -1250,6 +1250,7 @@ dl.gallery-item {
 .home-button {
 	display: block;
 	margin: 1em;
+	text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -3640,12 +3641,6 @@ blockquote.pull {
 	height: auto;
 }
 
-#motd_wrapper,
-.home-button {
-	margin: 1em auto;
-	float: none;
-}
-
 .missionary-listed {
 	max-width: 50%
 }
@@ -3666,12 +3661,6 @@ blockquote.pull {
 	height: auto;
 }
 
-#motd_wrapper,
-.home-button {
-	margin: 1em auto;
-	float: none;
-}
-
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -3688,15 +3677,6 @@ body {
 
 #branding {
 	border-top: none;
-}
-
-.home-button {
-	margin: 1em auto;
-	float: none;
-}
-
-#access li.page_item {
-#	width: 100%;
 }
 
 #access ul ul {
