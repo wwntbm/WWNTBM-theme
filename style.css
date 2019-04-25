@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.24
+ * Version: 1.0.25
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -3650,6 +3650,10 @@ blockquote.pull {
 @media (max-width: 450px) {
 
 /* @media max-width: 450px */
+
+#main #content {
+	margin: 0;
+}
 
 #content .gallery-columns-2 .gallery-item {
 	width: 45%;
