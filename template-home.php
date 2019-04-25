@@ -31,28 +31,28 @@ get_header(); ?>
 					</a>
 				</div>
 
-				<a class="home-button rounded shadowed" id="who" href="<?php echo esc_url( get_home_url() ); ?>/connect/missionaries/" title="Who We Are">
+				<a class="home-button rounded shadowed" href="<?php echo esc_url( get_home_url() ); ?>/connect/missionaries/" title="Who We Are">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/missionaries.jpg" alt="Who We Are" />
 					<h2 class="subtitle">Who We Are</h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="where" href="<?php echo esc_url( get_home_url() ); ?>/connect/fields-of-service/" title="Where We Serve">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/where-we-are.php" alt="Where We Serve" />
+				<a class="home-button rounded shadowed" href="<?php echo esc_url( get_home_url() ); ?>/connect/fields-of-service/" title="Where We Serve">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/where-we-are.jpg" alt="Where We Serve" />
 					<h2 class="subtitle">Where We Serve</h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="beliefs" href="<?php echo esc_url( get_home_url() ); ?>/learn/our-doctrinal-statement/" title="What We Believe">
+				<a class="home-button rounded shadowed" href="<?php echo esc_url( get_home_url() ); ?>/learn/our-doctrinal-statement/" title="What We Believe">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/Bible.jpg" alt="What We Believe" />
 					<h2 class="subtitle">What We Believe</h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="contact" href="<?php echo esc_url( get_home_url() ); ?>/connect/contact-wwntbm/" title="Who We Are">
+				<a class="home-button rounded shadowed" href="<?php echo esc_url( get_home_url() ); ?>/connect/contact-wwntbm/" title="How to Contact Us">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/contact-us.jpg" alt="How to Contact Us" />
 					<h2 class="subtitle">How to Contact Us</h2>
 				</a>
 
-				<a class="home-button rounded shadowed" id="missions-today" href="http://missions.today" title="Missions.today - a resource blog from WWNTBM">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/missions-today.jpg" alt="Missions Resources" />
+				<a class="home-button rounded shadowed" href="http://missions.today" title="Missions.today - a resource blog from WWNTBM">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/home-buttons/images/missions-today.jpg" alt="Missions.today - a resource blog from WWNTBM" />
 					<h2 class="subtitle">Missions Resources</h2>
 				</a>
 
