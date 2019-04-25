@@ -1249,7 +1249,6 @@ dl.gallery-item {
 
 .home-button {
 	display: block;
-	float: left;
 	margin: 1em;
 }
 
@@ -1257,6 +1256,10 @@ dl.gallery-item {
 	.home-button {
 		width: calc(50% - 2em);
 	}
+}
+
+.home-button img {
+	max-width: 100%;
 }
 
 /* @end */
