@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.25
+ * Version: 1.0.26
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -646,6 +646,19 @@ sub {
 
 /* Forms */
 
+.button {
+    background-color: #216ea7;
+    color: white;
+    padding: .666em 2em;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: #134061;
+}
+
 input,
 select,
 button,
@@ -866,19 +879,6 @@ a.telephone-link:hover {
 
 #branding .only-search + #access div {
 	padding-right: 205px;
-}
-
-.give-button {
-    background-color: #216ea7;
-    color: white;
-    padding: .666em 2em;
-    border-radius: 10px;
-    transition: all 0.2s ease;
-}
-
-.give-button:hover {
-    text-decoration: none;
-    background-color: #134061;
 }
 
 /* @end */
