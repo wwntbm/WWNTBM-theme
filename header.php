@@ -107,7 +107,7 @@
 			<hgroup>
 				<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri( 'template_directory' ) . '/images/header/logo-2016.png'; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" width="350" height="136" /><span><?php bloginfo( 'name' ); ?></span></a></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			 
+
 				<nav id="access" role="navigation">
 					<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
 					<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
@@ -117,7 +117,11 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav><!-- #access -->
 			</hgroup>
-			<p><a class="button give-button" href="<?php echo esc_url( home_url( 'give/' ) ); ?>">Give</a></p>
+			<?php
+			if ( is_main_site() ) {
+				echo '<p><a class="button give-button" href="' .esc_url( home_url( 'give/' ) ) . '">Give</a></p>';
+			}
+			?>
 	</header><!-- #branding -->
 
 
