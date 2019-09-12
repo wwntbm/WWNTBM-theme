@@ -118,7 +118,7 @@
 				</nav><!-- #access -->
 			</hgroup>
 			<?php
-			if ( is_main_site() ) {
+			if ( is_multisite() && is_main_site() ) {
 				echo '<p><a class="button give-button" href="' .esc_url( home_url( 'give/' ) ) . '">Give</a></p>';
 			}
 			?>
