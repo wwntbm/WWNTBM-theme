@@ -275,3 +275,29 @@ if ( ! current_user_can( 'manage_options' ) ) {
 	}
 	add_filter( 'pre_get_posts', 'posts_for_current_author' );
 }
+
+/**
+ * Save ACF JSON in theme folder.
+ *
+ * @param string $path ACF JSON directory.
+ *
+ * @return string      ACF JSON directory.
+ */
+function wwntbm_acf_json_save( $path ) {
+	$path = get_stylesheet_directory() . '/acf-json';
+	return $path;
+}
+add_filter( 'acf/settings/save_json', 'wwntbm_acf_json_save' );
+
+/**
+ * Load ACF JSON from theme folder.
+ *
+ * @param array $paths ACF JSON directories.
+ *
+ * @return array       ACF JSON directories.
+ */
+function my_acf_json_load_point( $paths ) {
+	$paths[] = get_stylesheet_directory() . '/acf-json';
+	return $paths;
+}
+add_filter( 'acf/settings/load_json', 'my_acf_json_load_point' );
