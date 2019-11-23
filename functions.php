@@ -16,7 +16,8 @@ add_action( 'wp_enqueue_scripts', 'wwntbm_assets' );
 /**
  * Add office staff role.
  */
-$administrator_role = get_role( 'administrator' );
+function wwntbm_user_roles() {
+	$administrator_role = get_role( 'administrator' );
 	// get_role returns an object; we want the capabilities piece, which is an array.
 	$office_staff_caps = $administrator_role->capabilities;
 
@@ -45,8 +46,8 @@ $administrator_role = get_role( 'administrator' );
 	$office_staff_role->add_cap( 'delete_missionary_update' );
 	$office_staff_role->add_cap( 'read_private_pages' );
 	$office_staff_role->add_cap( 'manage_options' );
-// end Add office staff custom role
-// Add missionaries custom role
+
+	// Add missionaries custom role
 	$author_role = get_role( 'author' );
 
 	// get_role returns an object; we want the capabilities piece, which is an array.
@@ -70,10 +71,18 @@ $administrator_role = get_role( 'administrator' );
 	$missionary_role->add_cap( 'edit_missionary_updates' );
 	$missionary_role->add_cap( 'publish_missionary_updates' );
 	$missionary_role->add_cap( 'read_private_pages' );
+}
+add_action( 'init', 'wwntbm_user_roles' );
 
-
-// end Add missionaries custom role
-// missionary prayer letter names
+/**
+ * Display missionary prayer letter names.
+ *
+ * @param string $file
+ * @param string $missionary_name_key
+ *
+ * @return void
+ * @since 1.0.0
+ */
 function missionary_prayer_letters( $file, $missionary_name_key ) {
 	$file_extension = pathinfo( $file, PATHINFO_EXTENSION );
 	$month_numbers = array( '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12' );
@@ -81,46 +90,48 @@ function missionary_prayer_letters( $file, $missionary_name_key ) {
 
 	// rename prayer letter
 	$prayer_letter_title = str_ireplace( $missionary_name_key . '---', '', ( basename( $file, '.' . $file_extension ) ) );
-		// filter out month
-		$prayer_letter_month_array = explode( '-', $prayer_letter_title );
-		$prayer_letter_month = $prayer_letter_month_array[1];
-		$prayer_letter_year = $prayer_letter_month_array[0];
+
+	// filter out month
+	$prayer_letter_month_array = explode( '-', $prayer_letter_title );
+	$prayer_letter_month = $prayer_letter_month_array[1];
+	$prayer_letter_year = $prayer_letter_month_array[0];
 
 	// build title
 	$prayer_letter_title = str_replace( $month_numbers, $month_names, $prayer_letter_month ) . ' ' . $prayer_letter_year;
 
 	// check for special titles
 	if ( $prayer_letter_month_array[2] != null ) {
-$prayer_letter_title .= ' (' . $prayer_letter_month_array[2] . ')';}
+		$prayer_letter_title .= ' (' . $prayer_letter_month_array[2] . ')';
+	}
 
 	// echo the <li> item
-	echo '<li><a target="_blank" href="' . site_url( '/' ) . $file . '" title="' . $prayer_letter_title . '">' . $prayer_letter_title . '</a></li>' . "\n";
+	echo '<li><a target="_blank" href="' . esc_url( get_site_url( null, '/' . $file ) ) . '" title="' . $prayer_letter_title . '">' . $prayer_letter_title . '</a></li>' . "\n";
 }
 // end missionary prayer letter names
 // add sidebar for home page
 function WWNTBM_widgets_init() {
 	register_sidebar(
-		 array(
-			 'name' => __( 'Homepage Sidebar', 'twentyeleven' ),
-			 'id' => 'sidebar-6',
-			 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			 'after_widget' => '</aside>',
-			 'before_title' => '<h3 class="widget-title">',
-			 'after_title' => '</h3>',
-		 )
-		);
+		array(
+			'name' => __( 'Homepage Sidebar', 'twentyeleven' ),
+			'id' => 'sidebar-6',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
 }
 
 
 // add custom thumbnail size for missionary archive page
 if ( function_exists( 'add_theme_support' ) ) {
-add_theme_support( 'post-thumbnails' );
-add_image_size( 'category-thumb', 150, 100, true );
-add_image_size( 'category-thumb-m', 225, 150, true );
-add_image_size( 'category-thumb-l', 300, 200, true );
-add_image_size( 'missionary_of_the_day', 250, 150, true );
-add_image_size( 'missionary_of_the_day_m', 375, 225, true );
-add_image_size( 'missionary_of_the_day_l', 500, 300, true );
+	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'category-thumb', 150, 100, true );
+	add_image_size( 'category-thumb-m', 225, 150, true );
+	add_image_size( 'category-thumb-l', 300, 200, true );
+	add_image_size( 'missionary_of_the_day', 250, 150, true );
+	add_image_size( 'missionary_of_the_day_m', 375, 225, true );
+	add_image_size( 'missionary_of_the_day_l', 500, 300, true );
 }
 
 
@@ -144,33 +155,33 @@ function remove_dashboard_widgets() {
 // AndrewRMinion branding
 	// change login page link
 	function wpc_url_login() {
-	return 'http://wwntbm.com/'; // your URL here
+		return 'https://wwntbm.com/';
 	}
 	add_filter( 'login_headerurl', 'wpc_url_login' );
 
 	// customize login page logo
 	function login_css() {
-	wp_enqueue_style( 'login_css', get_stylesheet_directory_uri() . '/login.css' );
+		wp_enqueue_style( 'login_css', get_stylesheet_directory_uri() . '/login.css' );
 	}
 	add_action( 'login_head', 'login_css' );
 
 	// custom admin footer
 	function remove_footer_admin() {
-	echo '&copy; ' . date( 'Y' ) . ' by <a href="http://andrewrminion.com/" target="_blank">AndrewRMinion Design</a>.';
+		echo 'Developed by <a href="https://andrewrminion.com/" target="_blank">AndrewRMinion Design</a>.';
 	}
 	add_filter( 'admin_footer_text', 'remove_footer_admin' );
 
 	// technical info widget
 	function armd_dashboard_widget_function() {
 	// Entering the text between the quotes
-	echo '<ul>
+		echo '<ul>
         <li>Release Date: May 2012</li>
-        <li>Developer: <a href="http://andrewrminion.com/" target="_blank">AndrewRMinion Design</a></li>
+        <li>Developer: <a href="https://andrewrminion.com/" target="_blank">AndrewRMinion Design</a></li>
         <li>Hosting provider: ANHosting (WWNTBM account)</li>
         </ul>';
 	}
 	function armd_add_dashboard_widgets() {
-	wp_add_dashboard_widget( 'wp_dashboard_widget', 'Technical information', 'armd_dashboard_widget_function' );
+		wp_add_dashboard_widget( 'wp_dashboard_widget', 'Technical information', 'armd_dashboard_widget_function' );
 	}
 	add_action( 'wp_dashboard_setup', 'armd_add_dashboard_widgets' );
 // end AndrewRMinion branding
