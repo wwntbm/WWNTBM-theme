@@ -56,17 +56,17 @@
 
 	$email = sanitize_email( get_field( 'email' ) );
 	if ( $email ) {
-		echo '<strong>Email: <a href="mailto:' . esc_attr( $email ) . '">' . esc_attr( $email ) . '</a><br />';
+		echo '<strong>Email</strong>: <a href="mailto:' . esc_attr( $email ) . '">' . esc_attr( $email ) . '</a><br />';
 	}
 
 		$phone = get_field( 'phone' );
 	if ( $phone ) {
-		echo '<strong>Phone: <a href="tel:' . esc_attr( $phone ) . '">' . esc_attr( $phone ) . '</a><br />';
+		echo '<strong>Phone</strong>: <a href="tel:' . esc_attr( $phone ) . '">' . esc_attr( $phone ) . '</a><br />';
 	}
 
 		$website = get_field( 'website' );
 	if ( $website ) {
-		echo '<strong>website: <a href="' . esc_url( $website ) . '">' . esc_url( $website ) . '</a><br />';
+		echo '<strong>website</strong>: <a href="' . esc_url( $website ) . '">' . esc_url( $website ) . '</a><br />';
 	}
 
 	echo '</p>';
