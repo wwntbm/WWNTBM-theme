@@ -301,3 +301,12 @@ function my_acf_json_load_point( $paths ) {
 	return $paths;
 }
 add_filter( 'acf/settings/load_json', 'my_acf_json_load_point' );
+
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page(
+		array(
+			'page_title' => __( 'Theme Options', 'wwntbm' ),
+			'capability' => 'manage_options',
+		)
+	);
+}
