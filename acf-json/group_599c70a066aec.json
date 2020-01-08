@@ -262,7 +262,7 @@
                     "label": "Birthday",
                     "name": "birthday",
                     "type": "date_picker",
-                    "instructions": "",
+                    "instructions": "If “hide year” is disabled, pick any year.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -279,7 +279,7 @@
                     "label": "Hide Year",
                     "name": "hide_year",
                     "type": "true_false",
-                    "instructions": "",
+                    "instructions": "Set to “hide” for parents and older children.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -386,5 +386,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578454754
+    "modified": 1578455145
 }
