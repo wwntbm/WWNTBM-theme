@@ -14,12 +14,12 @@ get_header(); ?>
 
 				<?php
 				while ( have_posts() ) :
-the_post();
-?>
+					the_post();
 
-					<?php get_template_part( 'content', 'missionary' ); ?>
+					get_template_part( 'content', 'missionary' );
 
-				<?php endwhile; // end of the loop. ?>
+				endwhile; // end of the loop.
+				?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
