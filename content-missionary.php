@@ -6,13 +6,14 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php twentyeleven_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -42,38 +43,37 @@
 		echo '</p>';
 	}
 
-		// Ministry type.
-		the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type</h2><p>', ', ', '</p>' );
+	// Ministry type.
+	the_terms( $post->ID, 'wwntbm_ministries', '<h2 class="ministry-type">Ministry Type</h2><p>', ', ', '</p>' );
 
-		// Missionary status.
-		the_terms( $post->ID, 'wwntbm_status', '<h2 class="missionary-status">Missionary Status: ', ', ', '</h2>' );
+	// Missionary status.
+	the_terms( $post->ID, 'wwntbm_status', '<h2 class="missionary-status">Missionary Status: ', ', ', '</h2>' );
 
-		/**
-		 * Contact fields.
-		 */
-		echo '<p class="contact">';
+	/**
+	 * Contact fields.
+	 */
+	echo '<p class="contact">';
 
-		$email = sanitize_email( get_field( 'email' ) );
+	$email = sanitize_email( get_field( 'email' ) );
 	if ( $email ) {
-		echo '<strong>Email: <a href="mailto:' . $email . '">' . $email . '</a><br />';
+		echo '<strong>Email: <a href="mailto:' . esc_attr( $email ) . '">' . esc_attr( $email ) . '</a><br />';
 	}
 
 		$phone = get_field( 'phone' );
 	if ( $phone ) {
-		echo '<strong>Phone: <a href="tel:' . $phone . '">' . $phone . '</a><br />';
+		echo '<strong>Phone: <a href="tel:' . esc_attr( $phone ) . '">' . esc_attr( $phone ) . '</a><br />';
 	}
 
 		$website = get_field( 'website' );
 	if ( $website ) {
-		echo '<strong>website: <a href="' . esc_url( $website ) . '">' . $website . '</a><br />';
+		echo '<strong>website: <a href="' . esc_url( $website ) . '">' . esc_url( $website ) . '</a><br />';
 	}
 
-		echo '</p>';
+	echo '</p>';
 
-		/**
-		 * Address fields.
-		 */
-
+	/**
+	 * Address fields.
+	 */
 	if ( get_field( 'address' ) ) {
 		echo '<h2>Address</h2>';
 		the_field( 'address' );
@@ -115,37 +115,33 @@
 		the_field( 'date_joined' );
 	}
 
-		/**
-		 * Any other content.
-		 */
-		the_content();
+	/**
+	 * Any other content.
+	 */
+	the_content();
 
+	/**
+	 * Prayer letters.
+	 */
 
-		/**
-		 * Prayer letters.
-		 */
-
-		// get missionary unique key
-		$wwntbm_missionary_key = strtolower( get_field( 'missionary_key' ) );
-
-		// get list of prayer letters
+	$wwntbm_missionary_key = strtolower( get_field( 'missionary_key' ) );
 	if ( isset( $wwntbm_missionary_key ) ) {
 		$location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';
 	}
 
-		// get and sort folders
-		$folder_list = glob( $location . '*', GLOB_ONLYDIR );
-		natcasesort( $folder_list );
-		$folder_list = array_reverse( $folder_list );
+	// Get and sort folders.
+	$folder_list = glob( $location . '*', GLOB_ONLYDIR );
+	natcasesort( $folder_list );
+	$folder_list = array_reverse( $folder_list );
 
-	if ( ( $folder_list != null ) and ( $wwntbm_missionary_key != null ) ) {
+	if ( ( ! is_null( $folder_list ) ) && ( ! is_null( $wwntbm_missionary_key ) ) ) {
 		echo '<div class="prayer_letters">
 			<h2>Prayer Letters:</h2>
 			<ul class="dropdown">';
 
-		// process folders
+		// Process folders.
 		foreach ( $folder_list as $group_folder ) {
-			// skip hidden folders
+			// Skip hidden folders.
 			if ( strpos( basename( $group_folder ), 'site' ) !== false ) {
 				continue;
 			} elseif ( strpos( basename( $group_folder ), 'post' ) !== false ) {
@@ -153,24 +149,25 @@
 			}
 
 			echo '<li class="dropdown_trigger';
-			// open group if it is this year's
-			if ( basename( $group_folder ) == date( 'Y' ) ) {
-					echo ' active';}
-			echo '">' . strtolower( basename( $group_folder ) ) . '
+			// Open group if it is this year's.
+			if ( basename( $group_folder ) === gmdate( 'Y' ) ) {
+				echo ' active';
+			}
+			echo '">' . esc_attr( strtolower( basename( $group_folder ) ) ) . '
 				<ul class="sub_links" style="display:';
-			if ( basename( $group_folder ) == date( 'Y' ) ) {
-					echo 'block';
+			if ( basename( $group_folder ) === gmdate( 'Y' ) ) {
+				echo 'block';
 			} else {
 				echo 'none';
 			}
 			echo ';">' . "\n";
 
-			// get and sort files
+			// Get and sort files.
 			$file_list = glob( $location . basename( $group_folder ) . '/*.pdf', GLOB_BRACE );
 			natcasesort( $file_list );
 			$file_list = array_reverse( $file_list );
 
-			// display files
+			// Display files.
 			foreach ( $file_list as $file ) {
 					missionary_prayer_letters( $file, $wwntbm_missionary_key );
 			}
