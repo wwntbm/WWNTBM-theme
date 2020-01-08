@@ -367,6 +367,39 @@
             "allow_null": 1,
             "multiple": 0,
             "return_format": "array"
+        },
+        {
+            "key": "field_5e1550ad61859",
+            "label": "Other",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_5e1550c16185a",
+            "label": "Other",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Add other data (prayer requests, etc.) in the main content field below.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -386,5 +419,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578455145
+    "modified": 1578455413
 }
