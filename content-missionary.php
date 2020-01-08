@@ -96,7 +96,7 @@
 			echo '<li>';
 			the_sub_field( 'name' );
 			echo ': ';
-			$date = get_field( 'birthday' );
+			$date = get_sub_field( 'birthday' );
 			if ( get_sub_field( 'hide_year' ) ) {
 				$split = explode( ',', $date );
 				$date  = $split[0];
