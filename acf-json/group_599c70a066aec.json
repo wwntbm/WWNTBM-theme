@@ -75,7 +75,7 @@
             "key": "field_5e153e423ae36",
             "label": "Address",
             "name": "address",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "Field Address",
             "required": 0,
             "conditional_logic": 0,
@@ -85,10 +85,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_56f99431cac9f",
@@ -112,7 +112,7 @@
             "key": "field_5e153e5b3ae37",
             "label": "Sending Church",
             "name": "sending_church",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "Sending church and address",
             "required": 0,
             "conditional_logic": 0,
@@ -122,10 +122,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "Church name, Pastor name, Address, Phone",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5dd9878c12aaf",
@@ -386,5 +386,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578451085
+    "modified": 1578454754
 }
