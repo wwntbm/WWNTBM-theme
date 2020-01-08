@@ -75,13 +75,15 @@
 	 * Address fields.
 	 */
 	if ( get_field( 'address' ) ) {
-		echo '<h2>Address</h2>';
+		echo '<h2>Address</h2><address>';
 		the_field( 'address' );
+		echo '</address>';
 	}
 
 	if ( get_field( 'sending_church' ) ) {
-		echo '<h2>Sending Church</h2>';
+		echo '<h2>Sending Church</h2><address>';
 		the_field( 'sending_church' );
+		echo '</address>';
 	}
 
 		/**
@@ -107,12 +109,16 @@
 
 	if ( get_field( 'anniversary' ) ) {
 		echo '<h2>Anniversary</h2>';
+		echo '<p>';
 		the_field( 'anniversary' );
+		echo '</p>';
 	}
 
 	if ( get_field( 'date_joined' ) ) {
 		echo '<h2>Date Joined</h2>';
+		echo '<p>';
 		the_field( 'date_joined' );
+		echo '</p>';
 	}
 
 	/**
