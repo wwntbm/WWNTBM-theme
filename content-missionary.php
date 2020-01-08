@@ -21,15 +21,18 @@
 
 	<div class="entry-content">
 	<?php
-	// photo
-	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-	  the_post_thumbnail( 'medium', array( 'class' => 'alignright rounded shadowed' ) );
-	}
-	?>
-	<?php
-		// field
-		$wwntbm_field = get_post_meta( get_the_ID(), 'missionary_field', true );
-		$wwntbm_field_region = get_post_meta( get_the_ID(), 'missionary_field_region', true );
+		/**
+		 * Photo.
+		 */
+		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+			the_post_thumbnail( 'medium', array( 'class' => 'alignright rounded shadowed' ) );
+		}
+
+		/**
+		 * Field.
+		 */
+		$wwntbm_field        = get_field( 'missionary_field' );
+		$wwntbm_field_region = get_field( 'missionary_field_region' );
 
 		if ( ! empty( $wwntbm_field ) ) {
 			echo '<h2 class="field-of-service">Field of Service</h2><p>' . esc_attr( $wwntbm_field );
@@ -45,42 +48,88 @@
 		// Missionary status.
 		the_terms( $post->ID, 'wwntbm_status', '<h2 class="missionary-status">Missionary Status: ', ', ', '</h2>' );
 
+		/**
+		 * Contact fields.
+		 */
+		echo '<p class="contact">';
+
+		$email = sanitize_email( get_field( 'email' ) );
+		if ( $email ) {
+			echo '<strong>Email: <a href="mailto:' . $email . '">' . $email . '</a><br />';
+		}
+
+		$phone = get_field( 'phone' );
+		if ( $phone ) {
+			echo '<strong>Phone: <a href="tel:' . $phone . '">' . $phone . '</a><br />';
+		}
+
+		$website = get_field( 'website' );
+		if ( $website ) {
+			echo '<strong>website: <a href="' . esc_url( $website ) . '">' . $website . '</a><br />';
+		}
+
+		echo '</p>';
+
+		/**
+		 * Address fields.
+		 */
+
+		if ( get_field( 'address' ) ) {
+			echo '<h2>Address</h2>';
+			the_field( 'address' );
+		}
+
+		if ( get_field( 'sending_church' ) ) {
+			echo '<h2>Sending Church</h2>';
+			the_field( 'sending_church' );
+		}
+
+		/**
+		 * Significant dates.
+		 */
+		if ( have_rows( 'birthdays' ) ) {
+			echo '<h2>Birthdays</h2><ul>';
+			while ( have_rows( 'birthdays' ) ) {
+				the_row();
+				echo '<li>';
+				the_sub_field( 'name' );
+				echo ': ';
+				$date = get_field( 'birthday' );
+				if ( get_sub_field( 'hide_year' ) ) {
+					$split = explode( ',', $date );
+					$date = $split[0];
+				}
+				echo esc_attr( $date );
+				echo '</li>';
+			}
+			echo '</ul>';
+		}
+
+		if ( get_field( 'anniversary' ) ) {
+			echo '<h2>Anniversary</h2>';
+			the_field( 'anniversary' );
+		}
+
+		if ( get_field( 'date_joined' ) ) {
+			echo '<h2>Date Joined</h2>';
+			the_field( 'date_joined' );
+		}
+
+		/**
+		 * Any other content.
+		 */
 		the_content();
 
-		// Updates by this missionary
-		$wwntbm_missionary_username = get_post_meta( $post->ID, 'Username', true );
-		// The Query
-		$the_query = new WP_Query( 'author_name=' . $wwntbm_missionary_username . '&post_type=wwntbm_updates' );
 
-		if ( ( $the_query->found_posts >= 1 ) and ( $wwntbm_missionary_username != null ) ) {
-			echo '<h2>Updates:</h2>
-			<ul class="updates">';
-			// The Loop
-			while ( $the_query->have_posts() ) :
-				$the_query->the_post();
-				echo '<li class="recent-update">
-				<h3>';
-				the_title();
-				echo '</h3>';
-				the_date( '', '<span class="post-date">', '</span>' );
-				the_content();
-				echo '</li><!-- .recent-update -->';
-			endwhile;
+		/**
+		 * Prayer letters.
+		 */
 
-			// Reset Post Data
-			wp_reset_postdata();
-			echo '</ul><!-- .updates -->';
-		}
-		?>
-
-		<?php
-		// prayer letters
 		// get missionary unique key
-		$wwntbm_missionary_key = get_post_meta( get_the_ID(), 'missionary_key', true );
-		$wwntbm_missionary_key = strtolower( $wwntbm_missionary_key );
+		$wwntbm_missionary_key = strtolower( get_field( 'missionary_key' ) );
 
 		// get list of prayer letters
-		if ( $wwntbm_missionary_key != null ) {
+		if ( isset( $wwntbm_missionary_key ) ) {
 			$location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';
 		}
 
