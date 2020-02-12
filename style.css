@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.26
+ * Version: 1.0.27
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -1794,6 +1794,11 @@ blockquote.pull {
 p.tithely-give-btn,
 p a.tithely-give-btn {
 	display: inline-block;
+}
+
+.donation-meta {
+	font-style: italic;
+	font-size: 85%;
 }
 
 form.donations * {
