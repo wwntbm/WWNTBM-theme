@@ -59,9 +59,17 @@
 		echo '<strong>Email</strong>: <a href="mailto:' . esc_attr( $email ) . '">' . esc_attr( $email ) . '</a><br />';
 	}
 
-		$phone = get_field( 'phone' );
+	$phone = get_field( 'phone' );
 	if ( $phone ) {
-		echo '<strong>Phone</strong>: <a href="tel:' . esc_attr( $phone ) . '">' . esc_attr( $phone ) . '</a><br />';
+		echo '<strong>Phone</strong>: ';
+
+		if ( preg_match( '/[a-zA-Z]/', $phone ) > 0 ) {
+			echo esc_attr( $phone );
+		} else {
+			echo '<a href="tel:' . esc_attr( $phone ) . '">' . esc_attr( $phone ) . '</a>';
+		}
+
+		echo '<br />';
 	}
 
 		$website = get_field( 'website' );
