@@ -3405,227 +3405,227 @@ a value of "15px" which adds redundant whitespace to the top of the article */
 
 	/* @end */
 
-/* And a full-width comment form */
+	/* And a full-width comment form */
 
-#respond {
-	width: auto;
-}
+	#respond {
+		width: auto;
+	}
 
-/* No need to float footer widgets at this size */
+	/* No need to float footer widgets at this size */
 
-#colophon #supplementary .widget-area {
-	float: none;
-	margin-right: 0;
-	width: auto;
-}
+	#colophon #supplementary .widget-area {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
 
-/* No need to float 404 widgets at this size */
+	/* No need to float 404 widgets at this size */
 
-.error404 #main .widget {
-	float: none;
-	margin-right: 0;
-	width: auto;
-}
+	.error404 #main .widget {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
 
-/* Make sure embeds fit their containers */
+	/* Make sure embeds fit their containers */
 
-embed,
+	embed,
 	object {
-	max-width: 100%;
-}
+		max-width: 100%;
+	}
 
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* iPad  */
 
-#access ul ul {
-	display: none;
-}
+	#access ul ul {
+		display: none;
+	}
 
 }
 
 @media (max-width: 650px) {
 
-#site-title a {
-	font-size: 24px;
-}
+	#site-title a {
+		font-size: 24px;
+	}
 
-#site-description {
-	font-size: 12px;
-}
-
-#access {
-	width: 100%;
-	margin-top: 1em;
-}
-
-#access ul {
-	font-size: 14px;
-}
-
-article.intro .entry-content {
-	font-size: 12px;
-}
-
-.entry-title {
-	font-size: 21px;
-}
-
-.featured-post .entry-title {
-	font-size: 14px;
-}
-
-.singular .entry-title {
-	font-size: 28px;
-}
-
-.entry-meta {
-	font-size: 12px;
-}
-
-blockquote {
-	margin: 0;
-}
-
-blockquote.pull {
-	font-size: 17px;
-}
-
-/* Reposition the site title and description slightly */
-
-#site-title {
-	padding: 5.30625em 0 0;
-}
-
-#site-title,
 	#site-description {
-	margin-right: 0;
-}
+		font-size: 12px;
+	}
 
-/* Make sure the logo and search form don't collide */
+	#access {
+		width: 100%;
+		margin-top: 1em;
+	}
 
-#branding #searchform {
-	top: 1.625em !important;
-}
+	#access ul {
+		font-size: 14px;
+	}
 
-/* Floated content doesn't work well at this size */
+	article.intro .entry-content {
+		font-size: 12px;
+	}
 
-.alignleft,
-	.alignright {
-	float: none;
-	margin-left: 0;
-	margin-right: 0;
-}
+	.entry-title {
+		font-size: 21px;
+	}
 
-/* Make sure the post-post navigation doesn't collide with anything */
+	.featured-post .entry-title {
+		font-size: 14px;
+	}
 
-#nav-single {
-	display: block;
-	position: static;
-}
+	.singular .entry-title {
+		font-size: 28px;
+	}
 
-.singular .hentry {
-	padding: 0;
-}
+	.entry-meta {
+		font-size: 12px;
+	}
 
-.singular.page .hentry {
-	padding: 1.625em 0 0;
-}
+	blockquote {
+		margin: 0;
+	}
 
-/* Talking avatars take up too much room at this size */
+	blockquote.pull {
+		font-size: 17px;
+	}
 
-.commentlist > li.comment,
-	.commentlist > li.pingback {
-	margin-left: 0 !important;
-}
+	/* Reposition the site title and description slightly */
 
-.commentlist .avatar {
-	background: transparent;
-	display: block;
-	padding: 0;
-	position: static;
-}
+	#site-title {
+		padding: 5.30625em 0 0;
+	}
 
-.commentlist .children .avatar {
-	background: none;
-	left: 2.2em;
-	padding: 0;
-	position: absolute;
-	top: 2.2em;
-}
+	#site-title,
+		#site-description {
+		margin-right: 0;
+	}
 
-/* Use the available space in the smaller comment form */
+	/* Make sure the logo and search form don't collide */
 
-#respond input[type="text"] {
-	width: 95%;
-}
+	#branding #searchform {
+		top: 1.625em !important;
+	}
 
-#respond .comment-form-author .required,
-	#respond .comment-form-email .required {
-	left: 95%;
-}
+	/* Floated content doesn't work well at this size */
 
-#content .gallery-columns-3 .gallery-item {
-	width: 31%;
-	padding-right: 2%;
-}
+	.alignleft,
+		.alignright {
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
 
-#content .gallery-columns-3 .gallery-item img {
-	width: 100%;
-	height: auto;
-}
+	/* Make sure the post-post navigation doesn't collide with anything */
 
-.missionary-listed {
-	max-width: 50%
-}
+	#nav-single {
+		display: block;
+		position: static;
+	}
+
+	.singular .hentry {
+		padding: 0;
+	}
+
+	.singular.page .hentry {
+		padding: 1.625em 0 0;
+	}
+
+	/* Talking avatars take up too much room at this size */
+
+	.commentlist > li.comment,
+		.commentlist > li.pingback {
+		margin-left: 0 !important;
+	}
+
+	.commentlist .avatar {
+		background: transparent;
+		display: block;
+		padding: 0;
+		position: static;
+	}
+
+	.commentlist .children .avatar {
+		background: none;
+		left: 2.2em;
+		padding: 0;
+		position: absolute;
+		top: 2.2em;
+	}
+
+	/* Use the available space in the smaller comment form */
+
+	#respond input[type="text"] {
+		width: 95%;
+	}
+
+	#respond .comment-form-author .required,
+		#respond .comment-form-email .required {
+		left: 95%;
+	}
+
+	#content .gallery-columns-3 .gallery-item {
+		width: 31%;
+		padding-right: 2%;
+	}
+
+	#content .gallery-columns-3 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
+
+	.missionary-listed {
+		max-width: 50%
+	}
 
 }
 
 @media (max-width: 450px) {
 
-/* @media max-width: 450px */
+	/* @media max-width: 450px */
 
-#main #content {
-	margin: 0;
-}
+	#main #content {
+		margin: 0;
+	}
 
-#content .gallery-columns-2 .gallery-item {
-	width: 45%;
-	padding-right: 4%;
-}
+	#content .gallery-columns-2 .gallery-item {
+		width: 45%;
+		padding-right: 4%;
+	}
 
-#content .gallery-columns-2 .gallery-item img {
-	width: 100%;
-	height: auto;
-}
+	#content .gallery-columns-2 .gallery-item img {
+		width: 100%;
+		height: auto;
+	}
 
 }
 
 @media only screen and (max-device-width: 480px) {
 
-/* @media min-width: 320px and max-width: 480px */
+	/* @media min-width: 320px and max-width: 480px */
 
-body {
-	padding: 0;
-}
+	body {
+		padding: 0;
+	}
 
-#page {
-	margin: 0;
-}
+	#page {
+		margin: 0;
+	}
 
-#branding {
-	border-top: none;
-}
+	#branding {
+		border-top: none;
+	}
 
-#access ul ul {
-	display: none;
-	left: 0;
-}
+	#access ul ul {
+		display: none;
+		left: 0;
+	}
 
-#secondary .widget {
-	border-top: 1px solid #ddd;
-}
+	#secondary .widget {
+		border-top: 1px solid #ddd;
+	}
 
 }
 
@@ -3635,206 +3635,206 @@ body {
 
 @media print {
 
-body {
-	background: none !important;
-	font-size: 10pt;
-}
+	body {
+		background: none !important;
+		font-size: 10pt;
+	}
 
-footer.entry-meta a[rel=bookmark]:link:after,
-	footer.entry-meta a[rel=bookmark]:visited:after {
-	content: " [" attr(href) "] ";
-}
+	footer.entry-meta a[rel=bookmark]:link:after,
+		footer.entry-meta a[rel=bookmark]:visited:after {
+		content: " [" attr(href) "] ";
+	}
 
-#page {
-	clear: both !important;
-	display: block !important;
-	float: none !important;
-	max-width: 100%;
-	position: relative !important;
-}
+	#page {
+		clear: both !important;
+		display: block !important;
+		float: none !important;
+		max-width: 100%;
+		position: relative !important;
+	}
 
-#branding {
-	border-top: none !important;
-	padding: 0;
-}
+	#branding {
+		border-top: none !important;
+		padding: 0;
+	}
 
-#branding hgroup {
-	margin: 0;
-}
+	#branding hgroup {
+		margin: 0;
+	}
 
-#site-title a {
-	font-size: 21pt;
-}
+	#site-title a {
+		font-size: 21pt;
+	}
 
-#site-description {
-	font-size: 10pt;
-}
+	#site-description {
+		font-size: 10pt;
+	}
 
-#branding #searchform {
-	display: none;
-}
+	#branding #searchform {
+		display: none;
+	}
 
-#branding img {
-	display: none;
-}
+	#branding img {
+		display: none;
+	}
 
-#access {
-	display: none;
-}
+	#access {
+		display: none;
+	}
 
-#main {
-	border-top: none;
-	box-shadow: none;
-}
+	#main {
+		border-top: none;
+		box-shadow: none;
+	}
 
-#primary {
-	float: left;
-	margin: 0;
-	width: 100%;
-}
+	#primary {
+		float: left;
+		margin: 0;
+		width: 100%;
+	}
 
-#content {
-	margin: 0;
-	width: auto;
-}
+	#content {
+		margin: 0;
+		width: auto;
+	}
 
-.singular #content {
-	margin: 0;
-	width: 100%;
-}
+	.singular #content {
+		margin: 0;
+		width: 100%;
+	}
 
-.singular .entry-header .entry-meta {
-	position: static;
-}
+	.singular .entry-header .entry-meta {
+		position: static;
+	}
 
-.entry-meta .edit-link a {
-	display: none;
-}
+	.entry-meta .edit-link a {
+		display: none;
+	}
 
-#content nav {
-	display: none;
-}
+	#content nav {
+		display: none;
+	}
 
-.singular .entry-header,
-	.singular .entry-content,
-	.singular footer.entry-meta,
-	.singular #comments-title {
-	margin: 0;
-	width: 100%;
-}
+	.singular .entry-header,
+		.singular .entry-content,
+		.singular footer.entry-meta,
+		.singular #comments-title {
+		margin: 0;
+		width: 100%;
+	}
 
-.singular .hentry {
-	padding: 0;
-}
+	.singular .hentry {
+		padding: 0;
+	}
 
-.entry-title,
-	.singular .entry-title {
-	font-size: 21pt;
-}
+	.entry-title,
+		.singular .entry-title {
+		font-size: 21pt;
+	}
 
-.entry-meta {
-	font-size: 10pt;
-}
+	.entry-meta {
+		font-size: 10pt;
+	}
 
-.entry-header .comments-link {
-	display: none;
-}
+	.entry-header .comments-link {
+		display: none;
+	}
 
-.page-link {
-	display: none;
-}
+	.page-link {
+		display: none;
+	}
 
-.singular #author-info {
-	background: none;
-	border-bottom: none;
-	border-top: none;
-	margin: 2.2em 0 0;
-	padding: 0;
-}
+	.singular #author-info {
+		background: none;
+		border-bottom: none;
+		border-top: none;
+		margin: 2.2em 0 0;
+		padding: 0;
+	}
 
-#respond {
-	display: none;
-}
+	#respond {
+		display: none;
+	}
 
-.widget-area {
-	display: none;
-}
+	.widget-area {
+		display: none;
+	}
 
-#colophon {
-	display: none;
-}
+	#colophon {
+		display: none;
+	}
 
-/* Comments */
+	/* Comments */
 
-.commentlist > li.comment {
-	background: none;
-	border: 1px solid #ddd;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	margin: 0 auto 1.625em;
-	padding: 1.625em;
-	position: relative;
-	width: auto;
-}
+	.commentlist > li.comment {
+		background: none;
+		border: 1px solid #ddd;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		margin: 0 auto 1.625em;
+		padding: 1.625em;
+		position: relative;
+		width: auto;
+	}
 
-.commentlist .avatar {
-	height: 39px;
-	left: 2.2em;
-	top: 2.2em;
-	width: 39px;
-}
+	.commentlist .avatar {
+		height: 39px;
+		left: 2.2em;
+		top: 2.2em;
+		width: 39px;
+	}
 
-.commentlist li.comment .comment-meta {
-	line-height: 1.625em;
-	margin-left: 50px;
-}
+	.commentlist li.comment .comment-meta {
+		line-height: 1.625em;
+		margin-left: 50px;
+	}
 
-.commentlist li.comment .fn {
-	display: block;
-}
+	.commentlist li.comment .fn {
+		display: block;
+	}
 
-.commentlist li.comment .comment-content {
-	margin: 1.625em 0 0;
-}
+	.commentlist li.comment .comment-content {
+		margin: 1.625em 0 0;
+	}
 
-.commentlist .comment-edit-link {
-	display: none;
-}
+	.commentlist .comment-edit-link {
+		display: none;
+	}
 
-.commentlist > li::before,
-	.commentlist > li.bypostauthor::before {
-	content: '';
-}
+	.commentlist > li::before,
+		.commentlist > li.bypostauthor::before {
+		content: '';
+	}
 
-.commentlist .reply {
-	display: none;
-}
+	.commentlist .reply {
+		display: none;
+	}
 
-/* Post author highlighting */
+	/* Post author highlighting */
 
-.commentlist > li.bypostauthor {
-	color: #444;
-}
+	.commentlist > li.bypostauthor {
+		color: #444;
+	}
 
-.commentlist > li.bypostauthor .comment-meta {
-	color: #666;
-}
+	.commentlist > li.bypostauthor .comment-meta {
+		color: #666;
+	}
 
-.commentlist > li.bypostauthor:before {
-	content: none;
-}
+	.commentlist > li.bypostauthor:before {
+		content: none;
+	}
 
-/* Post Author threaded comments */
+	/* Post Author threaded comments */
 
-.commentlist .children > li.bypostauthor {
-	background: #fff;
-	border-color: #ddd;
-}
+	.commentlist .children > li.bypostauthor {
+		background: #fff;
+		border-color: #ddd;
+	}
 
-.commentlist .children > li.bypostauthor > article,
-	.commentlist .children > li.bypostauthor > article .comment-meta {
-	color: #666;
-}
+	.commentlist .children > li.bypostauthor > article,
+		.commentlist .children > li.bypostauthor > article .comment-meta {
+		color: #666;
+	}
 
 }
 
