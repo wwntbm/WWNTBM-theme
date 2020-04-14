@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.28
+ * Version: 1.0.29
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -3927,4 +3927,13 @@ img.giving-icon {
 embed, iframe, object, video {
 	max-width: 100%;
 	vertical-align: middle;
+}
+
+.wp-block-embed figcaption {
+    font-size: 17px;
+    padding-left: 0 !important;
+}
+
+.wp-block-embed figcaption:before {
+    display: none;
 }
