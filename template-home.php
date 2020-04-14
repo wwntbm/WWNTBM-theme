@@ -24,6 +24,8 @@ get_header(); ?>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
+				<?php the_content(); ?>
+
 				<div class="home-button">
 					<?php echo do_shortcode( '[potd display="link"]' ); ?>
 					<?php echo do_shortcode( '[potd display="thumbnail"]' ); ?>
