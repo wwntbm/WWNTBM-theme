@@ -9,22 +9,22 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
+	<div id="primary">
+		<div id="content" role="main">
 
-				<?php
-				while ( have_posts() ) :
-the_post();
-?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 
-					<?php get_template_part( 'content', 'single' ); ?>
+				<?php get_template_part( 'content', 'single' ); ?>
 
-				<?php endwhile; // end of the loop. ?>
+				<?php comments_template( '', true ); ?>
 
-				<div class="fb-comments" data-href="<?php echo home_url() . $_SERVER['REQUEST_URI']; ?>" data-num-posts="3" data-width="470"></div>
+			<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
