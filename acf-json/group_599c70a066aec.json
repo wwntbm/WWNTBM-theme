@@ -27,7 +27,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -45,7 +45,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -64,7 +64,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -72,11 +72,27 @@
             "placeholder": "https:\/\/acme.inc"
         },
         {
+            "key": "field_5f86593d9972e",
+            "label": "Ministry Facebook",
+            "name": "facebook",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/facebook.com\/example"
+        },
+        {
             "key": "field_5e153e423ae36",
             "label": "Address",
             "name": "address",
             "type": "wysiwyg",
-            "instructions": "Field Address",
+            "instructions": "Field address",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -262,7 +278,7 @@
                     "label": "Birthday",
                     "name": "birthday",
                     "type": "date_picker",
-                    "instructions": "If “hide year” is disabled, pick any year.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -279,7 +295,7 @@
                     "label": "Hide Year",
                     "name": "hide_year",
                     "type": "true_false",
-                    "instructions": "Set to “hide” for parents and older children.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -417,7 +433,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1578455413
+    "modified": 1602640238
 }

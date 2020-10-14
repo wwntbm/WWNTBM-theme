@@ -72,9 +72,14 @@
 		echo '<br />';
 	}
 
-		$website = get_field( 'website' );
+	$website = get_field( 'website' );
 	if ( $website ) {
-		echo '<strong>website</strong>: <a href="' . esc_url( $website ) . '">' . esc_url( $website ) . '</a><br />';
+		echo '<strong>Website</strong>: <a href="' . esc_url( $website ) . '">' . esc_url( $website ) . '</a><br />';
+	}
+
+	$facebook = get_field( 'facebook' );
+	if ( $facebook ) {
+		echo '<strong>Ministry Facebook</strong>: <a href="' . esc_url( $facebook ) . '">' . esc_url( $facebook ) . '</a><br />';
 	}
 
 	echo '</p>';
