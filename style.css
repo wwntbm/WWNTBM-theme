@@ -4,7 +4,7 @@
  * Author: AndrewRMinion Design
  * Author URI: http://andrewrminion.com
  * Description: Based on TwentyEleven by the Wordpress Team
- * Version: 1.0.31
+ * Version: 1.0.32
  * License: GNU General Public License
  * License URI: license.txt
  * Template:       twentyeleven
@@ -1246,6 +1246,7 @@ dl.gallery-item {
 
 .home-button img {
 	max-width: 100%;
+	height: auto;
 }
 
 /* @end */
