@@ -22,18 +22,18 @@
 
 	<div class="entry-content">
 	<?php
-		/**
-		 * Photo.
-		 */
+	/**
+	 * Photo.
+	 */
 	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 		the_post_thumbnail( 'medium', array( 'class' => 'alignright rounded shadowed' ) );
 	}
 
-		/**
-		 * Field.
-		 */
-		$wwntbm_field        = get_field( 'missionary_field' );
-		$wwntbm_field_region = get_field( 'missionary_field_region' );
+	/**
+	 * Field.
+	 */
+	$wwntbm_field        = get_field( 'missionary_field' );
+	$wwntbm_field_region = get_field( 'missionary_field_region' );
 
 	if ( ! empty( $wwntbm_field ) ) {
 		echo '<h2 class="field-of-service">Field of Service</h2><p>' . esc_attr( $wwntbm_field );
@@ -99,9 +99,9 @@
 		echo '</address>';
 	}
 
-		/**
-		 * Significant dates.
-		 */
+	/**
+	 * Significant dates.
+	 */
 	if ( have_rows( 'birthdays' ) ) {
 		echo '<h2>Birthdays</h2><ul>';
 		while ( have_rows( 'birthdays' ) ) {
