@@ -90,16 +90,16 @@ add_action( 'init', 'wwntbm_user_roles' );
  */
 function missionary_prayer_letters( $file, $missionary_name_key ) {
 	$file_extension = pathinfo( $file, PATHINFO_EXTENSION );
-	$month_numbers = array( '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12' );
-	$month_names = array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' );
+	$month_numbers  = array( '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12' );
+	$month_names    = array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' );
 
 	// rename prayer letter.
 	$prayer_letter_title = str_ireplace( $missionary_name_key . '---', '', ( basename( $file, '.' . $file_extension ) ) );
 
 	// filter out month.
 	$prayer_letter_month_array = explode( '-', $prayer_letter_title );
-	$prayer_letter_month = $prayer_letter_month_array[1];
-	$prayer_letter_year = $prayer_letter_month_array[0];
+	$prayer_letter_month       = $prayer_letter_month_array[1];
+	$prayer_letter_year        = $prayer_letter_month_array[0];
 
 	// build title.
 	$prayer_letter_title = str_replace( $month_numbers, $month_names, $prayer_letter_month ) . ' ' . $prayer_letter_year;

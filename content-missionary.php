@@ -179,7 +179,7 @@
 			} else {
 				echo 'none';
 			}
-			echo ';">' . "\n";
+			echo ';">' . PHP_EOL;
 
 			// Get and sort files.
 			$file_list = glob( $location . basename( $group_folder ) . '/*.pdf', GLOB_BRACE );
@@ -188,14 +188,14 @@
 
 			// Display files.
 			foreach ( $file_list as $file ) {
-					missionary_prayer_letters( $file, $wwntbm_missionary_key );
+				missionary_prayer_letters( $file, $wwntbm_missionary_key );
 			}
 			echo '</ul><!-- .sub_links -->
-				</li>' . "\n";
+			</li>' . PHP_EOL;
 		}
 
 		echo '</ul><!-- .dropdown -->
-			</div><!-- .prayer_letters -->';
+		</div><!-- .prayer_letters -->';
 	}
 	?>
 
