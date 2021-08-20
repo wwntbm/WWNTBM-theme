@@ -105,12 +105,12 @@ function missionary_prayer_letters( $file, $missionary_name_key ) {
 	$prayer_letter_title = str_replace( $month_numbers, $month_names, $prayer_letter_month ) . ' ' . $prayer_letter_year;
 
 	// check for special titles.
-	if ( ! is_null( $prayer_letter_month_array[2] ) ) {
+	if ( isset( $prayer_letter_month_array[2] ) ) {
 		$prayer_letter_title .= ' (' . $prayer_letter_month_array[2] . ')';
 	}
 
 	// echo the <li> item.
-	echo '<li><a target="_blank" href="' . esc_url( get_site_url( null, '/' . $file ) ) . '" title="' . esc_attr( $prayer_letter_title ) . '">' . wp_kses_post( $prayer_letter_title ) . '</a></li>' . "\n";
+	echo '<li><a target="_blank" href="' . esc_url( 'https://cdn.wwntbm.com/' . $file ) . '" title="' . esc_attr( $prayer_letter_title ) . '">' . wp_kses_post( $prayer_letter_title ) . '</a></li>' . "\n";
 }
 
 /**

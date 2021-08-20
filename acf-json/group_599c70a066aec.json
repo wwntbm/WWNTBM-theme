@@ -111,7 +111,7 @@
             "label": "Location",
             "name": "location",
             "type": "google_map",
-            "instructions": "Location (approximate)",
+            "instructions": "Location (approximate). Note: this will be approximated even further on the map to prevent unclickable overlapping pins.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -435,5 +435,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1602640238
+    "modified": 1629489957
 }

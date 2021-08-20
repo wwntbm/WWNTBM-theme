@@ -20,19 +20,20 @@ get_header(); ?>
 			<?php
 				global $wp_query;
 				$args = array_merge(
-					 $wp_query->query, array(
-						 'orderby' => 'meta_value',
-						 'meta_key' => 'missionary_key',
-						 'order' => 'ASC',
-						 'posts_per_page' => -1,
-					 )
-					);
+					$wp_query->query,
+					array(
+						'orderby'        => 'meta_value',
+						'meta_key'       => 'missionary_key',
+						'order'          => 'ASC',
+						'posts_per_page' => -1,
+					)
+				);
 				query_posts( $args );
 
 				// get taxonomy name
-				$term = $wp_query->get_queried_object();
+				$term  = $wp_query->get_queried_object();
 				$title = $term->name;
-			?>
+				?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
@@ -42,13 +43,13 @@ get_header(); ?>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
-				<div class="entry-content">
+				<div class="entry-content flex-container">
 
 					<?php /* Start the Loop */ ?>
 					<?php
 					while ( have_posts() ) :
-the_post();
-?>
+						the_post();
+						?>
 
 						<h3 class="missionary-listed">
 							<a href="<?php the_permalink(); ?>">
@@ -58,8 +59,9 @@ the_post();
 							</span></a>
 							<?php
 								$wwntbm_field = get_post_meta( get_the_ID(), 'missionary_field', true );
-								if ( $wwntbm_field != null ) {
-echo '<span class="field-of-service">' . $wwntbm_field . '</span>';}
+							if ( ! empty( $wwntbm_field ) ) {
+								echo '<span class="field-of-service">' . esc_attr( $wwntbm_field ) . '</span>';
+							}
 							?>
 						</h3>
 

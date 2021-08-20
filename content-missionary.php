@@ -22,18 +22,18 @@
 
 	<div class="entry-content">
 	<?php
-	/**
-	 * Photo.
-	 */
+		/**
+		 * Photo.
+		 */
 	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 		the_post_thumbnail( 'medium', array( 'class' => 'alignright rounded shadowed' ) );
 	}
 
-	/**
-	 * Field.
-	 */
-	$wwntbm_field        = get_field( 'missionary_field' );
-	$wwntbm_field_region = get_field( 'missionary_field_region' );
+		/**
+		 * Field.
+		 */
+		$wwntbm_field        = get_field( 'missionary_field' );
+		$wwntbm_field_region = get_field( 'missionary_field_region' );
 
 	if ( ! empty( $wwntbm_field ) ) {
 		echo '<h2 class="field-of-service">Field of Service</h2><p>' . esc_attr( $wwntbm_field );
@@ -99,9 +99,9 @@
 		echo '</address>';
 	}
 
-	/**
-	 * Significant dates.
-	 */
+		/**
+		 * Significant dates.
+		 */
 	if ( have_rows( 'birthdays' ) ) {
 		echo '<h2>Birthdays</h2><ul>';
 		while ( have_rows( 'birthdays' ) ) {
@@ -144,12 +144,29 @@
 	 */
 
 	$wwntbm_missionary_key = strtolower( get_field( 'missionary_key' ) );
-	if ( isset( $wwntbm_missionary_key ) ) {
-		$location = 'wp-content/uploads/prayer-letters/' . $wwntbm_missionary_key . '/';
-	}
 
-	// Get and sort folders.
-	$folder_list = glob( $location . '*', GLOB_ONLYDIR );
+	$s3_uploads = S3_Uploads::get_instance();
+	$s3_client  = $s3_uploads->s3();
+	$results    = $s3_client->listObjectsV2(
+		array(
+			'Bucket' => $s3_uploads->get_s3_bucket(),
+			'Prefix' => 'uploads/prayer-letters/' . $wwntbm_missionary_key . '/2',
+		)
+	);
+
+	$folder_list = array_filter(
+		$results->get( 'Contents' ),
+		function( $prayer_letter ) {
+			return false !== strpos( $prayer_letter['Key'], '.bzEmpty' );
+		}
+	);
+
+	$folder_list = array_map(
+		function( $folder ) {
+			return $folder['Key'];
+		},
+		$folder_list
+	);
 	natcasesort( $folder_list );
 	$folder_list = array_reverse( $folder_list );
 
@@ -160,6 +177,8 @@
 
 		// Process folders.
 		foreach ( $folder_list as $group_folder ) {
+			$group_folder = str_ireplace( '.bzEmpty', '', $group_folder );
+
 			// Skip hidden folders.
 			if ( strpos( basename( $group_folder ), 'site' ) !== false ) {
 				continue;
@@ -179,10 +198,27 @@
 			} else {
 				echo 'none';
 			}
-			echo ';">' . PHP_EOL;
+			echo ';">' . "\n";
 
 			// Get and sort files.
-			$file_list = glob( $location . basename( $group_folder ) . '/*.pdf', GLOB_BRACE );
+			$files     = $s3_client->listObjectsV2(
+				array(
+					'Bucket' => $s3_uploads->get_s3_bucket(),
+					'Prefix' => $group_folder,
+				)
+			);
+			$file_list = array_filter(
+				$files->get( 'Contents' ),
+				function( $prayer_letter ) {
+					return false !== strpos( $prayer_letter['Key'], '.pdf' );
+				}
+			);
+			$file_list = array_map(
+				function( $file ) {
+					return $file['Key'];
+				},
+				$file_list
+			);
 			natcasesort( $file_list );
 			$file_list = array_reverse( $file_list );
 
@@ -191,11 +227,11 @@
 				missionary_prayer_letters( $file, $wwntbm_missionary_key );
 			}
 			echo '</ul><!-- .sub_links -->
-			</li>' . PHP_EOL;
+				</li>' . "\n";
 		}
 
 		echo '</ul><!-- .dropdown -->
-		</div><!-- .prayer_letters -->';
+			</div><!-- .prayer_letters -->';
 	}
 	?>
 
